@@ -1,1 +1,14 @@
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+<!DOCTYPE html>
+<html> <head> <meta charset="UTF-8">
+              <title>taswelll</title>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <script> function init() { const element = document.getElementById("name")
+                                         const params = new URLSearchParams(window.location.search);
+                                         element.textContent = params.get("name") || "bzz";
+                                         (function loop() { setTimeout(function() { element.textContent += element.textContent.slice(-1);
+                                                                                    loop(); }, parseInt(params.get("delay") || "50")) })(); } </script>
+              <style> #name { overflow-wrap: break-word; }
+                      body { font-family: monospace;
+                             font-size: 18px;
+                             padding: 10px 10px} </style> </head>
+       <body onload="init()"> <span id=name>bzz</span> </body> </html>
