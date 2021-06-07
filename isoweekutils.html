@@ -27,7 +27,7 @@
                 date = luxon.DateTime.fromObject({ 
                     weekYear:   +id`week_year`.value, 
                     weekNumber: +id`week_week`.value, 
-                    weekday:    +id`week_day`.value });
+                    weekday:    +id`week_day` .value });
                 id`greg_year`.value = date.year || 0
                 id`greg_month`.value = date.month || 0
                 id`greg_day`.value = date.day || 0
@@ -66,20 +66,15 @@
         <p><button onclick="ready()">reload</button></p>
         <hr>
         <h2> conversion </h2>
-        <p> gregorian:
-            <input type=number size="1" min=1 max=9999 value=2020 id=greg_year oninput=update_greg()>
-            -
-            <input type=number size="1" min=1 max=12 value=12 id=greg_month oninput=update_greg()>
-            -
-            <input type=number size="1" min=1 max=31 value=31 id=greg_day oninput=update_greg()>
+        <p> gregorian (YYYY-MM-DD):
+            <input type=number size="1" min=1 max=9999 value=2020 id=greg_year oninput=update_greg()><!--
+            -->-<input type=number size="1" min=1 max=12 value=12 id=greg_month oninput=update_greg()><!--
+            -->-<input type=number size="1" min=1 max=31 value=31 id=greg_day oninput=update_greg()>
         </p>
-
-        <p> week:
-
-               <input type=number size="1" min=1 max=9999 value=2019 id=week_year oninput=update_week()>
-            - W<input type=number size="1" min=1 max=54 value=54 id=week_week oninput=update_week()>
-            -
-               <input type=number size="1" min=1 max=7 value=4 id=week_day oninput=update_week()>
+        <p> ISO week:
+               <input type=number size="1" min=1 max=9999 value=2019 id=week_year oninput=update_week()><!--
+            -->-W<input type=number size="1" min=1 max=54 value=54 id=week_week oninput=update_week()><!--
+            -->-<input type=number size="1" min=1 max=7 value=4 id=week_day oninput=update_week()>
         </p>
     </body>
 </html>
