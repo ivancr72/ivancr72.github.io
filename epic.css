@@ -1,0 +1,17 @@
+/*epic css*/
+body {
+    margin: auto;
+    max-width: 800px;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+a {
+    color: #0080FF;
+    text-decoration: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
