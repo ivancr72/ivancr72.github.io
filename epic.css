@@ -15,3 +15,22 @@ a {
 a:hover {
     text-decoration: underline;
 }
+table {
+    width: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td,
+th {
+    border: 1px solid darkgray;
+    padding: 0px 10px;
+}
+
+th {
+    background-color: gainsboro;
+}
+
+.noborder {
+    border: 0px
+}
