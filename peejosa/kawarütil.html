@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ichn maghfason</title>
+    <link rel="stylesheet" type="text/css" href="/epic.css"/>
+    <style>
+        textarea, pre {
+            font-size: inherit;
+            border: solid 1px black;
+            width: 100%;
+            height: max-content;
+            resize: none;
+        }
+    </style>
+    <script>
+        function update() {
+            document.getElementById("result").innerText = document.getElementById("input").value
+                .replace(/(?<=s|z|S|Z)j/g, "h")
+                .replace(/(?<=s|z|S|Z)J/g, "H")
+                .replace(/(?<=s)c(?=h)/gi, "")
+                .replace(/æ/g, "ä")
+                .replace(/Æ/g, "Ä")
+                .replace(/minäshon/g, "minäsjon")
+                .replace(/MINÄSHON/g, "MINÄSJON")
+                .replace(/\bbar/g, "sölmon")
+                .replace(/\bBAR/g, "SÖLMON")
+                .replace(/\bBar/g, "Sölmon")
+        }
+
+        
+    </script>
+
+</head>
+
+<body lang=pee></body>
+
+    <h1>kawarütil</h1>
+
+    <p>koren ütil bukawar cranj ekrivfason v leer ekrivfason.</p>
+
+    <textarea id=input rows=5 oninput=update()>sjaiss</textarea>
+
+    <p>kawarti...</p>
+
+    <textarea id=result rows=5 readonly>shaiss</textarea>
+
+</body>
+
+</html>
