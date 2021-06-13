@@ -34,3 +34,7 @@ th {
 .noborder {
     border: 0px
 }
+
+ul.padded li {
+    padding-bottom: 5px;
+}
