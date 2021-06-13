@@ -7,7 +7,7 @@
         <script>
             function change_letter() {
                 letter = document.getElementById("input").value;
-                if (letter.length == 0) letter = "◌";
+                if (letter.length === 0) letter = "◌";
                 for (x of document.getElementsByClassName("e")) {
                     x.innerText = letter;
                 }
