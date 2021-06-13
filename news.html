@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>news</title>
     <link rel="stylesheet" type="text/css" href="/epic.css" />
     <!-- i spent wayyy too long trying to implement an algorithm myself and it wasnt even working as intended so -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
@@ -58,6 +57,7 @@
             let body = document.getElementsByTagName("body")[0]
             let header = document.createElement('h1')
             header.innerText = generate_sentence().slice(0, -1)
+            document.title = header.innerText
             body.appendChild(header)
             for (let i = 0; i < (rng() % 7 + 4); i++) {
                 let paragraph = document.createElement('p')
