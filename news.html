@@ -40,13 +40,20 @@
             sentence = ""
             length = rng() % (max_words - 10) + 10
 
+            let last_word = ""
+            let word = ""
+
             for (let i = 0; i < length; i++) {
-                sentence += words[rng() % words.length]
+                while (word === last_word) {
+                    word = words[rng() % words.length]
+                }
+                sentence += word
                 if (rng() % 10) {
                     sentence += " "
                 } else {
                     sentence += punctuation[rng() % punctuation.length]
                 }
+                last_word = word
             }
             sentence += words[rng() % words.length] + "."
 
