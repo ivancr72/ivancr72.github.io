@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+    <link rel="stylesheet" type="text/css" href="/epic.css" />
+    <!-- i spent wayyy too long trying to implement an algorithm myself and it wasnt even working as intended so -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+    </script>
+    <script>
+        
+        words = [
+            "the", "a", "this", "these", "that", "those", "each", "every", "any", "some", "each",
+            "every", "no", "none", "another", "all", "both", "very", "too", "so", "not", "he", "him",
+            "his", "she", "her", "it", "its", "they", "them", "their", "one", "what", "which", "who",
+            "whose", "be", "am", "are", "is", "was", "were", "have", "has", "having", "had", "very",
+            "not", "of", "in", "on", "over", "under", "to", "from", "with", "through", "by", "for",
+            "and", "nor", "but", "or", "yet", "so", "as", "because", "even", "if", "than", "unless",
+            "while"];
+        
+        punctuation = [", ", "—", ": ", "; "]
+        
+        const params = new URLSearchParams(window.location.search);
+
+        let seed = BigInt(params.get("articleno") || Math.random() * Math.pow(2, 64));
+        let random = new Math.seedrandom(seed); // from seedrandom
+        let rng = () => Math.abs(random.int32())
+
+        function generate_sentence() {
+            // XXX: dont append to strings you idiot
+            sentence = ""
+            length = rng() % 40 + 10
+
+            for (let i = 0; i < length; i++) {
+                sentence += words[rng() % words.length]
+                if (rng() % 10) {
+                    sentence += " "
+                } else {
+                    sentence += punctuation[rng() % punctuation.length]
+                }
+            }
+            sentence += words[rng() % words.length] + "."
+
+            sentence = sentence[0].toUpperCase() + sentence.slice(1)
+            return sentence
+        }
+        function ready() {
+            let body = document.getElementsByTagName("body")[0]
+            let header = document.createElement('h1')
+            header.innerText = generate_sentence().slice(0, -1)
+            body.appendChild(header)
+            for (let i = 0; i < (rng() % 5 + 2); i++) {
+                let paragraph = document.createElement('p')
+                for (let j = 0; j < (rng() % 5 + 2); j++) {
+                    paragraph.innerText += generate_sentence() + " "
+                }
+                body.appendChild(paragraph)   
+                
+            }
+        }
+
+
+    </script>
+</head>
+
+<body lang=en onload=ready()>
+</body>
+
+</html>
