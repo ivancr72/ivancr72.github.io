@@ -35,10 +35,10 @@
         let random = new Math.seedrandom(seed); // from seedrandom
         let rng = () => Math.abs(random.int32())
 
-        function generate_sentence() {
+        function generate_sentence(max_words = 50) {
             // XXX: dont append to strings you idiot
             sentence = ""
-            length = rng() % 40 + 10
+            length = rng() % (max_words - 10) + 10
 
             for (let i = 0; i < length; i++) {
                 sentence += words[rng() % words.length]
@@ -56,7 +56,7 @@
         function ready() {
             let body = document.getElementsByTagName("body")[0]
             let header = document.createElement('h1')
-            header.innerText = generate_sentence().slice(0, -1)
+            header.innerText = generate_sentence(25).slice(0, -1)
             document.title = header.innerText
             body.appendChild(header)
             for (let i = 0; i < (rng() % 7 + 4); i++) {
