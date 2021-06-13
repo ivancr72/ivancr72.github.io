@@ -41,6 +41,7 @@
                 let [start, end] = blocks[Math.floor(Math.random() * blocks.length)].split("..").map(x => parseInt(x, 16))
                 let cp = Math.floor(Math.random() * (end - start) + start)
                 document.getElementById("output").innerText = String.fromCodePoint(cp) + " U+" + cp.toString(16).toUpperCase().padStart(4, '0')
+                console.log(cp, String.fromCodePoint(cp))
             }
         </script>
         <style>
