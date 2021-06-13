@@ -13,6 +13,7 @@
         p {
             text-indent: 5em;
             line-height: 150%;
+            text-justify: inter-word;
         }
     </style>
     <script>
@@ -21,7 +22,7 @@
             "the", "a", "this", "these", "that", "those", "each", "every", "any", "some", "each",
             "every", "no", "none", "another", "all", "both", "very", "too", "so", "not", "he", "him",
             "his", "she", "her", "it", "its", "they", "them", "their", "one", "what", "which", "who",
-            "whose", "be", "am", "are", "is", "was", "were", "have", "has", "having", "had", "very",
+            "whose", "be", "are", "is", "was", "were", "have", "has", "having", "had", "very",
             "not", "of", "in", "on", "over", "under", "to", "from", "with", "through", "by", "for",
             "and", "nor", "but", "or", "yet", "so", "as", "because", "even", "if", "than", "unless",
             "while"];
@@ -59,7 +60,7 @@
             body.appendChild(header)
             for (let i = 0; i < (rng() % 7 + 4); i++) {
                 let paragraph = document.createElement('p')
-                for (let j = 0; j < (rng() % 3 + 1); j++) {
+                for (let j = 0; j < (rng() % 3 + 2); j++) {
                     paragraph.innerText += generate_sentence() + " "
                 }
                 body.appendChild(paragraph)   
