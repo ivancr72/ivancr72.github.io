@@ -12,6 +12,7 @@
     <style>
         p {
             text-indent: 5em;
+            line-height: 50%;
         }
     </style>
     <script>
@@ -56,9 +57,9 @@
             let header = document.createElement('h1')
             header.innerText = generate_sentence().slice(0, -1)
             body.appendChild(header)
-            for (let i = 0; i < (rng() % 5 + 2); i++) {
+            for (let i = 0; i < (rng() % 7 + 4); i++) {
                 let paragraph = document.createElement('p')
-                for (let j = 0; j < (rng() % 5 + 2); j++) {
+                for (let j = 0; j < (rng() % 3 + 1); j++) {
                     paragraph.innerText += generate_sentence() + " "
                 }
                 body.appendChild(paragraph)   
