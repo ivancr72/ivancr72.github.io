@@ -19,6 +19,8 @@ table {
     width: auto;
     border-collapse: collapse;
     text-align: center;
+}
+.scrollable {
     overflow-x: scroll;
 }
 
