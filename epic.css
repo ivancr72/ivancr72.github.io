@@ -22,7 +22,6 @@ table {
 }
 .scrollable {
     overflow-x: scroll;
-    width: 100%;
 }
 
 td,
