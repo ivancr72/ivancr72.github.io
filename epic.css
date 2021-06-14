@@ -22,6 +22,12 @@ table {
 }
 .scrollable {
     overflow-x: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
 }
 
 td,
