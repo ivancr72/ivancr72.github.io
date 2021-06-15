@@ -2,21 +2,21 @@
 
 @media (prefers-color-scheme: light) {
     html {
-        --background-color: #fff;
-        --foreground-color: #000;
-        --table-border-color: #888;
-        --table-header-color: #ccc;
-        --link-color: #06f;
+        --background: #fff;
+        --foreground: #000;
+        --table-border: #888;
+        --table-header: #ccc;
+        --link: #06f;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     html {
-        --background-color: #000;
-        --foreground-color: #fff;
-        --table-border-color: #888;
-        --table-header-color: #333;
-        --link-color: #09f;
+        --background: #000;
+        --foreground: #fff;
+        --table-border: #888;
+        --table-header: #333;
+        --link: #09f;
     }
 }
 body {
@@ -25,12 +25,12 @@ body {
     font-size: 18px;
     font-family: sans-serif;
     padding: 20px;
-    background-color: var(--background-color);
-    color: var(--foreground-color)
+    background-color: var(--background);
+    color: var(--foreground)
 }
 
 a {
-    color: var(--link-color);
+    color: var(--link);
     text-decoration: inherit;
 }
 
@@ -54,12 +54,12 @@ table {
 
 td,
 th {
-    border: 1px solid var(--table-border-color);
+    border: 1px solid var(--table-border);
     padding: 0px 10px;
 }
 
 th {
-    background-color: var(--table-header-color);
+    background-color: var(--table-header);
 }
 
 .noborder {
