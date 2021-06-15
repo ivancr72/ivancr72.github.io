@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: dark) {
     html {
-        --background: #000;
+        --background: #111;
         --foreground: #fff;
         --table-border: #888;
         --table-header: #333;
