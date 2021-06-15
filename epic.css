@@ -1,14 +1,36 @@
 /*epic css*/
+
+@media (prefers-color-scheme: light) {
+    html {
+        --background-color: #fff;
+        --foreground-color: #000;
+        --table-border-color: #888;
+        --table-header-color: #ccc;
+        --link-color: #06f;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --background-color: #000;
+        --foreground-color: #fff;
+        --table-border-color: #888;
+        --table-header-color: #333;
+        --link-color: #09f;
+    }
+}
 body {
     margin: auto;
     max-width: 800px;
     font-size: 18px;
     font-family: sans-serif;
     padding: 20px;
+    background-color: var(--background-color);
+    color: var(--foreground-color)
 }
 
 a {
-    color: #0060FF;
+    color: var(--link-color);
     text-decoration: inherit;
 }
 
@@ -32,12 +54,12 @@ table {
 
 td,
 th {
-    border: 1px solid darkgray;
+    border: 1px solid var(--table-border-color);
     padding: 0px 10px;
 }
 
 th {
-    background-color: gainsboro;
+    background-color: var(--table-header-color);
 }
 
 .noborder {
