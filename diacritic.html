@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/epic.css"/>
         <link rel="icon" type="image/png" href="/selaere.png">
         <title>dia critic</title>
         <script>
@@ -15,10 +16,8 @@
             }
         </script>
         <style>
-            body{
-                font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
-            }
             .l {
+                font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
                 font-size: 36px;
                 margin: 0px 20px 0px 10px;
             }
@@ -30,22 +29,15 @@
                 font: inherit;
                 width: 4em;
             }
-            a {
-                color: #0080FF;
-                text-decoration: inherit;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
         </style>
     </head>
     <body onload="ready()">
         <h1> dia critic </h1>
         <p> welcome to dia critic: the show that gets facts wrong about <strong>YOUR</strong> favorite dia.</p>
 
-        <p><a href=diacritic-full>full version</a></p>
-
         <p>(i recommend installing <a href="https://www.google.com/get/noto/">Noto Sans</a> to be able to see most of these)</p>
+
+        <p><a href=diacritic-full>full version</a></p>
 
         <p> letter: <input oninput="change_letter()" id=input type=text value=a maxlength=10 width=1> </p>
        
