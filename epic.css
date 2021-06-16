@@ -11,6 +11,9 @@
     :lang(qpj) {
         --foreground: #000225;
     }
+    :not(:lang(qpj)) {
+        --foreground: #000;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +26,9 @@
     }
     :lang(qpj) {
         --foreground: #E8E18D;
+    }
+    :not(:lang(qpj)) {
+        --foreground: #fff;
     }
 }
 body {
