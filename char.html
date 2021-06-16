@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="/selaere.png">
+        <link rel="stylesheet" type="text/css" href="epic.css"/>
         <title>char</title>
         <script>
             /*
@@ -46,22 +47,21 @@
             }
         </script>
         <style>
-            body{
-                font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
-                padding: 20px 20px;
-                text-align: center;
-            }
             #output {
                 font-size: 56px;
                 font-weight: bold;
                 height: 100px;
-                text-align: center;
+                font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
             }
         </style>
     </head>
     <body onload="char()" onkeypress="char()">
-        <div id=output></div>
-        <p>press any key to change!</p>
-        <button onclick=char()>or click here idc</button>
+        <h1>random* unicode character</h1>
+        <p>*a randomly chosen character from a randomly chosen unicode block. it would always be cjk otherwise</p>
+        <div style="text-align: center;">
+            <div id=output></div>
+            <p>press any key to change!</p>
+            <button onclick=char()>or click here idc</button>
+        </div>
     </body>
 </html>
