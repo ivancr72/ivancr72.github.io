@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/selaere.png">
+        <title>dia critic</title>
+        <script>
+            function change_letter() {
+                letter = document.getElementById("input").value;
+                if (letter.length === 0) letter = "◌";
+                for (x of document.getElementsByClassName("e")) {
+                    x.innerText = letter;
+                }
+            }
+        </script>
+        <style>
+            body{
+                font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
+            }
+            .l {
+                font-size: 36px;
+                margin: 0px 20px 0px 10px;
+            }
+            .sussy {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+            input {
+                font: inherit;
+                width: 4em;
+            }
+            a {
+                color: #0080FF;
+                text-decoration: inherit;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body onload="ready()">
+        <h2> dia critic 2 </h2>
+        <p> welcome to dia critic: the show that gets facts wrong about <strong>YOUR</strong> favorite dia.</p>
+
+        <p>(i recommend installing <a href="https://www.google.com/get/noto/">Noto Sans</a> to be able to see most of these)</p>
+
+        <p><a href=diacritic>limited version</a></p>
+
+        <p> letter: <input oninput="change_letter()" id=input type=text value=a maxlength=10 width=1> </p>
+       
+
+        <!--I know, vomit all you want... i was considering doing this client-side, but apparently javascript has no way
+            of getting unicode names automatically, so it'd have to parse a file more than a 100 times longer than this one.
+            (this is also the reason for the cryptic class names)
+            heck people add huge javascript libraries and they get away with it i think this is fine
+            generated with the following script: 
+            ```py
+            import unicodedata as u; open("output.html",'w').write('\n'.join(f"<br><span class=l><span class=e>a</span>&#x{cp:X};</span>U+{cp:04X} {u.name(chr(cp))}" for cp in range(0x1FFFF) if u.category(chr(cp)) == "Mn"))
+            ```
+        -->
+        <div class=sussy>
+<br><span class=l><span class=e>a</span>&#x300;</span>U+0300 COMBINING GRAVE ACCENT
+<br><span class=l><span class=e>a</span>&#x301;</span>U+0301 COMBINING ACUTE ACCENT
+<br><span class=l><span class=e>a</span>&#x302;</span>U+0302 COMBINING CIRCUMFLEX ACCENT
+<br><span class=l><span class=e>a</span>&#x303;</span>U+0303 COMBINING TILDE
+<br><span class=l><span class=e>a</span>&#x304;</span>U+0304 COMBINING MACRON
+<br><span class=l><span class=e>a</span>&#x305;</span>U+0305 COMBINING OVERLINE
+<br><span class=l><span class=e>a</span>&#x306;</span>U+0306 COMBINING BREVE
+<br><span class=l><span class=e>a</span>&#x307;</span>U+0307 COMBINING DOT ABOVE
+<br><span class=l><span class=e>a</span>&#x308;</span>U+0308 COMBINING DIAERESIS
+<br><span class=l><span class=e>a</span>&#x309;</span>U+0309 COMBINING HOOK ABOVE
+<br><span class=l><span class=e>a</span>&#x30A;</span>U+030A COMBINING RING ABOVE
+<br><span class=l><span class=e>a</span>&#x30B;</span>U+030B COMBINING DOUBLE ACUTE ACCENT
+<br><span class=l><span class=e>a</span>&#x30C;</span>U+030C COMBINING CARON
+<br><span class=l><span class=e>a</span>&#x30D;</span>U+030D COMBINING VERTICAL LINE ABOVE
+<br><span class=l><span class=e>a</span>&#x30E;</span>U+030E COMBINING DOUBLE VERTICAL LINE ABOVE
+<br><span class=l><span class=e>a</span>&#x30F;</span>U+030F COMBINING DOUBLE GRAVE ACCENT
+<br><span class=l><span class=e>a</span>&#x310;</span>U+0310 COMBINING CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x311;</span>U+0311 COMBINING INVERTED BREVE
+<br><span class=l><span class=e>a</span>&#x312;</span>U+0312 COMBINING TURNED COMMA ABOVE
+<br><span class=l><span class=e>a</span>&#x313;</span>U+0313 COMBINING COMMA ABOVE
+<br><span class=l><span class=e>a</span>&#x314;</span>U+0314 COMBINING REVERSED COMMA ABOVE
+<br><span class=l><span class=e>a</span>&#x315;</span>U+0315 COMBINING COMMA ABOVE RIGHT
+<br><span class=l><span class=e>a</span>&#x316;</span>U+0316 COMBINING GRAVE ACCENT BELOW
+<br><span class=l><span class=e>a</span>&#x317;</span>U+0317 COMBINING ACUTE ACCENT BELOW
+<br><span class=l><span class=e>a</span>&#x318;</span>U+0318 COMBINING LEFT TACK BELOW
+<br><span class=l><span class=e>a</span>&#x319;</span>U+0319 COMBINING RIGHT TACK BELOW
+<br><span class=l><span class=e>a</span>&#x31A;</span>U+031A COMBINING LEFT ANGLE ABOVE
+<br><span class=l><span class=e>a</span>&#x31B;</span>U+031B COMBINING HORN
+<br><span class=l><span class=e>a</span>&#x31C;</span>U+031C COMBINING LEFT HALF RING BELOW
+<br><span class=l><span class=e>a</span>&#x31D;</span>U+031D COMBINING UP TACK BELOW
+<br><span class=l><span class=e>a</span>&#x31E;</span>U+031E COMBINING DOWN TACK BELOW
+<br><span class=l><span class=e>a</span>&#x31F;</span>U+031F COMBINING PLUS SIGN BELOW
+<br><span class=l><span class=e>a</span>&#x320;</span>U+0320 COMBINING MINUS SIGN BELOW
+<br><span class=l><span class=e>a</span>&#x321;</span>U+0321 COMBINING PALATALIZED HOOK BELOW
+<br><span class=l><span class=e>a</span>&#x322;</span>U+0322 COMBINING RETROFLEX HOOK BELOW
+<br><span class=l><span class=e>a</span>&#x323;</span>U+0323 COMBINING DOT BELOW
+<br><span class=l><span class=e>a</span>&#x324;</span>U+0324 COMBINING DIAERESIS BELOW
+<br><span class=l><span class=e>a</span>&#x325;</span>U+0325 COMBINING RING BELOW
+<br><span class=l><span class=e>a</span>&#x326;</span>U+0326 COMBINING COMMA BELOW
+<br><span class=l><span class=e>a</span>&#x327;</span>U+0327 COMBINING CEDILLA
+<br><span class=l><span class=e>a</span>&#x328;</span>U+0328 COMBINING OGONEK
+<br><span class=l><span class=e>a</span>&#x329;</span>U+0329 COMBINING VERTICAL LINE BELOW
+<br><span class=l><span class=e>a</span>&#x32A;</span>U+032A COMBINING BRIDGE BELOW
+<br><span class=l><span class=e>a</span>&#x32B;</span>U+032B COMBINING INVERTED DOUBLE ARCH BELOW
+<br><span class=l><span class=e>a</span>&#x32C;</span>U+032C COMBINING CARON BELOW
+<br><span class=l><span class=e>a</span>&#x32D;</span>U+032D COMBINING CIRCUMFLEX ACCENT BELOW
+<br><span class=l><span class=e>a</span>&#x32E;</span>U+032E COMBINING BREVE BELOW
+<br><span class=l><span class=e>a</span>&#x32F;</span>U+032F COMBINING INVERTED BREVE BELOW
+<br><span class=l><span class=e>a</span>&#x330;</span>U+0330 COMBINING TILDE BELOW
+<br><span class=l><span class=e>a</span>&#x331;</span>U+0331 COMBINING MACRON BELOW
+<br><span class=l><span class=e>a</span>&#x332;</span>U+0332 COMBINING LOW LINE
+<br><span class=l><span class=e>a</span>&#x333;</span>U+0333 COMBINING DOUBLE LOW LINE
+<br><span class=l><span class=e>a</span>&#x334;</span>U+0334 COMBINING TILDE OVERLAY
+<br><span class=l><span class=e>a</span>&#x335;</span>U+0335 COMBINING SHORT STROKE OVERLAY
+<br><span class=l><span class=e>a</span>&#x336;</span>U+0336 COMBINING LONG STROKE OVERLAY
+<br><span class=l><span class=e>a</span>&#x337;</span>U+0337 COMBINING SHORT SOLIDUS OVERLAY
+<br><span class=l><span class=e>a</span>&#x338;</span>U+0338 COMBINING LONG SOLIDUS OVERLAY
+<br><span class=l><span class=e>a</span>&#x339;</span>U+0339 COMBINING RIGHT HALF RING BELOW
+<br><span class=l><span class=e>a</span>&#x33A;</span>U+033A COMBINING INVERTED BRIDGE BELOW
+<br><span class=l><span class=e>a</span>&#x33B;</span>U+033B COMBINING SQUARE BELOW
+<br><span class=l><span class=e>a</span>&#x33C;</span>U+033C COMBINING SEAGULL BELOW
+<br><span class=l><span class=e>a</span>&#x33D;</span>U+033D COMBINING X ABOVE
+<br><span class=l><span class=e>a</span>&#x33E;</span>U+033E COMBINING VERTICAL TILDE
+<br><span class=l><span class=e>a</span>&#x33F;</span>U+033F COMBINING DOUBLE OVERLINE
+<br><span class=l><span class=e>a</span>&#x340;</span>U+0340 COMBINING GRAVE TONE MARK
+<br><span class=l><span class=e>a</span>&#x341;</span>U+0341 COMBINING ACUTE TONE MARK
+<br><span class=l><span class=e>a</span>&#x342;</span>U+0342 COMBINING GREEK PERISPOMENI
+<br><span class=l><span class=e>a</span>&#x343;</span>U+0343 COMBINING GREEK KORONIS
+<br><span class=l><span class=e>a</span>&#x344;</span>U+0344 COMBINING GREEK DIALYTIKA TONOS
+<br><span class=l><span class=e>a</span>&#x345;</span>U+0345 COMBINING GREEK YPOGEGRAMMENI
+<br><span class=l><span class=e>a</span>&#x346;</span>U+0346 COMBINING BRIDGE ABOVE
+<br><span class=l><span class=e>a</span>&#x347;</span>U+0347 COMBINING EQUALS SIGN BELOW
+<br><span class=l><span class=e>a</span>&#x348;</span>U+0348 COMBINING DOUBLE VERTICAL LINE BELOW
+<br><span class=l><span class=e>a</span>&#x349;</span>U+0349 COMBINING LEFT ANGLE BELOW
+<br><span class=l><span class=e>a</span>&#x34A;</span>U+034A COMBINING NOT TILDE ABOVE
+<br><span class=l><span class=e>a</span>&#x34B;</span>U+034B COMBINING HOMOTHETIC ABOVE
+<br><span class=l><span class=e>a</span>&#x34C;</span>U+034C COMBINING ALMOST EQUAL TO ABOVE
+<br><span class=l><span class=e>a</span>&#x34D;</span>U+034D COMBINING LEFT RIGHT ARROW BELOW
+<br><span class=l><span class=e>a</span>&#x34E;</span>U+034E COMBINING UPWARDS ARROW BELOW
+<br><span class=l><span class=e>a</span>&#x34F;</span>U+034F COMBINING GRAPHEME JOINER
+<br><span class=l><span class=e>a</span>&#x350;</span>U+0350 COMBINING RIGHT ARROWHEAD ABOVE
+<br><span class=l><span class=e>a</span>&#x351;</span>U+0351 COMBINING LEFT HALF RING ABOVE
+<br><span class=l><span class=e>a</span>&#x352;</span>U+0352 COMBINING FERMATA
+<br><span class=l><span class=e>a</span>&#x353;</span>U+0353 COMBINING X BELOW
+<br><span class=l><span class=e>a</span>&#x354;</span>U+0354 COMBINING LEFT ARROWHEAD BELOW
+<br><span class=l><span class=e>a</span>&#x355;</span>U+0355 COMBINING RIGHT ARROWHEAD BELOW
+<br><span class=l><span class=e>a</span>&#x356;</span>U+0356 COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
+<br><span class=l><span class=e>a</span>&#x357;</span>U+0357 COMBINING RIGHT HALF RING ABOVE
+<br><span class=l><span class=e>a</span>&#x358;</span>U+0358 COMBINING DOT ABOVE RIGHT
+<br><span class=l><span class=e>a</span>&#x359;</span>U+0359 COMBINING ASTERISK BELOW
+<br><span class=l><span class=e>a</span>&#x35A;</span>U+035A COMBINING DOUBLE RING BELOW
+<br><span class=l><span class=e>a</span>&#x35B;</span>U+035B COMBINING ZIGZAG ABOVE
+<br><span class=l><span class=e>a</span>&#x35C;</span>U+035C COMBINING DOUBLE BREVE BELOW
+<br><span class=l><span class=e>a</span>&#x35D;</span>U+035D COMBINING DOUBLE BREVE
+<br><span class=l><span class=e>a</span>&#x35E;</span>U+035E COMBINING DOUBLE MACRON
+<br><span class=l><span class=e>a</span>&#x35F;</span>U+035F COMBINING DOUBLE MACRON BELOW
+<br><span class=l><span class=e>a</span>&#x360;</span>U+0360 COMBINING DOUBLE TILDE
+<br><span class=l><span class=e>a</span>&#x361;</span>U+0361 COMBINING DOUBLE INVERTED BREVE
+<br><span class=l><span class=e>a</span>&#x362;</span>U+0362 COMBINING DOUBLE RIGHTWARDS ARROW BELOW
+<br><span class=l><span class=e>a</span>&#x363;</span>U+0363 COMBINING LATIN SMALL LETTER A
+<br><span class=l><span class=e>a</span>&#x364;</span>U+0364 COMBINING LATIN SMALL LETTER E
+<br><span class=l><span class=e>a</span>&#x365;</span>U+0365 COMBINING LATIN SMALL LETTER I
+<br><span class=l><span class=e>a</span>&#x366;</span>U+0366 COMBINING LATIN SMALL LETTER O
+<br><span class=l><span class=e>a</span>&#x367;</span>U+0367 COMBINING LATIN SMALL LETTER U
+<br><span class=l><span class=e>a</span>&#x368;</span>U+0368 COMBINING LATIN SMALL LETTER C
+<br><span class=l><span class=e>a</span>&#x369;</span>U+0369 COMBINING LATIN SMALL LETTER D
+<br><span class=l><span class=e>a</span>&#x36A;</span>U+036A COMBINING LATIN SMALL LETTER H
+<br><span class=l><span class=e>a</span>&#x36B;</span>U+036B COMBINING LATIN SMALL LETTER M
+<br><span class=l><span class=e>a</span>&#x36C;</span>U+036C COMBINING LATIN SMALL LETTER R
+<br><span class=l><span class=e>a</span>&#x36D;</span>U+036D COMBINING LATIN SMALL LETTER T
+<br><span class=l><span class=e>a</span>&#x36E;</span>U+036E COMBINING LATIN SMALL LETTER V
+<br><span class=l><span class=e>a</span>&#x36F;</span>U+036F COMBINING LATIN SMALL LETTER X
+<br><span class=l><span class=e>a</span>&#x483;</span>U+0483 COMBINING CYRILLIC TITLO
+<br><span class=l><span class=e>a</span>&#x484;</span>U+0484 COMBINING CYRILLIC PALATALIZATION
+<br><span class=l><span class=e>a</span>&#x485;</span>U+0485 COMBINING CYRILLIC DASIA PNEUMATA
+<br><span class=l><span class=e>a</span>&#x486;</span>U+0486 COMBINING CYRILLIC PSILI PNEUMATA
+<br><span class=l><span class=e>a</span>&#x487;</span>U+0487 COMBINING CYRILLIC POKRYTIE
+<br><span class=l><span class=e>a</span>&#x591;</span>U+0591 HEBREW ACCENT ETNAHTA
+<br><span class=l><span class=e>a</span>&#x592;</span>U+0592 HEBREW ACCENT SEGOL
+<br><span class=l><span class=e>a</span>&#x593;</span>U+0593 HEBREW ACCENT SHALSHELET
+<br><span class=l><span class=e>a</span>&#x594;</span>U+0594 HEBREW ACCENT ZAQEF QATAN
+<br><span class=l><span class=e>a</span>&#x595;</span>U+0595 HEBREW ACCENT ZAQEF GADOL
+<br><span class=l><span class=e>a</span>&#x596;</span>U+0596 HEBREW ACCENT TIPEHA
+<br><span class=l><span class=e>a</span>&#x597;</span>U+0597 HEBREW ACCENT REVIA
+<br><span class=l><span class=e>a</span>&#x598;</span>U+0598 HEBREW ACCENT ZARQA
+<br><span class=l><span class=e>a</span>&#x599;</span>U+0599 HEBREW ACCENT PASHTA
+<br><span class=l><span class=e>a</span>&#x59A;</span>U+059A HEBREW ACCENT YETIV
+<br><span class=l><span class=e>a</span>&#x59B;</span>U+059B HEBREW ACCENT TEVIR
+<br><span class=l><span class=e>a</span>&#x59C;</span>U+059C HEBREW ACCENT GERESH
+<br><span class=l><span class=e>a</span>&#x59D;</span>U+059D HEBREW ACCENT GERESH MUQDAM
+<br><span class=l><span class=e>a</span>&#x59E;</span>U+059E HEBREW ACCENT GERSHAYIM
+<br><span class=l><span class=e>a</span>&#x59F;</span>U+059F HEBREW ACCENT QARNEY PARA
+<br><span class=l><span class=e>a</span>&#x5A0;</span>U+05A0 HEBREW ACCENT TELISHA GEDOLA
+<br><span class=l><span class=e>a</span>&#x5A1;</span>U+05A1 HEBREW ACCENT PAZER
+<br><span class=l><span class=e>a</span>&#x5A2;</span>U+05A2 HEBREW ACCENT ATNAH HAFUKH
+<br><span class=l><span class=e>a</span>&#x5A3;</span>U+05A3 HEBREW ACCENT MUNAH
+<br><span class=l><span class=e>a</span>&#x5A4;</span>U+05A4 HEBREW ACCENT MAHAPAKH
+<br><span class=l><span class=e>a</span>&#x5A5;</span>U+05A5 HEBREW ACCENT MERKHA
+<br><span class=l><span class=e>a</span>&#x5A6;</span>U+05A6 HEBREW ACCENT MERKHA KEFULA
+<br><span class=l><span class=e>a</span>&#x5A7;</span>U+05A7 HEBREW ACCENT DARGA
+<br><span class=l><span class=e>a</span>&#x5A8;</span>U+05A8 HEBREW ACCENT QADMA
+<br><span class=l><span class=e>a</span>&#x5A9;</span>U+05A9 HEBREW ACCENT TELISHA QETANA
+<br><span class=l><span class=e>a</span>&#x5AA;</span>U+05AA HEBREW ACCENT YERAH BEN YOMO
+<br><span class=l><span class=e>a</span>&#x5AB;</span>U+05AB HEBREW ACCENT OLE
+<br><span class=l><span class=e>a</span>&#x5AC;</span>U+05AC HEBREW ACCENT ILUY
+<br><span class=l><span class=e>a</span>&#x5AD;</span>U+05AD HEBREW ACCENT DEHI
+<br><span class=l><span class=e>a</span>&#x5AE;</span>U+05AE HEBREW ACCENT ZINOR
+<br><span class=l><span class=e>a</span>&#x5AF;</span>U+05AF HEBREW MARK MASORA CIRCLE
+<br><span class=l><span class=e>a</span>&#x5B0;</span>U+05B0 HEBREW POINT SHEVA
+<br><span class=l><span class=e>a</span>&#x5B1;</span>U+05B1 HEBREW POINT HATAF SEGOL
+<br><span class=l><span class=e>a</span>&#x5B2;</span>U+05B2 HEBREW POINT HATAF PATAH
+<br><span class=l><span class=e>a</span>&#x5B3;</span>U+05B3 HEBREW POINT HATAF QAMATS
+<br><span class=l><span class=e>a</span>&#x5B4;</span>U+05B4 HEBREW POINT HIRIQ
+<br><span class=l><span class=e>a</span>&#x5B5;</span>U+05B5 HEBREW POINT TSERE
+<br><span class=l><span class=e>a</span>&#x5B6;</span>U+05B6 HEBREW POINT SEGOL
+<br><span class=l><span class=e>a</span>&#x5B7;</span>U+05B7 HEBREW POINT PATAH
+<br><span class=l><span class=e>a</span>&#x5B8;</span>U+05B8 HEBREW POINT QAMATS
+<br><span class=l><span class=e>a</span>&#x5B9;</span>U+05B9 HEBREW POINT HOLAM
+<br><span class=l><span class=e>a</span>&#x5BA;</span>U+05BA HEBREW POINT HOLAM HASER FOR VAV
+<br><span class=l><span class=e>a</span>&#x5BB;</span>U+05BB HEBREW POINT QUBUTS
+<br><span class=l><span class=e>a</span>&#x5BC;</span>U+05BC HEBREW POINT DAGESH OR MAPIQ
+<br><span class=l><span class=e>a</span>&#x5BD;</span>U+05BD HEBREW POINT METEG
+<br><span class=l><span class=e>a</span>&#x5BF;</span>U+05BF HEBREW POINT RAFE
+<br><span class=l><span class=e>a</span>&#x5C1;</span>U+05C1 HEBREW POINT SHIN DOT
+<br><span class=l><span class=e>a</span>&#x5C2;</span>U+05C2 HEBREW POINT SIN DOT
+<br><span class=l><span class=e>a</span>&#x5C4;</span>U+05C4 HEBREW MARK UPPER DOT
+<br><span class=l><span class=e>a</span>&#x5C5;</span>U+05C5 HEBREW MARK LOWER DOT
+<br><span class=l><span class=e>a</span>&#x5C7;</span>U+05C7 HEBREW POINT QAMATS QATAN
+<br><span class=l><span class=e>a</span>&#x610;</span>U+0610 ARABIC SIGN SALLALLAHOU ALAYHE WASSALLAM
+<br><span class=l><span class=e>a</span>&#x611;</span>U+0611 ARABIC SIGN ALAYHE ASSALLAM
+<br><span class=l><span class=e>a</span>&#x612;</span>U+0612 ARABIC SIGN RAHMATULLAH ALAYHE
+<br><span class=l><span class=e>a</span>&#x613;</span>U+0613 ARABIC SIGN RADI ALLAHOU ANHU
+<br><span class=l><span class=e>a</span>&#x614;</span>U+0614 ARABIC SIGN TAKHALLUS
+<br><span class=l><span class=e>a</span>&#x615;</span>U+0615 ARABIC SMALL HIGH TAH
+<br><span class=l><span class=e>a</span>&#x616;</span>U+0616 ARABIC SMALL HIGH LIGATURE ALEF WITH LAM WITH YEH
+<br><span class=l><span class=e>a</span>&#x617;</span>U+0617 ARABIC SMALL HIGH ZAIN
+<br><span class=l><span class=e>a</span>&#x618;</span>U+0618 ARABIC SMALL FATHA
+<br><span class=l><span class=e>a</span>&#x619;</span>U+0619 ARABIC SMALL DAMMA
+<br><span class=l><span class=e>a</span>&#x61A;</span>U+061A ARABIC SMALL KASRA
+<br><span class=l><span class=e>a</span>&#x64B;</span>U+064B ARABIC FATHATAN
+<br><span class=l><span class=e>a</span>&#x64C;</span>U+064C ARABIC DAMMATAN
+<br><span class=l><span class=e>a</span>&#x64D;</span>U+064D ARABIC KASRATAN
+<br><span class=l><span class=e>a</span>&#x64E;</span>U+064E ARABIC FATHA
+<br><span class=l><span class=e>a</span>&#x64F;</span>U+064F ARABIC DAMMA
+<br><span class=l><span class=e>a</span>&#x650;</span>U+0650 ARABIC KASRA
+<br><span class=l><span class=e>a</span>&#x651;</span>U+0651 ARABIC SHADDA
+<br><span class=l><span class=e>a</span>&#x652;</span>U+0652 ARABIC SUKUN
+<br><span class=l><span class=e>a</span>&#x653;</span>U+0653 ARABIC MADDAH ABOVE
+<br><span class=l><span class=e>a</span>&#x654;</span>U+0654 ARABIC HAMZA ABOVE
+<br><span class=l><span class=e>a</span>&#x655;</span>U+0655 ARABIC HAMZA BELOW
+<br><span class=l><span class=e>a</span>&#x656;</span>U+0656 ARABIC SUBSCRIPT ALEF
+<br><span class=l><span class=e>a</span>&#x657;</span>U+0657 ARABIC INVERTED DAMMA
+<br><span class=l><span class=e>a</span>&#x658;</span>U+0658 ARABIC MARK NOON GHUNNA
+<br><span class=l><span class=e>a</span>&#x659;</span>U+0659 ARABIC ZWARAKAY
+<br><span class=l><span class=e>a</span>&#x65A;</span>U+065A ARABIC VOWEL SIGN SMALL V ABOVE
+<br><span class=l><span class=e>a</span>&#x65B;</span>U+065B ARABIC VOWEL SIGN INVERTED SMALL V ABOVE
+<br><span class=l><span class=e>a</span>&#x65C;</span>U+065C ARABIC VOWEL SIGN DOT BELOW
+<br><span class=l><span class=e>a</span>&#x65D;</span>U+065D ARABIC REVERSED DAMMA
+<br><span class=l><span class=e>a</span>&#x65E;</span>U+065E ARABIC FATHA WITH TWO DOTS
+<br><span class=l><span class=e>a</span>&#x65F;</span>U+065F ARABIC WAVY HAMZA BELOW
+<br><span class=l><span class=e>a</span>&#x670;</span>U+0670 ARABIC LETTER SUPERSCRIPT ALEF
+<br><span class=l><span class=e>a</span>&#x6D6;</span>U+06D6 ARABIC SMALL HIGH LIGATURE SAD WITH LAM WITH ALEF MAKSURA
+<br><span class=l><span class=e>a</span>&#x6D7;</span>U+06D7 ARABIC SMALL HIGH LIGATURE QAF WITH LAM WITH ALEF MAKSURA
+<br><span class=l><span class=e>a</span>&#x6D8;</span>U+06D8 ARABIC SMALL HIGH MEEM INITIAL FORM
+<br><span class=l><span class=e>a</span>&#x6D9;</span>U+06D9 ARABIC SMALL HIGH LAM ALEF
+<br><span class=l><span class=e>a</span>&#x6DA;</span>U+06DA ARABIC SMALL HIGH JEEM
+<br><span class=l><span class=e>a</span>&#x6DB;</span>U+06DB ARABIC SMALL HIGH THREE DOTS
+<br><span class=l><span class=e>a</span>&#x6DC;</span>U+06DC ARABIC SMALL HIGH SEEN
+<br><span class=l><span class=e>a</span>&#x6DF;</span>U+06DF ARABIC SMALL HIGH ROUNDED ZERO
+<br><span class=l><span class=e>a</span>&#x6E0;</span>U+06E0 ARABIC SMALL HIGH UPRIGHT RECTANGULAR ZERO
+<br><span class=l><span class=e>a</span>&#x6E1;</span>U+06E1 ARABIC SMALL HIGH DOTLESS HEAD OF KHAH
+<br><span class=l><span class=e>a</span>&#x6E2;</span>U+06E2 ARABIC SMALL HIGH MEEM ISOLATED FORM
+<br><span class=l><span class=e>a</span>&#x6E3;</span>U+06E3 ARABIC SMALL LOW SEEN
+<br><span class=l><span class=e>a</span>&#x6E4;</span>U+06E4 ARABIC SMALL HIGH MADDA
+<br><span class=l><span class=e>a</span>&#x6E7;</span>U+06E7 ARABIC SMALL HIGH YEH
+<br><span class=l><span class=e>a</span>&#x6E8;</span>U+06E8 ARABIC SMALL HIGH NOON
+<br><span class=l><span class=e>a</span>&#x6EA;</span>U+06EA ARABIC EMPTY CENTRE LOW STOP
+<br><span class=l><span class=e>a</span>&#x6EB;</span>U+06EB ARABIC EMPTY CENTRE HIGH STOP
+<br><span class=l><span class=e>a</span>&#x6EC;</span>U+06EC ARABIC ROUNDED HIGH STOP WITH FILLED CENTRE
+<br><span class=l><span class=e>a</span>&#x6ED;</span>U+06ED ARABIC SMALL LOW MEEM
+<br><span class=l><span class=e>a</span>&#x711;</span>U+0711 SYRIAC LETTER SUPERSCRIPT ALAPH
+<br><span class=l><span class=e>a</span>&#x730;</span>U+0730 SYRIAC PTHAHA ABOVE
+<br><span class=l><span class=e>a</span>&#x731;</span>U+0731 SYRIAC PTHAHA BELOW
+<br><span class=l><span class=e>a</span>&#x732;</span>U+0732 SYRIAC PTHAHA DOTTED
+<br><span class=l><span class=e>a</span>&#x733;</span>U+0733 SYRIAC ZQAPHA ABOVE
+<br><span class=l><span class=e>a</span>&#x734;</span>U+0734 SYRIAC ZQAPHA BELOW
+<br><span class=l><span class=e>a</span>&#x735;</span>U+0735 SYRIAC ZQAPHA DOTTED
+<br><span class=l><span class=e>a</span>&#x736;</span>U+0736 SYRIAC RBASA ABOVE
+<br><span class=l><span class=e>a</span>&#x737;</span>U+0737 SYRIAC RBASA BELOW
+<br><span class=l><span class=e>a</span>&#x738;</span>U+0738 SYRIAC DOTTED ZLAMA HORIZONTAL
+<br><span class=l><span class=e>a</span>&#x739;</span>U+0739 SYRIAC DOTTED ZLAMA ANGULAR
+<br><span class=l><span class=e>a</span>&#x73A;</span>U+073A SYRIAC HBASA ABOVE
+<br><span class=l><span class=e>a</span>&#x73B;</span>U+073B SYRIAC HBASA BELOW
+<br><span class=l><span class=e>a</span>&#x73C;</span>U+073C SYRIAC HBASA-ESASA DOTTED
+<br><span class=l><span class=e>a</span>&#x73D;</span>U+073D SYRIAC ESASA ABOVE
+<br><span class=l><span class=e>a</span>&#x73E;</span>U+073E SYRIAC ESASA BELOW
+<br><span class=l><span class=e>a</span>&#x73F;</span>U+073F SYRIAC RWAHA
+<br><span class=l><span class=e>a</span>&#x740;</span>U+0740 SYRIAC FEMININE DOT
+<br><span class=l><span class=e>a</span>&#x741;</span>U+0741 SYRIAC QUSHSHAYA
+<br><span class=l><span class=e>a</span>&#x742;</span>U+0742 SYRIAC RUKKAKHA
+<br><span class=l><span class=e>a</span>&#x743;</span>U+0743 SYRIAC TWO VERTICAL DOTS ABOVE
+<br><span class=l><span class=e>a</span>&#x744;</span>U+0744 SYRIAC TWO VERTICAL DOTS BELOW
+<br><span class=l><span class=e>a</span>&#x745;</span>U+0745 SYRIAC THREE DOTS ABOVE
+<br><span class=l><span class=e>a</span>&#x746;</span>U+0746 SYRIAC THREE DOTS BELOW
+<br><span class=l><span class=e>a</span>&#x747;</span>U+0747 SYRIAC OBLIQUE LINE ABOVE
+<br><span class=l><span class=e>a</span>&#x748;</span>U+0748 SYRIAC OBLIQUE LINE BELOW
+<br><span class=l><span class=e>a</span>&#x749;</span>U+0749 SYRIAC MUSIC
+<br><span class=l><span class=e>a</span>&#x74A;</span>U+074A SYRIAC BARREKH
+<br><span class=l><span class=e>a</span>&#x7A6;</span>U+07A6 THAANA ABAFILI
+<br><span class=l><span class=e>a</span>&#x7A7;</span>U+07A7 THAANA AABAAFILI
+<br><span class=l><span class=e>a</span>&#x7A8;</span>U+07A8 THAANA IBIFILI
+<br><span class=l><span class=e>a</span>&#x7A9;</span>U+07A9 THAANA EEBEEFILI
+<br><span class=l><span class=e>a</span>&#x7AA;</span>U+07AA THAANA UBUFILI
+<br><span class=l><span class=e>a</span>&#x7AB;</span>U+07AB THAANA OOBOOFILI
+<br><span class=l><span class=e>a</span>&#x7AC;</span>U+07AC THAANA EBEFILI
+<br><span class=l><span class=e>a</span>&#x7AD;</span>U+07AD THAANA EYBEYFILI
+<br><span class=l><span class=e>a</span>&#x7AE;</span>U+07AE THAANA OBOFILI
+<br><span class=l><span class=e>a</span>&#x7AF;</span>U+07AF THAANA OABOAFILI
+<br><span class=l><span class=e>a</span>&#x7B0;</span>U+07B0 THAANA SUKUN
+<br><span class=l><span class=e>a</span>&#x7EB;</span>U+07EB NKO COMBINING SHORT HIGH TONE
+<br><span class=l><span class=e>a</span>&#x7EC;</span>U+07EC NKO COMBINING SHORT LOW TONE
+<br><span class=l><span class=e>a</span>&#x7ED;</span>U+07ED NKO COMBINING SHORT RISING TONE
+<br><span class=l><span class=e>a</span>&#x7EE;</span>U+07EE NKO COMBINING LONG DESCENDING TONE
+<br><span class=l><span class=e>a</span>&#x7EF;</span>U+07EF NKO COMBINING LONG HIGH TONE
+<br><span class=l><span class=e>a</span>&#x7F0;</span>U+07F0 NKO COMBINING LONG LOW TONE
+<br><span class=l><span class=e>a</span>&#x7F1;</span>U+07F1 NKO COMBINING LONG RISING TONE
+<br><span class=l><span class=e>a</span>&#x7F2;</span>U+07F2 NKO COMBINING NASALIZATION MARK
+<br><span class=l><span class=e>a</span>&#x7F3;</span>U+07F3 NKO COMBINING DOUBLE DOT ABOVE
+<br><span class=l><span class=e>a</span>&#x7FD;</span>U+07FD NKO DANTAYALAN
+<br><span class=l><span class=e>a</span>&#x816;</span>U+0816 SAMARITAN MARK IN
+<br><span class=l><span class=e>a</span>&#x817;</span>U+0817 SAMARITAN MARK IN-ALAF
+<br><span class=l><span class=e>a</span>&#x818;</span>U+0818 SAMARITAN MARK OCCLUSION
+<br><span class=l><span class=e>a</span>&#x819;</span>U+0819 SAMARITAN MARK DAGESH
+<br><span class=l><span class=e>a</span>&#x81B;</span>U+081B SAMARITAN MARK EPENTHETIC YUT
+<br><span class=l><span class=e>a</span>&#x81C;</span>U+081C SAMARITAN VOWEL SIGN LONG E
+<br><span class=l><span class=e>a</span>&#x81D;</span>U+081D SAMARITAN VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x81E;</span>U+081E SAMARITAN VOWEL SIGN OVERLONG AA
+<br><span class=l><span class=e>a</span>&#x81F;</span>U+081F SAMARITAN VOWEL SIGN LONG AA
+<br><span class=l><span class=e>a</span>&#x820;</span>U+0820 SAMARITAN VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#x821;</span>U+0821 SAMARITAN VOWEL SIGN OVERLONG A
+<br><span class=l><span class=e>a</span>&#x822;</span>U+0822 SAMARITAN VOWEL SIGN LONG A
+<br><span class=l><span class=e>a</span>&#x823;</span>U+0823 SAMARITAN VOWEL SIGN A
+<br><span class=l><span class=e>a</span>&#x825;</span>U+0825 SAMARITAN VOWEL SIGN SHORT A
+<br><span class=l><span class=e>a</span>&#x826;</span>U+0826 SAMARITAN VOWEL SIGN LONG U
+<br><span class=l><span class=e>a</span>&#x827;</span>U+0827 SAMARITAN VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x829;</span>U+0829 SAMARITAN VOWEL SIGN LONG I
+<br><span class=l><span class=e>a</span>&#x82A;</span>U+082A SAMARITAN VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x82B;</span>U+082B SAMARITAN VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x82C;</span>U+082C SAMARITAN VOWEL SIGN SUKUN
+<br><span class=l><span class=e>a</span>&#x82D;</span>U+082D SAMARITAN MARK NEQUDAA
+<br><span class=l><span class=e>a</span>&#x859;</span>U+0859 MANDAIC AFFRICATION MARK
+<br><span class=l><span class=e>a</span>&#x85A;</span>U+085A MANDAIC VOCALIZATION MARK
+<br><span class=l><span class=e>a</span>&#x85B;</span>U+085B MANDAIC GEMINATION MARK
+<br><span class=l><span class=e>a</span>&#x8D3;</span>U+08D3 ARABIC SMALL LOW WAW
+<br><span class=l><span class=e>a</span>&#x8D4;</span>U+08D4 ARABIC SMALL HIGH WORD AR-RUB
+<br><span class=l><span class=e>a</span>&#x8D5;</span>U+08D5 ARABIC SMALL HIGH SAD
+<br><span class=l><span class=e>a</span>&#x8D6;</span>U+08D6 ARABIC SMALL HIGH AIN
+<br><span class=l><span class=e>a</span>&#x8D7;</span>U+08D7 ARABIC SMALL HIGH QAF
+<br><span class=l><span class=e>a</span>&#x8D8;</span>U+08D8 ARABIC SMALL HIGH NOON WITH KASRA
+<br><span class=l><span class=e>a</span>&#x8D9;</span>U+08D9 ARABIC SMALL LOW NOON WITH KASRA
+<br><span class=l><span class=e>a</span>&#x8DA;</span>U+08DA ARABIC SMALL HIGH WORD ATH-THALATHA
+<br><span class=l><span class=e>a</span>&#x8DB;</span>U+08DB ARABIC SMALL HIGH WORD AS-SAJDA
+<br><span class=l><span class=e>a</span>&#x8DC;</span>U+08DC ARABIC SMALL HIGH WORD AN-NISF
+<br><span class=l><span class=e>a</span>&#x8DD;</span>U+08DD ARABIC SMALL HIGH WORD SAKTA
+<br><span class=l><span class=e>a</span>&#x8DE;</span>U+08DE ARABIC SMALL HIGH WORD QIF
+<br><span class=l><span class=e>a</span>&#x8DF;</span>U+08DF ARABIC SMALL HIGH WORD WAQFA
+<br><span class=l><span class=e>a</span>&#x8E0;</span>U+08E0 ARABIC SMALL HIGH FOOTNOTE MARKER
+<br><span class=l><span class=e>a</span>&#x8E1;</span>U+08E1 ARABIC SMALL HIGH SIGN SAFHA
+<br><span class=l><span class=e>a</span>&#x8E3;</span>U+08E3 ARABIC TURNED DAMMA BELOW
+<br><span class=l><span class=e>a</span>&#x8E4;</span>U+08E4 ARABIC CURLY FATHA
+<br><span class=l><span class=e>a</span>&#x8E5;</span>U+08E5 ARABIC CURLY DAMMA
+<br><span class=l><span class=e>a</span>&#x8E6;</span>U+08E6 ARABIC CURLY KASRA
+<br><span class=l><span class=e>a</span>&#x8E7;</span>U+08E7 ARABIC CURLY FATHATAN
+<br><span class=l><span class=e>a</span>&#x8E8;</span>U+08E8 ARABIC CURLY DAMMATAN
+<br><span class=l><span class=e>a</span>&#x8E9;</span>U+08E9 ARABIC CURLY KASRATAN
+<br><span class=l><span class=e>a</span>&#x8EA;</span>U+08EA ARABIC TONE ONE DOT ABOVE
+<br><span class=l><span class=e>a</span>&#x8EB;</span>U+08EB ARABIC TONE TWO DOTS ABOVE
+<br><span class=l><span class=e>a</span>&#x8EC;</span>U+08EC ARABIC TONE LOOP ABOVE
+<br><span class=l><span class=e>a</span>&#x8ED;</span>U+08ED ARABIC TONE ONE DOT BELOW
+<br><span class=l><span class=e>a</span>&#x8EE;</span>U+08EE ARABIC TONE TWO DOTS BELOW
+<br><span class=l><span class=e>a</span>&#x8EF;</span>U+08EF ARABIC TONE LOOP BELOW
+<br><span class=l><span class=e>a</span>&#x8F0;</span>U+08F0 ARABIC OPEN FATHATAN
+<br><span class=l><span class=e>a</span>&#x8F1;</span>U+08F1 ARABIC OPEN DAMMATAN
+<br><span class=l><span class=e>a</span>&#x8F2;</span>U+08F2 ARABIC OPEN KASRATAN
+<br><span class=l><span class=e>a</span>&#x8F3;</span>U+08F3 ARABIC SMALL HIGH WAW
+<br><span class=l><span class=e>a</span>&#x8F4;</span>U+08F4 ARABIC FATHA WITH RING
+<br><span class=l><span class=e>a</span>&#x8F5;</span>U+08F5 ARABIC FATHA WITH DOT ABOVE
+<br><span class=l><span class=e>a</span>&#x8F6;</span>U+08F6 ARABIC KASRA WITH DOT BELOW
+<br><span class=l><span class=e>a</span>&#x8F7;</span>U+08F7 ARABIC LEFT ARROWHEAD ABOVE
+<br><span class=l><span class=e>a</span>&#x8F8;</span>U+08F8 ARABIC RIGHT ARROWHEAD ABOVE
+<br><span class=l><span class=e>a</span>&#x8F9;</span>U+08F9 ARABIC LEFT ARROWHEAD BELOW
+<br><span class=l><span class=e>a</span>&#x8FA;</span>U+08FA ARABIC RIGHT ARROWHEAD BELOW
+<br><span class=l><span class=e>a</span>&#x8FB;</span>U+08FB ARABIC DOUBLE RIGHT ARROWHEAD ABOVE
+<br><span class=l><span class=e>a</span>&#x8FC;</span>U+08FC ARABIC DOUBLE RIGHT ARROWHEAD ABOVE WITH DOT
+<br><span class=l><span class=e>a</span>&#x8FD;</span>U+08FD ARABIC RIGHT ARROWHEAD ABOVE WITH DOT
+<br><span class=l><span class=e>a</span>&#x8FE;</span>U+08FE ARABIC DAMMA WITH DOT
+<br><span class=l><span class=e>a</span>&#x8FF;</span>U+08FF ARABIC MARK SIDEWAYS NOON GHUNNA
+<br><span class=l><span class=e>a</span>&#x900;</span>U+0900 DEVANAGARI SIGN INVERTED CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x901;</span>U+0901 DEVANAGARI SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x902;</span>U+0902 DEVANAGARI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x93A;</span>U+093A DEVANAGARI VOWEL SIGN OE
+<br><span class=l><span class=e>a</span>&#x93C;</span>U+093C DEVANAGARI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x941;</span>U+0941 DEVANAGARI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x942;</span>U+0942 DEVANAGARI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x943;</span>U+0943 DEVANAGARI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x944;</span>U+0944 DEVANAGARI VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x945;</span>U+0945 DEVANAGARI VOWEL SIGN CANDRA E
+<br><span class=l><span class=e>a</span>&#x946;</span>U+0946 DEVANAGARI VOWEL SIGN SHORT E
+<br><span class=l><span class=e>a</span>&#x947;</span>U+0947 DEVANAGARI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x948;</span>U+0948 DEVANAGARI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x94D;</span>U+094D DEVANAGARI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x951;</span>U+0951 DEVANAGARI STRESS SIGN UDATTA
+<br><span class=l><span class=e>a</span>&#x952;</span>U+0952 DEVANAGARI STRESS SIGN ANUDATTA
+<br><span class=l><span class=e>a</span>&#x953;</span>U+0953 DEVANAGARI GRAVE ACCENT
+<br><span class=l><span class=e>a</span>&#x954;</span>U+0954 DEVANAGARI ACUTE ACCENT
+<br><span class=l><span class=e>a</span>&#x955;</span>U+0955 DEVANAGARI VOWEL SIGN CANDRA LONG E
+<br><span class=l><span class=e>a</span>&#x956;</span>U+0956 DEVANAGARI VOWEL SIGN UE
+<br><span class=l><span class=e>a</span>&#x957;</span>U+0957 DEVANAGARI VOWEL SIGN UUE
+<br><span class=l><span class=e>a</span>&#x962;</span>U+0962 DEVANAGARI VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x963;</span>U+0963 DEVANAGARI VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x981;</span>U+0981 BENGALI SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x9BC;</span>U+09BC BENGALI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x9C1;</span>U+09C1 BENGALI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x9C2;</span>U+09C2 BENGALI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x9C3;</span>U+09C3 BENGALI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x9C4;</span>U+09C4 BENGALI VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x9CD;</span>U+09CD BENGALI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x9E2;</span>U+09E2 BENGALI VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x9E3;</span>U+09E3 BENGALI VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x9FE;</span>U+09FE BENGALI SANDHI MARK
+<br><span class=l><span class=e>a</span>&#xA01;</span>U+0A01 GURMUKHI SIGN ADAK BINDI
+<br><span class=l><span class=e>a</span>&#xA02;</span>U+0A02 GURMUKHI SIGN BINDI
+<br><span class=l><span class=e>a</span>&#xA3C;</span>U+0A3C GURMUKHI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#xA41;</span>U+0A41 GURMUKHI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xA42;</span>U+0A42 GURMUKHI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#xA47;</span>U+0A47 GURMUKHI VOWEL SIGN EE
+<br><span class=l><span class=e>a</span>&#xA48;</span>U+0A48 GURMUKHI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#xA4B;</span>U+0A4B GURMUKHI VOWEL SIGN OO
+<br><span class=l><span class=e>a</span>&#xA4C;</span>U+0A4C GURMUKHI VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#xA4D;</span>U+0A4D GURMUKHI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xA51;</span>U+0A51 GURMUKHI SIGN UDAAT
+<br><span class=l><span class=e>a</span>&#xA70;</span>U+0A70 GURMUKHI TIPPI
+<br><span class=l><span class=e>a</span>&#xA71;</span>U+0A71 GURMUKHI ADDAK
+<br><span class=l><span class=e>a</span>&#xA75;</span>U+0A75 GURMUKHI SIGN YAKASH
+<br><span class=l><span class=e>a</span>&#xA81;</span>U+0A81 GUJARATI SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#xA82;</span>U+0A82 GUJARATI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#xABC;</span>U+0ABC GUJARATI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#xAC1;</span>U+0AC1 GUJARATI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xAC2;</span>U+0AC2 GUJARATI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#xAC3;</span>U+0AC3 GUJARATI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#xAC4;</span>U+0AC4 GUJARATI VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#xAC5;</span>U+0AC5 GUJARATI VOWEL SIGN CANDRA E
+<br><span class=l><span class=e>a</span>&#xAC7;</span>U+0AC7 GUJARATI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#xAC8;</span>U+0AC8 GUJARATI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#xACD;</span>U+0ACD GUJARATI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xAE2;</span>U+0AE2 GUJARATI VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#xAE3;</span>U+0AE3 GUJARATI VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#xAFA;</span>U+0AFA GUJARATI SIGN SUKUN
+<br><span class=l><span class=e>a</span>&#xAFB;</span>U+0AFB GUJARATI SIGN SHADDA
+<br><span class=l><span class=e>a</span>&#xAFC;</span>U+0AFC GUJARATI SIGN MADDAH
+<br><span class=l><span class=e>a</span>&#xAFD;</span>U+0AFD GUJARATI SIGN THREE-DOT NUKTA ABOVE
+<br><span class=l><span class=e>a</span>&#xAFE;</span>U+0AFE GUJARATI SIGN CIRCLE NUKTA ABOVE
+<br><span class=l><span class=e>a</span>&#xAFF;</span>U+0AFF GUJARATI SIGN TWO-CIRCLE NUKTA ABOVE
+<br><span class=l><span class=e>a</span>&#xB01;</span>U+0B01 ORIYA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#xB3C;</span>U+0B3C ORIYA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#xB3F;</span>U+0B3F ORIYA VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#xB41;</span>U+0B41 ORIYA VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xB42;</span>U+0B42 ORIYA VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#xB43;</span>U+0B43 ORIYA VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#xB44;</span>U+0B44 ORIYA VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#xB4D;</span>U+0B4D ORIYA SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xB55;</span>U+0B55 ORIYA SIGN OVERLINE
+<br><span class=l><span class=e>a</span>&#xB56;</span>U+0B56 ORIYA AI LENGTH MARK
+<br><span class=l><span class=e>a</span>&#xB62;</span>U+0B62 ORIYA VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#xB63;</span>U+0B63 ORIYA VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#xB82;</span>U+0B82 TAMIL SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#xBC0;</span>U+0BC0 TAMIL VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#xBCD;</span>U+0BCD TAMIL SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xC00;</span>U+0C00 TELUGU SIGN COMBINING CANDRABINDU ABOVE
+<br><span class=l><span class=e>a</span>&#xC04;</span>U+0C04 TELUGU SIGN COMBINING ANUSVARA ABOVE
+<br><span class=l><span class=e>a</span>&#xC3E;</span>U+0C3E TELUGU VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#xC3F;</span>U+0C3F TELUGU VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#xC40;</span>U+0C40 TELUGU VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#xC46;</span>U+0C46 TELUGU VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#xC47;</span>U+0C47 TELUGU VOWEL SIGN EE
+<br><span class=l><span class=e>a</span>&#xC48;</span>U+0C48 TELUGU VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#xC4A;</span>U+0C4A TELUGU VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#xC4B;</span>U+0C4B TELUGU VOWEL SIGN OO
+<br><span class=l><span class=e>a</span>&#xC4C;</span>U+0C4C TELUGU VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#xC4D;</span>U+0C4D TELUGU SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xC55;</span>U+0C55 TELUGU LENGTH MARK
+<br><span class=l><span class=e>a</span>&#xC56;</span>U+0C56 TELUGU AI LENGTH MARK
+<br><span class=l><span class=e>a</span>&#xC62;</span>U+0C62 TELUGU VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#xC63;</span>U+0C63 TELUGU VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#xC81;</span>U+0C81 KANNADA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#xCBC;</span>U+0CBC KANNADA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#xCBF;</span>U+0CBF KANNADA VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#xCC6;</span>U+0CC6 KANNADA VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#xCCC;</span>U+0CCC KANNADA VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#xCCD;</span>U+0CCD KANNADA SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xCE2;</span>U+0CE2 KANNADA VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#xCE3;</span>U+0CE3 KANNADA VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#xD00;</span>U+0D00 MALAYALAM SIGN COMBINING ANUSVARA ABOVE
+<br><span class=l><span class=e>a</span>&#xD01;</span>U+0D01 MALAYALAM SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#xD3B;</span>U+0D3B MALAYALAM SIGN VERTICAL BAR VIRAMA
+<br><span class=l><span class=e>a</span>&#xD3C;</span>U+0D3C MALAYALAM SIGN CIRCULAR VIRAMA
+<br><span class=l><span class=e>a</span>&#xD41;</span>U+0D41 MALAYALAM VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xD42;</span>U+0D42 MALAYALAM VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#xD43;</span>U+0D43 MALAYALAM VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#xD44;</span>U+0D44 MALAYALAM VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#xD4D;</span>U+0D4D MALAYALAM SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xD62;</span>U+0D62 MALAYALAM VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#xD63;</span>U+0D63 MALAYALAM VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#xD81;</span>U+0D81 SINHALA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#xDCA;</span>U+0DCA SINHALA SIGN AL-LAKUNA
+<br><span class=l><span class=e>a</span>&#xDD2;</span>U+0DD2 SINHALA VOWEL SIGN KETTI IS-PILLA
+<br><span class=l><span class=e>a</span>&#xDD3;</span>U+0DD3 SINHALA VOWEL SIGN DIGA IS-PILLA
+<br><span class=l><span class=e>a</span>&#xDD4;</span>U+0DD4 SINHALA VOWEL SIGN KETTI PAA-PILLA
+<br><span class=l><span class=e>a</span>&#xDD6;</span>U+0DD6 SINHALA VOWEL SIGN DIGA PAA-PILLA
+<br><span class=l><span class=e>a</span>&#xE31;</span>U+0E31 THAI CHARACTER MAI HAN-AKAT
+<br><span class=l><span class=e>a</span>&#xE34;</span>U+0E34 THAI CHARACTER SARA I
+<br><span class=l><span class=e>a</span>&#xE35;</span>U+0E35 THAI CHARACTER SARA II
+<br><span class=l><span class=e>a</span>&#xE36;</span>U+0E36 THAI CHARACTER SARA UE
+<br><span class=l><span class=e>a</span>&#xE37;</span>U+0E37 THAI CHARACTER SARA UEE
+<br><span class=l><span class=e>a</span>&#xE38;</span>U+0E38 THAI CHARACTER SARA U
+<br><span class=l><span class=e>a</span>&#xE39;</span>U+0E39 THAI CHARACTER SARA UU
+<br><span class=l><span class=e>a</span>&#xE3A;</span>U+0E3A THAI CHARACTER PHINTHU
+<br><span class=l><span class=e>a</span>&#xE47;</span>U+0E47 THAI CHARACTER MAITAIKHU
+<br><span class=l><span class=e>a</span>&#xE48;</span>U+0E48 THAI CHARACTER MAI EK
+<br><span class=l><span class=e>a</span>&#xE49;</span>U+0E49 THAI CHARACTER MAI THO
+<br><span class=l><span class=e>a</span>&#xE4A;</span>U+0E4A THAI CHARACTER MAI TRI
+<br><span class=l><span class=e>a</span>&#xE4B;</span>U+0E4B THAI CHARACTER MAI CHATTAWA
+<br><span class=l><span class=e>a</span>&#xE4C;</span>U+0E4C THAI CHARACTER THANTHAKHAT
+<br><span class=l><span class=e>a</span>&#xE4D;</span>U+0E4D THAI CHARACTER NIKHAHIT
+<br><span class=l><span class=e>a</span>&#xE4E;</span>U+0E4E THAI CHARACTER YAMAKKAN
+<br><span class=l><span class=e>a</span>&#xEB1;</span>U+0EB1 LAO VOWEL SIGN MAI KAN
+<br><span class=l><span class=e>a</span>&#xEB4;</span>U+0EB4 LAO VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#xEB5;</span>U+0EB5 LAO VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#xEB6;</span>U+0EB6 LAO VOWEL SIGN Y
+<br><span class=l><span class=e>a</span>&#xEB7;</span>U+0EB7 LAO VOWEL SIGN YY
+<br><span class=l><span class=e>a</span>&#xEB8;</span>U+0EB8 LAO VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xEB9;</span>U+0EB9 LAO VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#xEBA;</span>U+0EBA LAO SIGN PALI VIRAMA
+<br><span class=l><span class=e>a</span>&#xEBB;</span>U+0EBB LAO VOWEL SIGN MAI KON
+<br><span class=l><span class=e>a</span>&#xEBC;</span>U+0EBC LAO SEMIVOWEL SIGN LO
+<br><span class=l><span class=e>a</span>&#xEC8;</span>U+0EC8 LAO TONE MAI EK
+<br><span class=l><span class=e>a</span>&#xEC9;</span>U+0EC9 LAO TONE MAI THO
+<br><span class=l><span class=e>a</span>&#xECA;</span>U+0ECA LAO TONE MAI TI
+<br><span class=l><span class=e>a</span>&#xECB;</span>U+0ECB LAO TONE MAI CATAWA
+<br><span class=l><span class=e>a</span>&#xECC;</span>U+0ECC LAO CANCELLATION MARK
+<br><span class=l><span class=e>a</span>&#xECD;</span>U+0ECD LAO NIGGAHITA
+<br><span class=l><span class=e>a</span>&#xF18;</span>U+0F18 TIBETAN ASTROLOGICAL SIGN -KHYUD PA
+<br><span class=l><span class=e>a</span>&#xF19;</span>U+0F19 TIBETAN ASTROLOGICAL SIGN SDONG TSHUGS
+<br><span class=l><span class=e>a</span>&#xF35;</span>U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA
+<br><span class=l><span class=e>a</span>&#xF37;</span>U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS
+<br><span class=l><span class=e>a</span>&#xF39;</span>U+0F39 TIBETAN MARK TSA -PHRU
+<br><span class=l><span class=e>a</span>&#xF71;</span>U+0F71 TIBETAN VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#xF72;</span>U+0F72 TIBETAN VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#xF73;</span>U+0F73 TIBETAN VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#xF74;</span>U+0F74 TIBETAN VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xF75;</span>U+0F75 TIBETAN VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#xF76;</span>U+0F76 TIBETAN VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#xF77;</span>U+0F77 TIBETAN VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#xF78;</span>U+0F78 TIBETAN VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#xF79;</span>U+0F79 TIBETAN VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#xF7A;</span>U+0F7A TIBETAN VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#xF7B;</span>U+0F7B TIBETAN VOWEL SIGN EE
+<br><span class=l><span class=e>a</span>&#xF7C;</span>U+0F7C TIBETAN VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#xF7D;</span>U+0F7D TIBETAN VOWEL SIGN OO
+<br><span class=l><span class=e>a</span>&#xF7E;</span>U+0F7E TIBETAN SIGN RJES SU NGA RO
+<br><span class=l><span class=e>a</span>&#xF80;</span>U+0F80 TIBETAN VOWEL SIGN REVERSED I
+<br><span class=l><span class=e>a</span>&#xF81;</span>U+0F81 TIBETAN VOWEL SIGN REVERSED II
+<br><span class=l><span class=e>a</span>&#xF82;</span>U+0F82 TIBETAN SIGN NYI ZLA NAA DA
+<br><span class=l><span class=e>a</span>&#xF83;</span>U+0F83 TIBETAN SIGN SNA LDAN
+<br><span class=l><span class=e>a</span>&#xF84;</span>U+0F84 TIBETAN MARK HALANTA
+<br><span class=l><span class=e>a</span>&#xF86;</span>U+0F86 TIBETAN SIGN LCI RTAGS
+<br><span class=l><span class=e>a</span>&#xF87;</span>U+0F87 TIBETAN SIGN YANG RTAGS
+<br><span class=l><span class=e>a</span>&#xF8D;</span>U+0F8D TIBETAN SUBJOINED SIGN LCE TSA CAN
+<br><span class=l><span class=e>a</span>&#xF8E;</span>U+0F8E TIBETAN SUBJOINED SIGN MCHU CAN
+<br><span class=l><span class=e>a</span>&#xF8F;</span>U+0F8F TIBETAN SUBJOINED SIGN INVERTED MCHU CAN
+<br><span class=l><span class=e>a</span>&#xF90;</span>U+0F90 TIBETAN SUBJOINED LETTER KA
+<br><span class=l><span class=e>a</span>&#xF91;</span>U+0F91 TIBETAN SUBJOINED LETTER KHA
+<br><span class=l><span class=e>a</span>&#xF92;</span>U+0F92 TIBETAN SUBJOINED LETTER GA
+<br><span class=l><span class=e>a</span>&#xF93;</span>U+0F93 TIBETAN SUBJOINED LETTER GHA
+<br><span class=l><span class=e>a</span>&#xF94;</span>U+0F94 TIBETAN SUBJOINED LETTER NGA
+<br><span class=l><span class=e>a</span>&#xF95;</span>U+0F95 TIBETAN SUBJOINED LETTER CA
+<br><span class=l><span class=e>a</span>&#xF96;</span>U+0F96 TIBETAN SUBJOINED LETTER CHA
+<br><span class=l><span class=e>a</span>&#xF97;</span>U+0F97 TIBETAN SUBJOINED LETTER JA
+<br><span class=l><span class=e>a</span>&#xF99;</span>U+0F99 TIBETAN SUBJOINED LETTER NYA
+<br><span class=l><span class=e>a</span>&#xF9A;</span>U+0F9A TIBETAN SUBJOINED LETTER TTA
+<br><span class=l><span class=e>a</span>&#xF9B;</span>U+0F9B TIBETAN SUBJOINED LETTER TTHA
+<br><span class=l><span class=e>a</span>&#xF9C;</span>U+0F9C TIBETAN SUBJOINED LETTER DDA
+<br><span class=l><span class=e>a</span>&#xF9D;</span>U+0F9D TIBETAN SUBJOINED LETTER DDHA
+<br><span class=l><span class=e>a</span>&#xF9E;</span>U+0F9E TIBETAN SUBJOINED LETTER NNA
+<br><span class=l><span class=e>a</span>&#xF9F;</span>U+0F9F TIBETAN SUBJOINED LETTER TA
+<br><span class=l><span class=e>a</span>&#xFA0;</span>U+0FA0 TIBETAN SUBJOINED LETTER THA
+<br><span class=l><span class=e>a</span>&#xFA1;</span>U+0FA1 TIBETAN SUBJOINED LETTER DA
+<br><span class=l><span class=e>a</span>&#xFA2;</span>U+0FA2 TIBETAN SUBJOINED LETTER DHA
+<br><span class=l><span class=e>a</span>&#xFA3;</span>U+0FA3 TIBETAN SUBJOINED LETTER NA
+<br><span class=l><span class=e>a</span>&#xFA4;</span>U+0FA4 TIBETAN SUBJOINED LETTER PA
+<br><span class=l><span class=e>a</span>&#xFA5;</span>U+0FA5 TIBETAN SUBJOINED LETTER PHA
+<br><span class=l><span class=e>a</span>&#xFA6;</span>U+0FA6 TIBETAN SUBJOINED LETTER BA
+<br><span class=l><span class=e>a</span>&#xFA7;</span>U+0FA7 TIBETAN SUBJOINED LETTER BHA
+<br><span class=l><span class=e>a</span>&#xFA8;</span>U+0FA8 TIBETAN SUBJOINED LETTER MA
+<br><span class=l><span class=e>a</span>&#xFA9;</span>U+0FA9 TIBETAN SUBJOINED LETTER TSA
+<br><span class=l><span class=e>a</span>&#xFAA;</span>U+0FAA TIBETAN SUBJOINED LETTER TSHA
+<br><span class=l><span class=e>a</span>&#xFAB;</span>U+0FAB TIBETAN SUBJOINED LETTER DZA
+<br><span class=l><span class=e>a</span>&#xFAC;</span>U+0FAC TIBETAN SUBJOINED LETTER DZHA
+<br><span class=l><span class=e>a</span>&#xFAD;</span>U+0FAD TIBETAN SUBJOINED LETTER WA
+<br><span class=l><span class=e>a</span>&#xFAE;</span>U+0FAE TIBETAN SUBJOINED LETTER ZHA
+<br><span class=l><span class=e>a</span>&#xFAF;</span>U+0FAF TIBETAN SUBJOINED LETTER ZA
+<br><span class=l><span class=e>a</span>&#xFB0;</span>U+0FB0 TIBETAN SUBJOINED LETTER -A
+<br><span class=l><span class=e>a</span>&#xFB1;</span>U+0FB1 TIBETAN SUBJOINED LETTER YA
+<br><span class=l><span class=e>a</span>&#xFB2;</span>U+0FB2 TIBETAN SUBJOINED LETTER RA
+<br><span class=l><span class=e>a</span>&#xFB3;</span>U+0FB3 TIBETAN SUBJOINED LETTER LA
+<br><span class=l><span class=e>a</span>&#xFB4;</span>U+0FB4 TIBETAN SUBJOINED LETTER SHA
+<br><span class=l><span class=e>a</span>&#xFB5;</span>U+0FB5 TIBETAN SUBJOINED LETTER SSA
+<br><span class=l><span class=e>a</span>&#xFB6;</span>U+0FB6 TIBETAN SUBJOINED LETTER SA
+<br><span class=l><span class=e>a</span>&#xFB7;</span>U+0FB7 TIBETAN SUBJOINED LETTER HA
+<br><span class=l><span class=e>a</span>&#xFB8;</span>U+0FB8 TIBETAN SUBJOINED LETTER A
+<br><span class=l><span class=e>a</span>&#xFB9;</span>U+0FB9 TIBETAN SUBJOINED LETTER KSSA
+<br><span class=l><span class=e>a</span>&#xFBA;</span>U+0FBA TIBETAN SUBJOINED LETTER FIXED-FORM WA
+<br><span class=l><span class=e>a</span>&#xFBB;</span>U+0FBB TIBETAN SUBJOINED LETTER FIXED-FORM YA
+<br><span class=l><span class=e>a</span>&#xFBC;</span>U+0FBC TIBETAN SUBJOINED LETTER FIXED-FORM RA
+<br><span class=l><span class=e>a</span>&#xFC6;</span>U+0FC6 TIBETAN SYMBOL PADMA GDAN
+<br><span class=l><span class=e>a</span>&#x102D;</span>U+102D MYANMAR VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x102E;</span>U+102E MYANMAR VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x102F;</span>U+102F MYANMAR VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1030;</span>U+1030 MYANMAR VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x1032;</span>U+1032 MYANMAR VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x1033;</span>U+1033 MYANMAR VOWEL SIGN MON II
+<br><span class=l><span class=e>a</span>&#x1034;</span>U+1034 MYANMAR VOWEL SIGN MON O
+<br><span class=l><span class=e>a</span>&#x1035;</span>U+1035 MYANMAR VOWEL SIGN E ABOVE
+<br><span class=l><span class=e>a</span>&#x1036;</span>U+1036 MYANMAR SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x1037;</span>U+1037 MYANMAR SIGN DOT BELOW
+<br><span class=l><span class=e>a</span>&#x1039;</span>U+1039 MYANMAR SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x103A;</span>U+103A MYANMAR SIGN ASAT
+<br><span class=l><span class=e>a</span>&#x103D;</span>U+103D MYANMAR CONSONANT SIGN MEDIAL WA
+<br><span class=l><span class=e>a</span>&#x103E;</span>U+103E MYANMAR CONSONANT SIGN MEDIAL HA
+<br><span class=l><span class=e>a</span>&#x1058;</span>U+1058 MYANMAR VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x1059;</span>U+1059 MYANMAR VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x105E;</span>U+105E MYANMAR CONSONANT SIGN MON MEDIAL NA
+<br><span class=l><span class=e>a</span>&#x105F;</span>U+105F MYANMAR CONSONANT SIGN MON MEDIAL MA
+<br><span class=l><span class=e>a</span>&#x1060;</span>U+1060 MYANMAR CONSONANT SIGN MON MEDIAL LA
+<br><span class=l><span class=e>a</span>&#x1071;</span>U+1071 MYANMAR VOWEL SIGN GEBA KAREN I
+<br><span class=l><span class=e>a</span>&#x1072;</span>U+1072 MYANMAR VOWEL SIGN KAYAH OE
+<br><span class=l><span class=e>a</span>&#x1073;</span>U+1073 MYANMAR VOWEL SIGN KAYAH U
+<br><span class=l><span class=e>a</span>&#x1074;</span>U+1074 MYANMAR VOWEL SIGN KAYAH EE
+<br><span class=l><span class=e>a</span>&#x1082;</span>U+1082 MYANMAR CONSONANT SIGN SHAN MEDIAL WA
+<br><span class=l><span class=e>a</span>&#x1085;</span>U+1085 MYANMAR VOWEL SIGN SHAN E ABOVE
+<br><span class=l><span class=e>a</span>&#x1086;</span>U+1086 MYANMAR VOWEL SIGN SHAN FINAL Y
+<br><span class=l><span class=e>a</span>&#x108D;</span>U+108D MYANMAR SIGN SHAN COUNCIL EMPHATIC TONE
+<br><span class=l><span class=e>a</span>&#x109D;</span>U+109D MYANMAR VOWEL SIGN AITON AI
+<br><span class=l><span class=e>a</span>&#x135D;</span>U+135D ETHIOPIC COMBINING GEMINATION AND VOWEL LENGTH MARK
+<br><span class=l><span class=e>a</span>&#x135E;</span>U+135E ETHIOPIC COMBINING VOWEL LENGTH MARK
+<br><span class=l><span class=e>a</span>&#x135F;</span>U+135F ETHIOPIC COMBINING GEMINATION MARK
+<br><span class=l><span class=e>a</span>&#x1712;</span>U+1712 TAGALOG VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1713;</span>U+1713 TAGALOG VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1714;</span>U+1714 TAGALOG SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x1732;</span>U+1732 HANUNOO VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1733;</span>U+1733 HANUNOO VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1734;</span>U+1734 HANUNOO SIGN PAMUDPOD
+<br><span class=l><span class=e>a</span>&#x1752;</span>U+1752 BUHID VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1753;</span>U+1753 BUHID VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1772;</span>U+1772 TAGBANWA VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1773;</span>U+1773 TAGBANWA VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x17B4;</span>U+17B4 KHMER VOWEL INHERENT AQ
+<br><span class=l><span class=e>a</span>&#x17B5;</span>U+17B5 KHMER VOWEL INHERENT AA
+<br><span class=l><span class=e>a</span>&#x17B7;</span>U+17B7 KHMER VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x17B8;</span>U+17B8 KHMER VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x17B9;</span>U+17B9 KHMER VOWEL SIGN Y
+<br><span class=l><span class=e>a</span>&#x17BA;</span>U+17BA KHMER VOWEL SIGN YY
+<br><span class=l><span class=e>a</span>&#x17BB;</span>U+17BB KHMER VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x17BC;</span>U+17BC KHMER VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x17BD;</span>U+17BD KHMER VOWEL SIGN UA
+<br><span class=l><span class=e>a</span>&#x17C6;</span>U+17C6 KHMER SIGN NIKAHIT
+<br><span class=l><span class=e>a</span>&#x17C9;</span>U+17C9 KHMER SIGN MUUSIKATOAN
+<br><span class=l><span class=e>a</span>&#x17CA;</span>U+17CA KHMER SIGN TRIISAP
+<br><span class=l><span class=e>a</span>&#x17CB;</span>U+17CB KHMER SIGN BANTOC
+<br><span class=l><span class=e>a</span>&#x17CC;</span>U+17CC KHMER SIGN ROBAT
+<br><span class=l><span class=e>a</span>&#x17CD;</span>U+17CD KHMER SIGN TOANDAKHIAT
+<br><span class=l><span class=e>a</span>&#x17CE;</span>U+17CE KHMER SIGN KAKABAT
+<br><span class=l><span class=e>a</span>&#x17CF;</span>U+17CF KHMER SIGN AHSDA
+<br><span class=l><span class=e>a</span>&#x17D0;</span>U+17D0 KHMER SIGN SAMYOK SANNYA
+<br><span class=l><span class=e>a</span>&#x17D1;</span>U+17D1 KHMER SIGN VIRIAM
+<br><span class=l><span class=e>a</span>&#x17D2;</span>U+17D2 KHMER SIGN COENG
+<br><span class=l><span class=e>a</span>&#x17D3;</span>U+17D3 KHMER SIGN BATHAMASAT
+<br><span class=l><span class=e>a</span>&#x17DD;</span>U+17DD KHMER SIGN ATTHACAN
+<br><span class=l><span class=e>a</span>&#x180B;</span>U+180B MONGOLIAN FREE VARIATION SELECTOR ONE
+<br><span class=l><span class=e>a</span>&#x180C;</span>U+180C MONGOLIAN FREE VARIATION SELECTOR TWO
+<br><span class=l><span class=e>a</span>&#x180D;</span>U+180D MONGOLIAN FREE VARIATION SELECTOR THREE
+<br><span class=l><span class=e>a</span>&#x1885;</span>U+1885 MONGOLIAN LETTER ALI GALI BALUDA
+<br><span class=l><span class=e>a</span>&#x1886;</span>U+1886 MONGOLIAN LETTER ALI GALI THREE BALUDA
+<br><span class=l><span class=e>a</span>&#x18A9;</span>U+18A9 MONGOLIAN LETTER ALI GALI DAGALGA
+<br><span class=l><span class=e>a</span>&#x1920;</span>U+1920 LIMBU VOWEL SIGN A
+<br><span class=l><span class=e>a</span>&#x1921;</span>U+1921 LIMBU VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1922;</span>U+1922 LIMBU VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1927;</span>U+1927 LIMBU VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x1928;</span>U+1928 LIMBU VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x1932;</span>U+1932 LIMBU SMALL LETTER ANUSVARA
+<br><span class=l><span class=e>a</span>&#x1939;</span>U+1939 LIMBU SIGN MUKPHRENG
+<br><span class=l><span class=e>a</span>&#x193A;</span>U+193A LIMBU SIGN KEMPHRENG
+<br><span class=l><span class=e>a</span>&#x193B;</span>U+193B LIMBU SIGN SA-I
+<br><span class=l><span class=e>a</span>&#x1A17;</span>U+1A17 BUGINESE VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1A18;</span>U+1A18 BUGINESE VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1A1B;</span>U+1A1B BUGINESE VOWEL SIGN AE
+<br><span class=l><span class=e>a</span>&#x1A56;</span>U+1A56 TAI THAM CONSONANT SIGN MEDIAL LA
+<br><span class=l><span class=e>a</span>&#x1A58;</span>U+1A58 TAI THAM SIGN MAI KANG LAI
+<br><span class=l><span class=e>a</span>&#x1A59;</span>U+1A59 TAI THAM CONSONANT SIGN FINAL NGA
+<br><span class=l><span class=e>a</span>&#x1A5A;</span>U+1A5A TAI THAM CONSONANT SIGN LOW PA
+<br><span class=l><span class=e>a</span>&#x1A5B;</span>U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA
+<br><span class=l><span class=e>a</span>&#x1A5C;</span>U+1A5C TAI THAM CONSONANT SIGN MA
+<br><span class=l><span class=e>a</span>&#x1A5D;</span>U+1A5D TAI THAM CONSONANT SIGN BA
+<br><span class=l><span class=e>a</span>&#x1A5E;</span>U+1A5E TAI THAM CONSONANT SIGN SA
+<br><span class=l><span class=e>a</span>&#x1A60;</span>U+1A60 TAI THAM SIGN SAKOT
+<br><span class=l><span class=e>a</span>&#x1A62;</span>U+1A62 TAI THAM VOWEL SIGN MAI SAT
+<br><span class=l><span class=e>a</span>&#x1A65;</span>U+1A65 TAI THAM VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1A66;</span>U+1A66 TAI THAM VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x1A67;</span>U+1A67 TAI THAM VOWEL SIGN UE
+<br><span class=l><span class=e>a</span>&#x1A68;</span>U+1A68 TAI THAM VOWEL SIGN UUE
+<br><span class=l><span class=e>a</span>&#x1A69;</span>U+1A69 TAI THAM VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1A6A;</span>U+1A6A TAI THAM VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x1A6B;</span>U+1A6B TAI THAM VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x1A6C;</span>U+1A6C TAI THAM VOWEL SIGN OA BELOW
+<br><span class=l><span class=e>a</span>&#x1A73;</span>U+1A73 TAI THAM VOWEL SIGN OA ABOVE
+<br><span class=l><span class=e>a</span>&#x1A74;</span>U+1A74 TAI THAM SIGN MAI KANG
+<br><span class=l><span class=e>a</span>&#x1A75;</span>U+1A75 TAI THAM SIGN TONE-1
+<br><span class=l><span class=e>a</span>&#x1A76;</span>U+1A76 TAI THAM SIGN TONE-2
+<br><span class=l><span class=e>a</span>&#x1A77;</span>U+1A77 TAI THAM SIGN KHUEN TONE-3
+<br><span class=l><span class=e>a</span>&#x1A78;</span>U+1A78 TAI THAM SIGN KHUEN TONE-4
+<br><span class=l><span class=e>a</span>&#x1A79;</span>U+1A79 TAI THAM SIGN KHUEN TONE-5
+<br><span class=l><span class=e>a</span>&#x1A7A;</span>U+1A7A TAI THAM SIGN RA HAAM
+<br><span class=l><span class=e>a</span>&#x1A7B;</span>U+1A7B TAI THAM SIGN MAI SAM
+<br><span class=l><span class=e>a</span>&#x1A7C;</span>U+1A7C TAI THAM SIGN KHUEN-LUE KARAN
+<br><span class=l><span class=e>a</span>&#x1A7F;</span>U+1A7F TAI THAM COMBINING CRYPTOGRAMMIC DOT
+<br><span class=l><span class=e>a</span>&#x1AB0;</span>U+1AB0 COMBINING DOUBLED CIRCUMFLEX ACCENT
+<br><span class=l><span class=e>a</span>&#x1AB1;</span>U+1AB1 COMBINING DIAERESIS-RING
+<br><span class=l><span class=e>a</span>&#x1AB2;</span>U+1AB2 COMBINING INFINITY
+<br><span class=l><span class=e>a</span>&#x1AB3;</span>U+1AB3 COMBINING DOWNWARDS ARROW
+<br><span class=l><span class=e>a</span>&#x1AB4;</span>U+1AB4 COMBINING TRIPLE DOT
+<br><span class=l><span class=e>a</span>&#x1AB5;</span>U+1AB5 COMBINING X-X BELOW
+<br><span class=l><span class=e>a</span>&#x1AB6;</span>U+1AB6 COMBINING WIGGLY LINE BELOW
+<br><span class=l><span class=e>a</span>&#x1AB7;</span>U+1AB7 COMBINING OPEN MARK BELOW
+<br><span class=l><span class=e>a</span>&#x1AB8;</span>U+1AB8 COMBINING DOUBLE OPEN MARK BELOW
+<br><span class=l><span class=e>a</span>&#x1AB9;</span>U+1AB9 COMBINING LIGHT CENTRALIZATION STROKE BELOW
+<br><span class=l><span class=e>a</span>&#x1ABA;</span>U+1ABA COMBINING STRONG CENTRALIZATION STROKE BELOW
+<br><span class=l><span class=e>a</span>&#x1ABB;</span>U+1ABB COMBINING PARENTHESES ABOVE
+<br><span class=l><span class=e>a</span>&#x1ABC;</span>U+1ABC COMBINING DOUBLE PARENTHESES ABOVE
+<br><span class=l><span class=e>a</span>&#x1ABD;</span>U+1ABD COMBINING PARENTHESES BELOW
+<br><span class=l><span class=e>a</span>&#x1ABF;</span>U+1ABF COMBINING LATIN SMALL LETTER W BELOW
+<br><span class=l><span class=e>a</span>&#x1AC0;</span>U+1AC0 COMBINING LATIN SMALL LETTER TURNED W BELOW
+<br><span class=l><span class=e>a</span>&#x1B00;</span>U+1B00 BALINESE SIGN ULU RICEM
+<br><span class=l><span class=e>a</span>&#x1B01;</span>U+1B01 BALINESE SIGN ULU CANDRA
+<br><span class=l><span class=e>a</span>&#x1B02;</span>U+1B02 BALINESE SIGN CECEK
+<br><span class=l><span class=e>a</span>&#x1B03;</span>U+1B03 BALINESE SIGN SURANG
+<br><span class=l><span class=e>a</span>&#x1B34;</span>U+1B34 BALINESE SIGN REREKAN
+<br><span class=l><span class=e>a</span>&#x1B36;</span>U+1B36 BALINESE VOWEL SIGN ULU
+<br><span class=l><span class=e>a</span>&#x1B37;</span>U+1B37 BALINESE VOWEL SIGN ULU SARI
+<br><span class=l><span class=e>a</span>&#x1B38;</span>U+1B38 BALINESE VOWEL SIGN SUKU
+<br><span class=l><span class=e>a</span>&#x1B39;</span>U+1B39 BALINESE VOWEL SIGN SUKU ILUT
+<br><span class=l><span class=e>a</span>&#x1B3A;</span>U+1B3A BALINESE VOWEL SIGN RA REPA
+<br><span class=l><span class=e>a</span>&#x1B3C;</span>U+1B3C BALINESE VOWEL SIGN LA LENGA
+<br><span class=l><span class=e>a</span>&#x1B42;</span>U+1B42 BALINESE VOWEL SIGN PEPET
+<br><span class=l><span class=e>a</span>&#x1B6B;</span>U+1B6B BALINESE MUSICAL SYMBOL COMBINING TEGEH
+<br><span class=l><span class=e>a</span>&#x1B6C;</span>U+1B6C BALINESE MUSICAL SYMBOL COMBINING ENDEP
+<br><span class=l><span class=e>a</span>&#x1B6D;</span>U+1B6D BALINESE MUSICAL SYMBOL COMBINING KEMPUL
+<br><span class=l><span class=e>a</span>&#x1B6E;</span>U+1B6E BALINESE MUSICAL SYMBOL COMBINING KEMPLI
+<br><span class=l><span class=e>a</span>&#x1B6F;</span>U+1B6F BALINESE MUSICAL SYMBOL COMBINING JEGOGAN
+<br><span class=l><span class=e>a</span>&#x1B70;</span>U+1B70 BALINESE MUSICAL SYMBOL COMBINING KEMPUL WITH JEGOGAN
+<br><span class=l><span class=e>a</span>&#x1B71;</span>U+1B71 BALINESE MUSICAL SYMBOL COMBINING KEMPLI WITH JEGOGAN
+<br><span class=l><span class=e>a</span>&#x1B72;</span>U+1B72 BALINESE MUSICAL SYMBOL COMBINING BENDE
+<br><span class=l><span class=e>a</span>&#x1B73;</span>U+1B73 BALINESE MUSICAL SYMBOL COMBINING GONG
+<br><span class=l><span class=e>a</span>&#x1B80;</span>U+1B80 SUNDANESE SIGN PANYECEK
+<br><span class=l><span class=e>a</span>&#x1B81;</span>U+1B81 SUNDANESE SIGN PANGLAYAR
+<br><span class=l><span class=e>a</span>&#x1BA2;</span>U+1BA2 SUNDANESE CONSONANT SIGN PANYAKRA
+<br><span class=l><span class=e>a</span>&#x1BA3;</span>U+1BA3 SUNDANESE CONSONANT SIGN PANYIKU
+<br><span class=l><span class=e>a</span>&#x1BA4;</span>U+1BA4 SUNDANESE VOWEL SIGN PANGHULU
+<br><span class=l><span class=e>a</span>&#x1BA5;</span>U+1BA5 SUNDANESE VOWEL SIGN PANYUKU
+<br><span class=l><span class=e>a</span>&#x1BA8;</span>U+1BA8 SUNDANESE VOWEL SIGN PAMEPET
+<br><span class=l><span class=e>a</span>&#x1BA9;</span>U+1BA9 SUNDANESE VOWEL SIGN PANEULEUNG
+<br><span class=l><span class=e>a</span>&#x1BAB;</span>U+1BAB SUNDANESE SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x1BAC;</span>U+1BAC SUNDANESE CONSONANT SIGN PASANGAN MA
+<br><span class=l><span class=e>a</span>&#x1BAD;</span>U+1BAD SUNDANESE CONSONANT SIGN PASANGAN WA
+<br><span class=l><span class=e>a</span>&#x1BE6;</span>U+1BE6 BATAK SIGN TOMPI
+<br><span class=l><span class=e>a</span>&#x1BE8;</span>U+1BE8 BATAK VOWEL SIGN PAKPAK E
+<br><span class=l><span class=e>a</span>&#x1BE9;</span>U+1BE9 BATAK VOWEL SIGN EE
+<br><span class=l><span class=e>a</span>&#x1BED;</span>U+1BED BATAK VOWEL SIGN KARO O
+<br><span class=l><span class=e>a</span>&#x1BEF;</span>U+1BEF BATAK VOWEL SIGN U FOR SIMALUNGUN SA
+<br><span class=l><span class=e>a</span>&#x1BF0;</span>U+1BF0 BATAK CONSONANT SIGN NG
+<br><span class=l><span class=e>a</span>&#x1BF1;</span>U+1BF1 BATAK CONSONANT SIGN H
+<br><span class=l><span class=e>a</span>&#x1C2C;</span>U+1C2C LEPCHA VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x1C2D;</span>U+1C2D LEPCHA CONSONANT SIGN K
+<br><span class=l><span class=e>a</span>&#x1C2E;</span>U+1C2E LEPCHA CONSONANT SIGN M
+<br><span class=l><span class=e>a</span>&#x1C2F;</span>U+1C2F LEPCHA CONSONANT SIGN L
+<br><span class=l><span class=e>a</span>&#x1C30;</span>U+1C30 LEPCHA CONSONANT SIGN N
+<br><span class=l><span class=e>a</span>&#x1C31;</span>U+1C31 LEPCHA CONSONANT SIGN P
+<br><span class=l><span class=e>a</span>&#x1C32;</span>U+1C32 LEPCHA CONSONANT SIGN R
+<br><span class=l><span class=e>a</span>&#x1C33;</span>U+1C33 LEPCHA CONSONANT SIGN T
+<br><span class=l><span class=e>a</span>&#x1C36;</span>U+1C36 LEPCHA SIGN RAN
+<br><span class=l><span class=e>a</span>&#x1C37;</span>U+1C37 LEPCHA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x1CD0;</span>U+1CD0 VEDIC TONE KARSHANA
+<br><span class=l><span class=e>a</span>&#x1CD1;</span>U+1CD1 VEDIC TONE SHARA
+<br><span class=l><span class=e>a</span>&#x1CD2;</span>U+1CD2 VEDIC TONE PRENKHA
+<br><span class=l><span class=e>a</span>&#x1CD4;</span>U+1CD4 VEDIC SIGN YAJURVEDIC MIDLINE SVARITA
+<br><span class=l><span class=e>a</span>&#x1CD5;</span>U+1CD5 VEDIC TONE YAJURVEDIC AGGRAVATED INDEPENDENT SVARITA
+<br><span class=l><span class=e>a</span>&#x1CD6;</span>U+1CD6 VEDIC TONE YAJURVEDIC INDEPENDENT SVARITA
+<br><span class=l><span class=e>a</span>&#x1CD7;</span>U+1CD7 VEDIC TONE YAJURVEDIC KATHAKA INDEPENDENT SVARITA
+<br><span class=l><span class=e>a</span>&#x1CD8;</span>U+1CD8 VEDIC TONE CANDRA BELOW
+<br><span class=l><span class=e>a</span>&#x1CD9;</span>U+1CD9 VEDIC TONE YAJURVEDIC KATHAKA INDEPENDENT SVARITA SCHROEDER
+<br><span class=l><span class=e>a</span>&#x1CDA;</span>U+1CDA VEDIC TONE DOUBLE SVARITA
+<br><span class=l><span class=e>a</span>&#x1CDB;</span>U+1CDB VEDIC TONE TRIPLE SVARITA
+<br><span class=l><span class=e>a</span>&#x1CDC;</span>U+1CDC VEDIC TONE KATHAKA ANUDATTA
+<br><span class=l><span class=e>a</span>&#x1CDD;</span>U+1CDD VEDIC TONE DOT BELOW
+<br><span class=l><span class=e>a</span>&#x1CDE;</span>U+1CDE VEDIC TONE TWO DOTS BELOW
+<br><span class=l><span class=e>a</span>&#x1CDF;</span>U+1CDF VEDIC TONE THREE DOTS BELOW
+<br><span class=l><span class=e>a</span>&#x1CE0;</span>U+1CE0 VEDIC TONE RIGVEDIC KASHMIRI INDEPENDENT SVARITA
+<br><span class=l><span class=e>a</span>&#x1CE2;</span>U+1CE2 VEDIC SIGN VISARGA SVARITA
+<br><span class=l><span class=e>a</span>&#x1CE3;</span>U+1CE3 VEDIC SIGN VISARGA UDATTA
+<br><span class=l><span class=e>a</span>&#x1CE4;</span>U+1CE4 VEDIC SIGN REVERSED VISARGA UDATTA
+<br><span class=l><span class=e>a</span>&#x1CE5;</span>U+1CE5 VEDIC SIGN VISARGA ANUDATTA
+<br><span class=l><span class=e>a</span>&#x1CE6;</span>U+1CE6 VEDIC SIGN REVERSED VISARGA ANUDATTA
+<br><span class=l><span class=e>a</span>&#x1CE7;</span>U+1CE7 VEDIC SIGN VISARGA UDATTA WITH TAIL
+<br><span class=l><span class=e>a</span>&#x1CE8;</span>U+1CE8 VEDIC SIGN VISARGA ANUDATTA WITH TAIL
+<br><span class=l><span class=e>a</span>&#x1CED;</span>U+1CED VEDIC SIGN TIRYAK
+<br><span class=l><span class=e>a</span>&#x1CF4;</span>U+1CF4 VEDIC TONE CANDRA ABOVE
+<br><span class=l><span class=e>a</span>&#x1CF8;</span>U+1CF8 VEDIC TONE RING ABOVE
+<br><span class=l><span class=e>a</span>&#x1CF9;</span>U+1CF9 VEDIC TONE DOUBLE RING ABOVE
+<br><span class=l><span class=e>a</span>&#x1DC0;</span>U+1DC0 COMBINING DOTTED GRAVE ACCENT
+<br><span class=l><span class=e>a</span>&#x1DC1;</span>U+1DC1 COMBINING DOTTED ACUTE ACCENT
+<br><span class=l><span class=e>a</span>&#x1DC2;</span>U+1DC2 COMBINING SNAKE BELOW
+<br><span class=l><span class=e>a</span>&#x1DC3;</span>U+1DC3 COMBINING SUSPENSION MARK
+<br><span class=l><span class=e>a</span>&#x1DC4;</span>U+1DC4 COMBINING MACRON-ACUTE
+<br><span class=l><span class=e>a</span>&#x1DC5;</span>U+1DC5 COMBINING GRAVE-MACRON
+<br><span class=l><span class=e>a</span>&#x1DC6;</span>U+1DC6 COMBINING MACRON-GRAVE
+<br><span class=l><span class=e>a</span>&#x1DC7;</span>U+1DC7 COMBINING ACUTE-MACRON
+<br><span class=l><span class=e>a</span>&#x1DC8;</span>U+1DC8 COMBINING GRAVE-ACUTE-GRAVE
+<br><span class=l><span class=e>a</span>&#x1DC9;</span>U+1DC9 COMBINING ACUTE-GRAVE-ACUTE
+<br><span class=l><span class=e>a</span>&#x1DCA;</span>U+1DCA COMBINING LATIN SMALL LETTER R BELOW
+<br><span class=l><span class=e>a</span>&#x1DCB;</span>U+1DCB COMBINING BREVE-MACRON
+<br><span class=l><span class=e>a</span>&#x1DCC;</span>U+1DCC COMBINING MACRON-BREVE
+<br><span class=l><span class=e>a</span>&#x1DCD;</span>U+1DCD COMBINING DOUBLE CIRCUMFLEX ABOVE
+<br><span class=l><span class=e>a</span>&#x1DCE;</span>U+1DCE COMBINING OGONEK ABOVE
+<br><span class=l><span class=e>a</span>&#x1DCF;</span>U+1DCF COMBINING ZIGZAG BELOW
+<br><span class=l><span class=e>a</span>&#x1DD0;</span>U+1DD0 COMBINING IS BELOW
+<br><span class=l><span class=e>a</span>&#x1DD1;</span>U+1DD1 COMBINING UR ABOVE
+<br><span class=l><span class=e>a</span>&#x1DD2;</span>U+1DD2 COMBINING US ABOVE
+<br><span class=l><span class=e>a</span>&#x1DD3;</span>U+1DD3 COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE
+<br><span class=l><span class=e>a</span>&#x1DD4;</span>U+1DD4 COMBINING LATIN SMALL LETTER AE
+<br><span class=l><span class=e>a</span>&#x1DD5;</span>U+1DD5 COMBINING LATIN SMALL LETTER AO
+<br><span class=l><span class=e>a</span>&#x1DD6;</span>U+1DD6 COMBINING LATIN SMALL LETTER AV
+<br><span class=l><span class=e>a</span>&#x1DD7;</span>U+1DD7 COMBINING LATIN SMALL LETTER C CEDILLA
+<br><span class=l><span class=e>a</span>&#x1DD8;</span>U+1DD8 COMBINING LATIN SMALL LETTER INSULAR D
+<br><span class=l><span class=e>a</span>&#x1DD9;</span>U+1DD9 COMBINING LATIN SMALL LETTER ETH
+<br><span class=l><span class=e>a</span>&#x1DDA;</span>U+1DDA COMBINING LATIN SMALL LETTER G
+<br><span class=l><span class=e>a</span>&#x1DDB;</span>U+1DDB COMBINING LATIN LETTER SMALL CAPITAL G
+<br><span class=l><span class=e>a</span>&#x1DDC;</span>U+1DDC COMBINING LATIN SMALL LETTER K
+<br><span class=l><span class=e>a</span>&#x1DDD;</span>U+1DDD COMBINING LATIN SMALL LETTER L
+<br><span class=l><span class=e>a</span>&#x1DDE;</span>U+1DDE COMBINING LATIN LETTER SMALL CAPITAL L
+<br><span class=l><span class=e>a</span>&#x1DDF;</span>U+1DDF COMBINING LATIN LETTER SMALL CAPITAL M
+<br><span class=l><span class=e>a</span>&#x1DE0;</span>U+1DE0 COMBINING LATIN SMALL LETTER N
+<br><span class=l><span class=e>a</span>&#x1DE1;</span>U+1DE1 COMBINING LATIN LETTER SMALL CAPITAL N
+<br><span class=l><span class=e>a</span>&#x1DE2;</span>U+1DE2 COMBINING LATIN LETTER SMALL CAPITAL R
+<br><span class=l><span class=e>a</span>&#x1DE3;</span>U+1DE3 COMBINING LATIN SMALL LETTER R ROTUNDA
+<br><span class=l><span class=e>a</span>&#x1DE4;</span>U+1DE4 COMBINING LATIN SMALL LETTER S
+<br><span class=l><span class=e>a</span>&#x1DE5;</span>U+1DE5 COMBINING LATIN SMALL LETTER LONG S
+<br><span class=l><span class=e>a</span>&#x1DE6;</span>U+1DE6 COMBINING LATIN SMALL LETTER Z
+<br><span class=l><span class=e>a</span>&#x1DE7;</span>U+1DE7 COMBINING LATIN SMALL LETTER ALPHA
+<br><span class=l><span class=e>a</span>&#x1DE8;</span>U+1DE8 COMBINING LATIN SMALL LETTER B
+<br><span class=l><span class=e>a</span>&#x1DE9;</span>U+1DE9 COMBINING LATIN SMALL LETTER BETA
+<br><span class=l><span class=e>a</span>&#x1DEA;</span>U+1DEA COMBINING LATIN SMALL LETTER SCHWA
+<br><span class=l><span class=e>a</span>&#x1DEB;</span>U+1DEB COMBINING LATIN SMALL LETTER F
+<br><span class=l><span class=e>a</span>&#x1DEC;</span>U+1DEC COMBINING LATIN SMALL LETTER L WITH DOUBLE MIDDLE TILDE
+<br><span class=l><span class=e>a</span>&#x1DED;</span>U+1DED COMBINING LATIN SMALL LETTER O WITH LIGHT CENTRALIZATION STROKE
+<br><span class=l><span class=e>a</span>&#x1DEE;</span>U+1DEE COMBINING LATIN SMALL LETTER P
+<br><span class=l><span class=e>a</span>&#x1DEF;</span>U+1DEF COMBINING LATIN SMALL LETTER ESH
+<br><span class=l><span class=e>a</span>&#x1DF0;</span>U+1DF0 COMBINING LATIN SMALL LETTER U WITH LIGHT CENTRALIZATION STROKE
+<br><span class=l><span class=e>a</span>&#x1DF1;</span>U+1DF1 COMBINING LATIN SMALL LETTER W
+<br><span class=l><span class=e>a</span>&#x1DF2;</span>U+1DF2 COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<br><span class=l><span class=e>a</span>&#x1DF3;</span>U+1DF3 COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<br><span class=l><span class=e>a</span>&#x1DF4;</span>U+1DF4 COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<br><span class=l><span class=e>a</span>&#x1DF5;</span>U+1DF5 COMBINING UP TACK ABOVE
+<br><span class=l><span class=e>a</span>&#x1DF6;</span>U+1DF6 COMBINING KAVYKA ABOVE RIGHT
+<br><span class=l><span class=e>a</span>&#x1DF7;</span>U+1DF7 COMBINING KAVYKA ABOVE LEFT
+<br><span class=l><span class=e>a</span>&#x1DF8;</span>U+1DF8 COMBINING DOT ABOVE LEFT
+<br><span class=l><span class=e>a</span>&#x1DF9;</span>U+1DF9 COMBINING WIDE INVERTED BRIDGE BELOW
+<br><span class=l><span class=e>a</span>&#x1DFB;</span>U+1DFB COMBINING DELETION MARK
+<br><span class=l><span class=e>a</span>&#x1DFC;</span>U+1DFC COMBINING DOUBLE INVERTED BREVE BELOW
+<br><span class=l><span class=e>a</span>&#x1DFD;</span>U+1DFD COMBINING ALMOST EQUAL TO BELOW
+<br><span class=l><span class=e>a</span>&#x1DFE;</span>U+1DFE COMBINING LEFT ARROWHEAD ABOVE
+<br><span class=l><span class=e>a</span>&#x1DFF;</span>U+1DFF COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
+<br><span class=l><span class=e>a</span>&#x20D0;</span>U+20D0 COMBINING LEFT HARPOON ABOVE
+<br><span class=l><span class=e>a</span>&#x20D1;</span>U+20D1 COMBINING RIGHT HARPOON ABOVE
+<br><span class=l><span class=e>a</span>&#x20D2;</span>U+20D2 COMBINING LONG VERTICAL LINE OVERLAY
+<br><span class=l><span class=e>a</span>&#x20D3;</span>U+20D3 COMBINING SHORT VERTICAL LINE OVERLAY
+<br><span class=l><span class=e>a</span>&#x20D4;</span>U+20D4 COMBINING ANTICLOCKWISE ARROW ABOVE
+<br><span class=l><span class=e>a</span>&#x20D5;</span>U+20D5 COMBINING CLOCKWISE ARROW ABOVE
+<br><span class=l><span class=e>a</span>&#x20D6;</span>U+20D6 COMBINING LEFT ARROW ABOVE
+<br><span class=l><span class=e>a</span>&#x20D7;</span>U+20D7 COMBINING RIGHT ARROW ABOVE
+<br><span class=l><span class=e>a</span>&#x20D8;</span>U+20D8 COMBINING RING OVERLAY
+<br><span class=l><span class=e>a</span>&#x20D9;</span>U+20D9 COMBINING CLOCKWISE RING OVERLAY
+<br><span class=l><span class=e>a</span>&#x20DA;</span>U+20DA COMBINING ANTICLOCKWISE RING OVERLAY
+<br><span class=l><span class=e>a</span>&#x20DB;</span>U+20DB COMBINING THREE DOTS ABOVE
+<br><span class=l><span class=e>a</span>&#x20DC;</span>U+20DC COMBINING FOUR DOTS ABOVE
+<br><span class=l><span class=e>a</span>&#x20E1;</span>U+20E1 COMBINING LEFT RIGHT ARROW ABOVE
+<br><span class=l><span class=e>a</span>&#x20E5;</span>U+20E5 COMBINING REVERSE SOLIDUS OVERLAY
+<br><span class=l><span class=e>a</span>&#x20E6;</span>U+20E6 COMBINING DOUBLE VERTICAL STROKE OVERLAY
+<br><span class=l><span class=e>a</span>&#x20E7;</span>U+20E7 COMBINING ANNUITY SYMBOL
+<br><span class=l><span class=e>a</span>&#x20E8;</span>U+20E8 COMBINING TRIPLE UNDERDOT
+<br><span class=l><span class=e>a</span>&#x20E9;</span>U+20E9 COMBINING WIDE BRIDGE ABOVE
+<br><span class=l><span class=e>a</span>&#x20EA;</span>U+20EA COMBINING LEFTWARDS ARROW OVERLAY
+<br><span class=l><span class=e>a</span>&#x20EB;</span>U+20EB COMBINING LONG DOUBLE SOLIDUS OVERLAY
+<br><span class=l><span class=e>a</span>&#x20EC;</span>U+20EC COMBINING RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<br><span class=l><span class=e>a</span>&#x20ED;</span>U+20ED COMBINING LEFTWARDS HARPOON WITH BARB DOWNWARDS
+<br><span class=l><span class=e>a</span>&#x20EE;</span>U+20EE COMBINING LEFT ARROW BELOW
+<br><span class=l><span class=e>a</span>&#x20EF;</span>U+20EF COMBINING RIGHT ARROW BELOW
+<br><span class=l><span class=e>a</span>&#x20F0;</span>U+20F0 COMBINING ASTERISK ABOVE
+<br><span class=l><span class=e>a</span>&#x2CEF;</span>U+2CEF COPTIC COMBINING NI ABOVE
+<br><span class=l><span class=e>a</span>&#x2CF0;</span>U+2CF0 COPTIC COMBINING SPIRITUS ASPER
+<br><span class=l><span class=e>a</span>&#x2CF1;</span>U+2CF1 COPTIC COMBINING SPIRITUS LENIS
+<br><span class=l><span class=e>a</span>&#x2D7F;</span>U+2D7F TIFINAGH CONSONANT JOINER
+<br><span class=l><span class=e>a</span>&#x2DE0;</span>U+2DE0 COMBINING CYRILLIC LETTER BE
+<br><span class=l><span class=e>a</span>&#x2DE1;</span>U+2DE1 COMBINING CYRILLIC LETTER VE
+<br><span class=l><span class=e>a</span>&#x2DE2;</span>U+2DE2 COMBINING CYRILLIC LETTER GHE
+<br><span class=l><span class=e>a</span>&#x2DE3;</span>U+2DE3 COMBINING CYRILLIC LETTER DE
+<br><span class=l><span class=e>a</span>&#x2DE4;</span>U+2DE4 COMBINING CYRILLIC LETTER ZHE
+<br><span class=l><span class=e>a</span>&#x2DE5;</span>U+2DE5 COMBINING CYRILLIC LETTER ZE
+<br><span class=l><span class=e>a</span>&#x2DE6;</span>U+2DE6 COMBINING CYRILLIC LETTER KA
+<br><span class=l><span class=e>a</span>&#x2DE7;</span>U+2DE7 COMBINING CYRILLIC LETTER EL
+<br><span class=l><span class=e>a</span>&#x2DE8;</span>U+2DE8 COMBINING CYRILLIC LETTER EM
+<br><span class=l><span class=e>a</span>&#x2DE9;</span>U+2DE9 COMBINING CYRILLIC LETTER EN
+<br><span class=l><span class=e>a</span>&#x2DEA;</span>U+2DEA COMBINING CYRILLIC LETTER O
+<br><span class=l><span class=e>a</span>&#x2DEB;</span>U+2DEB COMBINING CYRILLIC LETTER PE
+<br><span class=l><span class=e>a</span>&#x2DEC;</span>U+2DEC COMBINING CYRILLIC LETTER ER
+<br><span class=l><span class=e>a</span>&#x2DED;</span>U+2DED COMBINING CYRILLIC LETTER ES
+<br><span class=l><span class=e>a</span>&#x2DEE;</span>U+2DEE COMBINING CYRILLIC LETTER TE
+<br><span class=l><span class=e>a</span>&#x2DEF;</span>U+2DEF COMBINING CYRILLIC LETTER HA
+<br><span class=l><span class=e>a</span>&#x2DF0;</span>U+2DF0 COMBINING CYRILLIC LETTER TSE
+<br><span class=l><span class=e>a</span>&#x2DF1;</span>U+2DF1 COMBINING CYRILLIC LETTER CHE
+<br><span class=l><span class=e>a</span>&#x2DF2;</span>U+2DF2 COMBINING CYRILLIC LETTER SHA
+<br><span class=l><span class=e>a</span>&#x2DF3;</span>U+2DF3 COMBINING CYRILLIC LETTER SHCHA
+<br><span class=l><span class=e>a</span>&#x2DF4;</span>U+2DF4 COMBINING CYRILLIC LETTER FITA
+<br><span class=l><span class=e>a</span>&#x2DF5;</span>U+2DF5 COMBINING CYRILLIC LETTER ES-TE
+<br><span class=l><span class=e>a</span>&#x2DF6;</span>U+2DF6 COMBINING CYRILLIC LETTER A
+<br><span class=l><span class=e>a</span>&#x2DF7;</span>U+2DF7 COMBINING CYRILLIC LETTER IE
+<br><span class=l><span class=e>a</span>&#x2DF8;</span>U+2DF8 COMBINING CYRILLIC LETTER DJERV
+<br><span class=l><span class=e>a</span>&#x2DF9;</span>U+2DF9 COMBINING CYRILLIC LETTER MONOGRAPH UK
+<br><span class=l><span class=e>a</span>&#x2DFA;</span>U+2DFA COMBINING CYRILLIC LETTER YAT
+<br><span class=l><span class=e>a</span>&#x2DFB;</span>U+2DFB COMBINING CYRILLIC LETTER YU
+<br><span class=l><span class=e>a</span>&#x2DFC;</span>U+2DFC COMBINING CYRILLIC LETTER IOTIFIED A
+<br><span class=l><span class=e>a</span>&#x2DFD;</span>U+2DFD COMBINING CYRILLIC LETTER LITTLE YUS
+<br><span class=l><span class=e>a</span>&#x2DFE;</span>U+2DFE COMBINING CYRILLIC LETTER BIG YUS
+<br><span class=l><span class=e>a</span>&#x2DFF;</span>U+2DFF COMBINING CYRILLIC LETTER IOTIFIED BIG YUS
+<br><span class=l><span class=e>a</span>&#x302A;</span>U+302A IDEOGRAPHIC LEVEL TONE MARK
+<br><span class=l><span class=e>a</span>&#x302B;</span>U+302B IDEOGRAPHIC RISING TONE MARK
+<br><span class=l><span class=e>a</span>&#x302C;</span>U+302C IDEOGRAPHIC DEPARTING TONE MARK
+<br><span class=l><span class=e>a</span>&#x302D;</span>U+302D IDEOGRAPHIC ENTERING TONE MARK
+<br><span class=l><span class=e>a</span>&#x3099;</span>U+3099 COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK
+<br><span class=l><span class=e>a</span>&#x309A;</span>U+309A COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK
+<br><span class=l><span class=e>a</span>&#xA66F;</span>U+A66F COMBINING CYRILLIC VZMET
+<br><span class=l><span class=e>a</span>&#xA674;</span>U+A674 COMBINING CYRILLIC LETTER UKRAINIAN IE
+<br><span class=l><span class=e>a</span>&#xA675;</span>U+A675 COMBINING CYRILLIC LETTER I
+<br><span class=l><span class=e>a</span>&#xA676;</span>U+A676 COMBINING CYRILLIC LETTER YI
+<br><span class=l><span class=e>a</span>&#xA677;</span>U+A677 COMBINING CYRILLIC LETTER U
+<br><span class=l><span class=e>a</span>&#xA678;</span>U+A678 COMBINING CYRILLIC LETTER HARD SIGN
+<br><span class=l><span class=e>a</span>&#xA679;</span>U+A679 COMBINING CYRILLIC LETTER YERU
+<br><span class=l><span class=e>a</span>&#xA67A;</span>U+A67A COMBINING CYRILLIC LETTER SOFT SIGN
+<br><span class=l><span class=e>a</span>&#xA67B;</span>U+A67B COMBINING CYRILLIC LETTER OMEGA
+<br><span class=l><span class=e>a</span>&#xA67C;</span>U+A67C COMBINING CYRILLIC KAVYKA
+<br><span class=l><span class=e>a</span>&#xA67D;</span>U+A67D COMBINING CYRILLIC PAYEROK
+<br><span class=l><span class=e>a</span>&#xA69E;</span>U+A69E COMBINING CYRILLIC LETTER EF
+<br><span class=l><span class=e>a</span>&#xA69F;</span>U+A69F COMBINING CYRILLIC LETTER IOTIFIED E
+<br><span class=l><span class=e>a</span>&#xA6F0;</span>U+A6F0 BAMUM COMBINING MARK KOQNDON
+<br><span class=l><span class=e>a</span>&#xA6F1;</span>U+A6F1 BAMUM COMBINING MARK TUKWENTIS
+<br><span class=l><span class=e>a</span>&#xA802;</span>U+A802 SYLOTI NAGRI SIGN DVISVARA
+<br><span class=l><span class=e>a</span>&#xA806;</span>U+A806 SYLOTI NAGRI SIGN HASANTA
+<br><span class=l><span class=e>a</span>&#xA80B;</span>U+A80B SYLOTI NAGRI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#xA825;</span>U+A825 SYLOTI NAGRI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xA826;</span>U+A826 SYLOTI NAGRI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#xA82C;</span>U+A82C SYLOTI NAGRI SIGN ALTERNATE HASANTA
+<br><span class=l><span class=e>a</span>&#xA8C4;</span>U+A8C4 SAURASHTRA SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#xA8C5;</span>U+A8C5 SAURASHTRA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#xA8E0;</span>U+A8E0 COMBINING DEVANAGARI DIGIT ZERO
+<br><span class=l><span class=e>a</span>&#xA8E1;</span>U+A8E1 COMBINING DEVANAGARI DIGIT ONE
+<br><span class=l><span class=e>a</span>&#xA8E2;</span>U+A8E2 COMBINING DEVANAGARI DIGIT TWO
+<br><span class=l><span class=e>a</span>&#xA8E3;</span>U+A8E3 COMBINING DEVANAGARI DIGIT THREE
+<br><span class=l><span class=e>a</span>&#xA8E4;</span>U+A8E4 COMBINING DEVANAGARI DIGIT FOUR
+<br><span class=l><span class=e>a</span>&#xA8E5;</span>U+A8E5 COMBINING DEVANAGARI DIGIT FIVE
+<br><span class=l><span class=e>a</span>&#xA8E6;</span>U+A8E6 COMBINING DEVANAGARI DIGIT SIX
+<br><span class=l><span class=e>a</span>&#xA8E7;</span>U+A8E7 COMBINING DEVANAGARI DIGIT SEVEN
+<br><span class=l><span class=e>a</span>&#xA8E8;</span>U+A8E8 COMBINING DEVANAGARI DIGIT EIGHT
+<br><span class=l><span class=e>a</span>&#xA8E9;</span>U+A8E9 COMBINING DEVANAGARI DIGIT NINE
+<br><span class=l><span class=e>a</span>&#xA8EA;</span>U+A8EA COMBINING DEVANAGARI LETTER A
+<br><span class=l><span class=e>a</span>&#xA8EB;</span>U+A8EB COMBINING DEVANAGARI LETTER U
+<br><span class=l><span class=e>a</span>&#xA8EC;</span>U+A8EC COMBINING DEVANAGARI LETTER KA
+<br><span class=l><span class=e>a</span>&#xA8ED;</span>U+A8ED COMBINING DEVANAGARI LETTER NA
+<br><span class=l><span class=e>a</span>&#xA8EE;</span>U+A8EE COMBINING DEVANAGARI LETTER PA
+<br><span class=l><span class=e>a</span>&#xA8EF;</span>U+A8EF COMBINING DEVANAGARI LETTER RA
+<br><span class=l><span class=e>a</span>&#xA8F0;</span>U+A8F0 COMBINING DEVANAGARI LETTER VI
+<br><span class=l><span class=e>a</span>&#xA8F1;</span>U+A8F1 COMBINING DEVANAGARI SIGN AVAGRAHA
+<br><span class=l><span class=e>a</span>&#xA8FF;</span>U+A8FF DEVANAGARI VOWEL SIGN AY
+<br><span class=l><span class=e>a</span>&#xA926;</span>U+A926 KAYAH LI VOWEL UE
+<br><span class=l><span class=e>a</span>&#xA927;</span>U+A927 KAYAH LI VOWEL E
+<br><span class=l><span class=e>a</span>&#xA928;</span>U+A928 KAYAH LI VOWEL U
+<br><span class=l><span class=e>a</span>&#xA929;</span>U+A929 KAYAH LI VOWEL EE
+<br><span class=l><span class=e>a</span>&#xA92A;</span>U+A92A KAYAH LI VOWEL O
+<br><span class=l><span class=e>a</span>&#xA92B;</span>U+A92B KAYAH LI TONE PLOPHU
+<br><span class=l><span class=e>a</span>&#xA92C;</span>U+A92C KAYAH LI TONE CALYA
+<br><span class=l><span class=e>a</span>&#xA92D;</span>U+A92D KAYAH LI TONE CALYA PLOPHU
+<br><span class=l><span class=e>a</span>&#xA947;</span>U+A947 REJANG VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#xA948;</span>U+A948 REJANG VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xA949;</span>U+A949 REJANG VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#xA94A;</span>U+A94A REJANG VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#xA94B;</span>U+A94B REJANG VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#xA94C;</span>U+A94C REJANG VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#xA94D;</span>U+A94D REJANG VOWEL SIGN EU
+<br><span class=l><span class=e>a</span>&#xA94E;</span>U+A94E REJANG VOWEL SIGN EA
+<br><span class=l><span class=e>a</span>&#xA94F;</span>U+A94F REJANG CONSONANT SIGN NG
+<br><span class=l><span class=e>a</span>&#xA950;</span>U+A950 REJANG CONSONANT SIGN N
+<br><span class=l><span class=e>a</span>&#xA951;</span>U+A951 REJANG CONSONANT SIGN R
+<br><span class=l><span class=e>a</span>&#xA980;</span>U+A980 JAVANESE SIGN PANYANGGA
+<br><span class=l><span class=e>a</span>&#xA981;</span>U+A981 JAVANESE SIGN CECAK
+<br><span class=l><span class=e>a</span>&#xA982;</span>U+A982 JAVANESE SIGN LAYAR
+<br><span class=l><span class=e>a</span>&#xA9B3;</span>U+A9B3 JAVANESE SIGN CECAK TELU
+<br><span class=l><span class=e>a</span>&#xA9B6;</span>U+A9B6 JAVANESE VOWEL SIGN WULU
+<br><span class=l><span class=e>a</span>&#xA9B7;</span>U+A9B7 JAVANESE VOWEL SIGN WULU MELIK
+<br><span class=l><span class=e>a</span>&#xA9B8;</span>U+A9B8 JAVANESE VOWEL SIGN SUKU
+<br><span class=l><span class=e>a</span>&#xA9B9;</span>U+A9B9 JAVANESE VOWEL SIGN SUKU MENDUT
+<br><span class=l><span class=e>a</span>&#xA9BC;</span>U+A9BC JAVANESE VOWEL SIGN PEPET
+<br><span class=l><span class=e>a</span>&#xA9BD;</span>U+A9BD JAVANESE CONSONANT SIGN KERET
+<br><span class=l><span class=e>a</span>&#xA9E5;</span>U+A9E5 MYANMAR SIGN SHAN SAW
+<br><span class=l><span class=e>a</span>&#xAA29;</span>U+AA29 CHAM VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#xAA2A;</span>U+AA2A CHAM VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#xAA2B;</span>U+AA2B CHAM VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#xAA2C;</span>U+AA2C CHAM VOWEL SIGN EI
+<br><span class=l><span class=e>a</span>&#xAA2D;</span>U+AA2D CHAM VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#xAA2E;</span>U+AA2E CHAM VOWEL SIGN OE
+<br><span class=l><span class=e>a</span>&#xAA31;</span>U+AA31 CHAM VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#xAA32;</span>U+AA32 CHAM VOWEL SIGN UE
+<br><span class=l><span class=e>a</span>&#xAA35;</span>U+AA35 CHAM CONSONANT SIGN LA
+<br><span class=l><span class=e>a</span>&#xAA36;</span>U+AA36 CHAM CONSONANT SIGN WA
+<br><span class=l><span class=e>a</span>&#xAA43;</span>U+AA43 CHAM CONSONANT SIGN FINAL NG
+<br><span class=l><span class=e>a</span>&#xAA4C;</span>U+AA4C CHAM CONSONANT SIGN FINAL M
+<br><span class=l><span class=e>a</span>&#xAA7C;</span>U+AA7C MYANMAR SIGN TAI LAING TONE-2
+<br><span class=l><span class=e>a</span>&#xAAB0;</span>U+AAB0 TAI VIET MAI KANG
+<br><span class=l><span class=e>a</span>&#xAAB2;</span>U+AAB2 TAI VIET VOWEL I
+<br><span class=l><span class=e>a</span>&#xAAB3;</span>U+AAB3 TAI VIET VOWEL UE
+<br><span class=l><span class=e>a</span>&#xAAB4;</span>U+AAB4 TAI VIET VOWEL U
+<br><span class=l><span class=e>a</span>&#xAAB7;</span>U+AAB7 TAI VIET MAI KHIT
+<br><span class=l><span class=e>a</span>&#xAAB8;</span>U+AAB8 TAI VIET VOWEL IA
+<br><span class=l><span class=e>a</span>&#xAABE;</span>U+AABE TAI VIET VOWEL AM
+<br><span class=l><span class=e>a</span>&#xAABF;</span>U+AABF TAI VIET TONE MAI EK
+<br><span class=l><span class=e>a</span>&#xAAC1;</span>U+AAC1 TAI VIET TONE MAI THO
+<br><span class=l><span class=e>a</span>&#xAAEC;</span>U+AAEC MEETEI MAYEK VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#xAAED;</span>U+AAED MEETEI MAYEK VOWEL SIGN AAI
+<br><span class=l><span class=e>a</span>&#xAAF6;</span>U+AAF6 MEETEI MAYEK VIRAMA
+<br><span class=l><span class=e>a</span>&#xABE5;</span>U+ABE5 MEETEI MAYEK VOWEL SIGN ANAP
+<br><span class=l><span class=e>a</span>&#xABE8;</span>U+ABE8 MEETEI MAYEK VOWEL SIGN UNAP
+<br><span class=l><span class=e>a</span>&#xABED;</span>U+ABED MEETEI MAYEK APUN IYEK
+<br><span class=l><span class=e>a</span>&#xFB1E;</span>U+FB1E HEBREW POINT JUDEO-SPANISH VARIKA
+<br><span class=l><span class=e>a</span>&#xFE00;</span>U+FE00 VARIATION SELECTOR-1
+<br><span class=l><span class=e>a</span>&#xFE01;</span>U+FE01 VARIATION SELECTOR-2
+<br><span class=l><span class=e>a</span>&#xFE02;</span>U+FE02 VARIATION SELECTOR-3
+<br><span class=l><span class=e>a</span>&#xFE03;</span>U+FE03 VARIATION SELECTOR-4
+<br><span class=l><span class=e>a</span>&#xFE04;</span>U+FE04 VARIATION SELECTOR-5
+<br><span class=l><span class=e>a</span>&#xFE05;</span>U+FE05 VARIATION SELECTOR-6
+<br><span class=l><span class=e>a</span>&#xFE06;</span>U+FE06 VARIATION SELECTOR-7
+<br><span class=l><span class=e>a</span>&#xFE07;</span>U+FE07 VARIATION SELECTOR-8
+<br><span class=l><span class=e>a</span>&#xFE08;</span>U+FE08 VARIATION SELECTOR-9
+<br><span class=l><span class=e>a</span>&#xFE09;</span>U+FE09 VARIATION SELECTOR-10
+<br><span class=l><span class=e>a</span>&#xFE0A;</span>U+FE0A VARIATION SELECTOR-11
+<br><span class=l><span class=e>a</span>&#xFE0B;</span>U+FE0B VARIATION SELECTOR-12
+<br><span class=l><span class=e>a</span>&#xFE0C;</span>U+FE0C VARIATION SELECTOR-13
+<br><span class=l><span class=e>a</span>&#xFE0D;</span>U+FE0D VARIATION SELECTOR-14
+<br><span class=l><span class=e>a</span>&#xFE0E;</span>U+FE0E VARIATION SELECTOR-15
+<br><span class=l><span class=e>a</span>&#xFE0F;</span>U+FE0F VARIATION SELECTOR-16
+<br><span class=l><span class=e>a</span>&#xFE20;</span>U+FE20 COMBINING LIGATURE LEFT HALF
+<br><span class=l><span class=e>a</span>&#xFE21;</span>U+FE21 COMBINING LIGATURE RIGHT HALF
+<br><span class=l><span class=e>a</span>&#xFE22;</span>U+FE22 COMBINING DOUBLE TILDE LEFT HALF
+<br><span class=l><span class=e>a</span>&#xFE23;</span>U+FE23 COMBINING DOUBLE TILDE RIGHT HALF
+<br><span class=l><span class=e>a</span>&#xFE24;</span>U+FE24 COMBINING MACRON LEFT HALF
+<br><span class=l><span class=e>a</span>&#xFE25;</span>U+FE25 COMBINING MACRON RIGHT HALF
+<br><span class=l><span class=e>a</span>&#xFE26;</span>U+FE26 COMBINING CONJOINING MACRON
+<br><span class=l><span class=e>a</span>&#xFE27;</span>U+FE27 COMBINING LIGATURE LEFT HALF BELOW
+<br><span class=l><span class=e>a</span>&#xFE28;</span>U+FE28 COMBINING LIGATURE RIGHT HALF BELOW
+<br><span class=l><span class=e>a</span>&#xFE29;</span>U+FE29 COMBINING TILDE LEFT HALF BELOW
+<br><span class=l><span class=e>a</span>&#xFE2A;</span>U+FE2A COMBINING TILDE RIGHT HALF BELOW
+<br><span class=l><span class=e>a</span>&#xFE2B;</span>U+FE2B COMBINING MACRON LEFT HALF BELOW
+<br><span class=l><span class=e>a</span>&#xFE2C;</span>U+FE2C COMBINING MACRON RIGHT HALF BELOW
+<br><span class=l><span class=e>a</span>&#xFE2D;</span>U+FE2D COMBINING CONJOINING MACRON BELOW
+<br><span class=l><span class=e>a</span>&#xFE2E;</span>U+FE2E COMBINING CYRILLIC TITLO LEFT HALF
+<br><span class=l><span class=e>a</span>&#xFE2F;</span>U+FE2F COMBINING CYRILLIC TITLO RIGHT HALF
+<br><span class=l><span class=e>a</span>&#x101FD;</span>U+101FD PHAISTOS DISC SIGN COMBINING OBLIQUE STROKE
+<br><span class=l><span class=e>a</span>&#x102E0;</span>U+102E0 COPTIC EPACT THOUSANDS MARK
+<br><span class=l><span class=e>a</span>&#x10376;</span>U+10376 COMBINING OLD PERMIC LETTER AN
+<br><span class=l><span class=e>a</span>&#x10377;</span>U+10377 COMBINING OLD PERMIC LETTER DOI
+<br><span class=l><span class=e>a</span>&#x10378;</span>U+10378 COMBINING OLD PERMIC LETTER ZATA
+<br><span class=l><span class=e>a</span>&#x10379;</span>U+10379 COMBINING OLD PERMIC LETTER NENOE
+<br><span class=l><span class=e>a</span>&#x1037A;</span>U+1037A COMBINING OLD PERMIC LETTER SII
+<br><span class=l><span class=e>a</span>&#x10A01;</span>U+10A01 KHAROSHTHI VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x10A02;</span>U+10A02 KHAROSHTHI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x10A03;</span>U+10A03 KHAROSHTHI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x10A05;</span>U+10A05 KHAROSHTHI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x10A06;</span>U+10A06 KHAROSHTHI VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x10A0C;</span>U+10A0C KHAROSHTHI VOWEL LENGTH MARK
+<br><span class=l><span class=e>a</span>&#x10A0D;</span>U+10A0D KHAROSHTHI SIGN DOUBLE RING BELOW
+<br><span class=l><span class=e>a</span>&#x10A0E;</span>U+10A0E KHAROSHTHI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x10A0F;</span>U+10A0F KHAROSHTHI SIGN VISARGA
+<br><span class=l><span class=e>a</span>&#x10A38;</span>U+10A38 KHAROSHTHI SIGN BAR ABOVE
+<br><span class=l><span class=e>a</span>&#x10A39;</span>U+10A39 KHAROSHTHI SIGN CAUDA
+<br><span class=l><span class=e>a</span>&#x10A3A;</span>U+10A3A KHAROSHTHI SIGN DOT BELOW
+<br><span class=l><span class=e>a</span>&#x10A3F;</span>U+10A3F KHAROSHTHI VIRAMA
+<br><span class=l><span class=e>a</span>&#x10AE5;</span>U+10AE5 MANICHAEAN ABBREVIATION MARK ABOVE
+<br><span class=l><span class=e>a</span>&#x10AE6;</span>U+10AE6 MANICHAEAN ABBREVIATION MARK BELOW
+<br><span class=l><span class=e>a</span>&#x10D24;</span>U+10D24 HANIFI ROHINGYA SIGN HARBAHAY
+<br><span class=l><span class=e>a</span>&#x10D25;</span>U+10D25 HANIFI ROHINGYA SIGN TAHALA
+<br><span class=l><span class=e>a</span>&#x10D26;</span>U+10D26 HANIFI ROHINGYA SIGN TANA
+<br><span class=l><span class=e>a</span>&#x10D27;</span>U+10D27 HANIFI ROHINGYA SIGN TASSI
+<br><span class=l><span class=e>a</span>&#x10EAB;</span>U+10EAB YEZIDI COMBINING HAMZA MARK
+<br><span class=l><span class=e>a</span>&#x10EAC;</span>U+10EAC YEZIDI COMBINING MADDA MARK
+<br><span class=l><span class=e>a</span>&#x10F46;</span>U+10F46 SOGDIAN COMBINING DOT BELOW
+<br><span class=l><span class=e>a</span>&#x10F47;</span>U+10F47 SOGDIAN COMBINING TWO DOTS BELOW
+<br><span class=l><span class=e>a</span>&#x10F48;</span>U+10F48 SOGDIAN COMBINING DOT ABOVE
+<br><span class=l><span class=e>a</span>&#x10F49;</span>U+10F49 SOGDIAN COMBINING TWO DOTS ABOVE
+<br><span class=l><span class=e>a</span>&#x10F4A;</span>U+10F4A SOGDIAN COMBINING CURVE ABOVE
+<br><span class=l><span class=e>a</span>&#x10F4B;</span>U+10F4B SOGDIAN COMBINING CURVE BELOW
+<br><span class=l><span class=e>a</span>&#x10F4C;</span>U+10F4C SOGDIAN COMBINING HOOK ABOVE
+<br><span class=l><span class=e>a</span>&#x10F4D;</span>U+10F4D SOGDIAN COMBINING HOOK BELOW
+<br><span class=l><span class=e>a</span>&#x10F4E;</span>U+10F4E SOGDIAN COMBINING LONG HOOK BELOW
+<br><span class=l><span class=e>a</span>&#x10F4F;</span>U+10F4F SOGDIAN COMBINING RESH BELOW
+<br><span class=l><span class=e>a</span>&#x10F50;</span>U+10F50 SOGDIAN COMBINING STROKE BELOW
+<br><span class=l><span class=e>a</span>&#x11001;</span>U+11001 BRAHMI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11038;</span>U+11038 BRAHMI VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#x11039;</span>U+11039 BRAHMI VOWEL SIGN BHATTIPROLU AA
+<br><span class=l><span class=e>a</span>&#x1103A;</span>U+1103A BRAHMI VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x1103B;</span>U+1103B BRAHMI VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x1103C;</span>U+1103C BRAHMI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1103D;</span>U+1103D BRAHMI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x1103E;</span>U+1103E BRAHMI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x1103F;</span>U+1103F BRAHMI VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x11040;</span>U+11040 BRAHMI VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x11041;</span>U+11041 BRAHMI VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x11042;</span>U+11042 BRAHMI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11043;</span>U+11043 BRAHMI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11044;</span>U+11044 BRAHMI VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x11045;</span>U+11045 BRAHMI VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x11046;</span>U+11046 BRAHMI VIRAMA
+<br><span class=l><span class=e>a</span>&#x1107F;</span>U+1107F BRAHMI NUMBER JOINER
+<br><span class=l><span class=e>a</span>&#x11080;</span>U+11080 KAITHI SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x11081;</span>U+11081 KAITHI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x110B3;</span>U+110B3 KAITHI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x110B4;</span>U+110B4 KAITHI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x110B5;</span>U+110B5 KAITHI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x110B6;</span>U+110B6 KAITHI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x110B9;</span>U+110B9 KAITHI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x110BA;</span>U+110BA KAITHI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x11100;</span>U+11100 CHAKMA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x11101;</span>U+11101 CHAKMA SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11102;</span>U+11102 CHAKMA SIGN VISARGA
+<br><span class=l><span class=e>a</span>&#x11127;</span>U+11127 CHAKMA VOWEL SIGN A
+<br><span class=l><span class=e>a</span>&#x11128;</span>U+11128 CHAKMA VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x11129;</span>U+11129 CHAKMA VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x1112A;</span>U+1112A CHAKMA VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x1112B;</span>U+1112B CHAKMA VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x1112D;</span>U+1112D CHAKMA VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x1112E;</span>U+1112E CHAKMA VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x1112F;</span>U+1112F CHAKMA VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x11130;</span>U+11130 CHAKMA VOWEL SIGN OI
+<br><span class=l><span class=e>a</span>&#x11131;</span>U+11131 CHAKMA O MARK
+<br><span class=l><span class=e>a</span>&#x11132;</span>U+11132 CHAKMA AU MARK
+<br><span class=l><span class=e>a</span>&#x11133;</span>U+11133 CHAKMA VIRAMA
+<br><span class=l><span class=e>a</span>&#x11134;</span>U+11134 CHAKMA MAAYYAA
+<br><span class=l><span class=e>a</span>&#x11173;</span>U+11173 MAHAJANI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x11180;</span>U+11180 SHARADA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x11181;</span>U+11181 SHARADA SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x111B6;</span>U+111B6 SHARADA VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x111B7;</span>U+111B7 SHARADA VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x111B8;</span>U+111B8 SHARADA VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x111B9;</span>U+111B9 SHARADA VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x111BA;</span>U+111BA SHARADA VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x111BB;</span>U+111BB SHARADA VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x111BC;</span>U+111BC SHARADA VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x111BD;</span>U+111BD SHARADA VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x111BE;</span>U+111BE SHARADA VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x111C9;</span>U+111C9 SHARADA SANDHI MARK
+<br><span class=l><span class=e>a</span>&#x111CA;</span>U+111CA SHARADA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x111CB;</span>U+111CB SHARADA VOWEL MODIFIER MARK
+<br><span class=l><span class=e>a</span>&#x111CC;</span>U+111CC SHARADA EXTRA SHORT VOWEL MARK
+<br><span class=l><span class=e>a</span>&#x111CF;</span>U+111CF SHARADA SIGN INVERTED CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x1122F;</span>U+1122F KHOJKI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11230;</span>U+11230 KHOJKI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11231;</span>U+11231 KHOJKI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11234;</span>U+11234 KHOJKI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11236;</span>U+11236 KHOJKI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x11237;</span>U+11237 KHOJKI SIGN SHADDA
+<br><span class=l><span class=e>a</span>&#x1123E;</span>U+1123E KHOJKI SIGN SUKUN
+<br><span class=l><span class=e>a</span>&#x112DF;</span>U+112DF KHUDAWADI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x112E3;</span>U+112E3 KHUDAWADI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x112E4;</span>U+112E4 KHUDAWADI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x112E5;</span>U+112E5 KHUDAWADI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x112E6;</span>U+112E6 KHUDAWADI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x112E7;</span>U+112E7 KHUDAWADI VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x112E8;</span>U+112E8 KHUDAWADI VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x112E9;</span>U+112E9 KHUDAWADI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x112EA;</span>U+112EA KHUDAWADI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x11300;</span>U+11300 GRANTHA SIGN COMBINING ANUSVARA ABOVE
+<br><span class=l><span class=e>a</span>&#x11301;</span>U+11301 GRANTHA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x1133B;</span>U+1133B COMBINING BINDU BELOW
+<br><span class=l><span class=e>a</span>&#x1133C;</span>U+1133C GRANTHA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x11340;</span>U+11340 GRANTHA VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x11366;</span>U+11366 COMBINING GRANTHA DIGIT ZERO
+<br><span class=l><span class=e>a</span>&#x11367;</span>U+11367 COMBINING GRANTHA DIGIT ONE
+<br><span class=l><span class=e>a</span>&#x11368;</span>U+11368 COMBINING GRANTHA DIGIT TWO
+<br><span class=l><span class=e>a</span>&#x11369;</span>U+11369 COMBINING GRANTHA DIGIT THREE
+<br><span class=l><span class=e>a</span>&#x1136A;</span>U+1136A COMBINING GRANTHA DIGIT FOUR
+<br><span class=l><span class=e>a</span>&#x1136B;</span>U+1136B COMBINING GRANTHA DIGIT FIVE
+<br><span class=l><span class=e>a</span>&#x1136C;</span>U+1136C COMBINING GRANTHA DIGIT SIX
+<br><span class=l><span class=e>a</span>&#x11370;</span>U+11370 COMBINING GRANTHA LETTER A
+<br><span class=l><span class=e>a</span>&#x11371;</span>U+11371 COMBINING GRANTHA LETTER KA
+<br><span class=l><span class=e>a</span>&#x11372;</span>U+11372 COMBINING GRANTHA LETTER NA
+<br><span class=l><span class=e>a</span>&#x11373;</span>U+11373 COMBINING GRANTHA LETTER VI
+<br><span class=l><span class=e>a</span>&#x11374;</span>U+11374 COMBINING GRANTHA LETTER PA
+<br><span class=l><span class=e>a</span>&#x11438;</span>U+11438 NEWA VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11439;</span>U+11439 NEWA VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x1143A;</span>U+1143A NEWA VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x1143B;</span>U+1143B NEWA VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x1143C;</span>U+1143C NEWA VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x1143D;</span>U+1143D NEWA VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x1143E;</span>U+1143E NEWA VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x1143F;</span>U+1143F NEWA VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11442;</span>U+11442 NEWA SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x11443;</span>U+11443 NEWA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x11444;</span>U+11444 NEWA SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11446;</span>U+11446 NEWA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x1145E;</span>U+1145E NEWA SANDHI MARK
+<br><span class=l><span class=e>a</span>&#x114B3;</span>U+114B3 TIRHUTA VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x114B4;</span>U+114B4 TIRHUTA VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x114B5;</span>U+114B5 TIRHUTA VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x114B6;</span>U+114B6 TIRHUTA VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x114B7;</span>U+114B7 TIRHUTA VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x114B8;</span>U+114B8 TIRHUTA VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x114BA;</span>U+114BA TIRHUTA VOWEL SIGN SHORT E
+<br><span class=l><span class=e>a</span>&#x114BF;</span>U+114BF TIRHUTA SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x114C0;</span>U+114C0 TIRHUTA SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x114C2;</span>U+114C2 TIRHUTA SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x114C3;</span>U+114C3 TIRHUTA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x115B2;</span>U+115B2 SIDDHAM VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x115B3;</span>U+115B3 SIDDHAM VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x115B4;</span>U+115B4 SIDDHAM VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x115B5;</span>U+115B5 SIDDHAM VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x115BC;</span>U+115BC SIDDHAM SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x115BD;</span>U+115BD SIDDHAM SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x115BF;</span>U+115BF SIDDHAM SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x115C0;</span>U+115C0 SIDDHAM SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x115DC;</span>U+115DC SIDDHAM VOWEL SIGN ALTERNATE U
+<br><span class=l><span class=e>a</span>&#x115DD;</span>U+115DD SIDDHAM VOWEL SIGN ALTERNATE UU
+<br><span class=l><span class=e>a</span>&#x11633;</span>U+11633 MODI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11634;</span>U+11634 MODI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x11635;</span>U+11635 MODI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x11636;</span>U+11636 MODI VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x11637;</span>U+11637 MODI VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x11638;</span>U+11638 MODI VOWEL SIGN VOCALIC LL
+<br><span class=l><span class=e>a</span>&#x11639;</span>U+11639 MODI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x1163A;</span>U+1163A MODI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x1163D;</span>U+1163D MODI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x1163F;</span>U+1163F MODI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x11640;</span>U+11640 MODI SIGN ARDHACANDRA
+<br><span class=l><span class=e>a</span>&#x116AB;</span>U+116AB TAKRI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x116AD;</span>U+116AD TAKRI VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#x116B0;</span>U+116B0 TAKRI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x116B1;</span>U+116B1 TAKRI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x116B2;</span>U+116B2 TAKRI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x116B3;</span>U+116B3 TAKRI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x116B4;</span>U+116B4 TAKRI VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x116B5;</span>U+116B5 TAKRI VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x116B7;</span>U+116B7 TAKRI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x1171D;</span>U+1171D AHOM CONSONANT SIGN MEDIAL LA
+<br><span class=l><span class=e>a</span>&#x1171E;</span>U+1171E AHOM CONSONANT SIGN MEDIAL RA
+<br><span class=l><span class=e>a</span>&#x1171F;</span>U+1171F AHOM CONSONANT SIGN MEDIAL LIGATING RA
+<br><span class=l><span class=e>a</span>&#x11722;</span>U+11722 AHOM VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x11723;</span>U+11723 AHOM VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x11724;</span>U+11724 AHOM VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11725;</span>U+11725 AHOM VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x11727;</span>U+11727 AHOM VOWEL SIGN AW
+<br><span class=l><span class=e>a</span>&#x11728;</span>U+11728 AHOM VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x11729;</span>U+11729 AHOM VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x1172A;</span>U+1172A AHOM VOWEL SIGN AM
+<br><span class=l><span class=e>a</span>&#x1172B;</span>U+1172B AHOM SIGN KILLER
+<br><span class=l><span class=e>a</span>&#x1182F;</span>U+1182F DOGRA VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11830;</span>U+11830 DOGRA VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x11831;</span>U+11831 DOGRA VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x11832;</span>U+11832 DOGRA VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x11833;</span>U+11833 DOGRA VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11834;</span>U+11834 DOGRA VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11835;</span>U+11835 DOGRA VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x11836;</span>U+11836 DOGRA VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x11837;</span>U+11837 DOGRA SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11839;</span>U+11839 DOGRA SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x1183A;</span>U+1183A DOGRA SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x1193B;</span>U+1193B DIVES AKURU SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x1193C;</span>U+1193C DIVES AKURU SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x1193E;</span>U+1193E DIVES AKURU VIRAMA
+<br><span class=l><span class=e>a</span>&#x11943;</span>U+11943 DIVES AKURU SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x119D4;</span>U+119D4 NANDINAGARI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x119D5;</span>U+119D5 NANDINAGARI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x119D6;</span>U+119D6 NANDINAGARI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x119D7;</span>U+119D7 NANDINAGARI VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x119DA;</span>U+119DA NANDINAGARI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x119DB;</span>U+119DB NANDINAGARI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x119E0;</span>U+119E0 NANDINAGARI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x11A01;</span>U+11A01 ZANABAZAR SQUARE VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x11A02;</span>U+11A02 ZANABAZAR SQUARE VOWEL SIGN UE
+<br><span class=l><span class=e>a</span>&#x11A03;</span>U+11A03 ZANABAZAR SQUARE VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11A04;</span>U+11A04 ZANABAZAR SQUARE VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11A05;</span>U+11A05 ZANABAZAR SQUARE VOWEL SIGN OE
+<br><span class=l><span class=e>a</span>&#x11A06;</span>U+11A06 ZANABAZAR SQUARE VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x11A07;</span>U+11A07 ZANABAZAR SQUARE VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11A08;</span>U+11A08 ZANABAZAR SQUARE VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x11A09;</span>U+11A09 ZANABAZAR SQUARE VOWEL SIGN REVERSED I
+<br><span class=l><span class=e>a</span>&#x11A0A;</span>U+11A0A ZANABAZAR SQUARE VOWEL LENGTH MARK
+<br><span class=l><span class=e>a</span>&#x11A33;</span>U+11A33 ZANABAZAR SQUARE FINAL CONSONANT MARK
+<br><span class=l><span class=e>a</span>&#x11A34;</span>U+11A34 ZANABAZAR SQUARE SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x11A35;</span>U+11A35 ZANABAZAR SQUARE SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x11A36;</span>U+11A36 ZANABAZAR SQUARE SIGN CANDRABINDU WITH ORNAMENT
+<br><span class=l><span class=e>a</span>&#x11A37;</span>U+11A37 ZANABAZAR SQUARE SIGN CANDRA WITH ORNAMENT
+<br><span class=l><span class=e>a</span>&#x11A38;</span>U+11A38 ZANABAZAR SQUARE SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11A3B;</span>U+11A3B ZANABAZAR SQUARE CLUSTER-FINAL LETTER YA
+<br><span class=l><span class=e>a</span>&#x11A3C;</span>U+11A3C ZANABAZAR SQUARE CLUSTER-FINAL LETTER RA
+<br><span class=l><span class=e>a</span>&#x11A3D;</span>U+11A3D ZANABAZAR SQUARE CLUSTER-FINAL LETTER LA
+<br><span class=l><span class=e>a</span>&#x11A3E;</span>U+11A3E ZANABAZAR SQUARE CLUSTER-FINAL LETTER VA
+<br><span class=l><span class=e>a</span>&#x11A47;</span>U+11A47 ZANABAZAR SQUARE SUBJOINER
+<br><span class=l><span class=e>a</span>&#x11A51;</span>U+11A51 SOYOMBO VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x11A52;</span>U+11A52 SOYOMBO VOWEL SIGN UE
+<br><span class=l><span class=e>a</span>&#x11A53;</span>U+11A53 SOYOMBO VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11A54;</span>U+11A54 SOYOMBO VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11A55;</span>U+11A55 SOYOMBO VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x11A56;</span>U+11A56 SOYOMBO VOWEL SIGN OE
+<br><span class=l><span class=e>a</span>&#x11A59;</span>U+11A59 SOYOMBO VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x11A5A;</span>U+11A5A SOYOMBO VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x11A5B;</span>U+11A5B SOYOMBO VOWEL LENGTH MARK
+<br><span class=l><span class=e>a</span>&#x11A8A;</span>U+11A8A SOYOMBO FINAL CONSONANT SIGN G
+<br><span class=l><span class=e>a</span>&#x11A8B;</span>U+11A8B SOYOMBO FINAL CONSONANT SIGN K
+<br><span class=l><span class=e>a</span>&#x11A8C;</span>U+11A8C SOYOMBO FINAL CONSONANT SIGN NG
+<br><span class=l><span class=e>a</span>&#x11A8D;</span>U+11A8D SOYOMBO FINAL CONSONANT SIGN D
+<br><span class=l><span class=e>a</span>&#x11A8E;</span>U+11A8E SOYOMBO FINAL CONSONANT SIGN N
+<br><span class=l><span class=e>a</span>&#x11A8F;</span>U+11A8F SOYOMBO FINAL CONSONANT SIGN B
+<br><span class=l><span class=e>a</span>&#x11A90;</span>U+11A90 SOYOMBO FINAL CONSONANT SIGN M
+<br><span class=l><span class=e>a</span>&#x11A91;</span>U+11A91 SOYOMBO FINAL CONSONANT SIGN R
+<br><span class=l><span class=e>a</span>&#x11A92;</span>U+11A92 SOYOMBO FINAL CONSONANT SIGN L
+<br><span class=l><span class=e>a</span>&#x11A93;</span>U+11A93 SOYOMBO FINAL CONSONANT SIGN SH
+<br><span class=l><span class=e>a</span>&#x11A94;</span>U+11A94 SOYOMBO FINAL CONSONANT SIGN S
+<br><span class=l><span class=e>a</span>&#x11A95;</span>U+11A95 SOYOMBO FINAL CONSONANT SIGN -A
+<br><span class=l><span class=e>a</span>&#x11A96;</span>U+11A96 SOYOMBO SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11A98;</span>U+11A98 SOYOMBO GEMINATION MARK
+<br><span class=l><span class=e>a</span>&#x11A99;</span>U+11A99 SOYOMBO SUBJOINER
+<br><span class=l><span class=e>a</span>&#x11C30;</span>U+11C30 BHAIKSUKI VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x11C31;</span>U+11C31 BHAIKSUKI VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x11C32;</span>U+11C32 BHAIKSUKI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11C33;</span>U+11C33 BHAIKSUKI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x11C34;</span>U+11C34 BHAIKSUKI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x11C35;</span>U+11C35 BHAIKSUKI VOWEL SIGN VOCALIC RR
+<br><span class=l><span class=e>a</span>&#x11C36;</span>U+11C36 BHAIKSUKI VOWEL SIGN VOCALIC L
+<br><span class=l><span class=e>a</span>&#x11C38;</span>U+11C38 BHAIKSUKI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11C39;</span>U+11C39 BHAIKSUKI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11C3A;</span>U+11C3A BHAIKSUKI VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x11C3B;</span>U+11C3B BHAIKSUKI VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x11C3C;</span>U+11C3C BHAIKSUKI SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x11C3D;</span>U+11C3D BHAIKSUKI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11C3F;</span>U+11C3F BHAIKSUKI SIGN VIRAMA
+<br><span class=l><span class=e>a</span>&#x11C92;</span>U+11C92 MARCHEN SUBJOINED LETTER KA
+<br><span class=l><span class=e>a</span>&#x11C93;</span>U+11C93 MARCHEN SUBJOINED LETTER KHA
+<br><span class=l><span class=e>a</span>&#x11C94;</span>U+11C94 MARCHEN SUBJOINED LETTER GA
+<br><span class=l><span class=e>a</span>&#x11C95;</span>U+11C95 MARCHEN SUBJOINED LETTER NGA
+<br><span class=l><span class=e>a</span>&#x11C96;</span>U+11C96 MARCHEN SUBJOINED LETTER CA
+<br><span class=l><span class=e>a</span>&#x11C97;</span>U+11C97 MARCHEN SUBJOINED LETTER CHA
+<br><span class=l><span class=e>a</span>&#x11C98;</span>U+11C98 MARCHEN SUBJOINED LETTER JA
+<br><span class=l><span class=e>a</span>&#x11C99;</span>U+11C99 MARCHEN SUBJOINED LETTER NYA
+<br><span class=l><span class=e>a</span>&#x11C9A;</span>U+11C9A MARCHEN SUBJOINED LETTER TA
+<br><span class=l><span class=e>a</span>&#x11C9B;</span>U+11C9B MARCHEN SUBJOINED LETTER THA
+<br><span class=l><span class=e>a</span>&#x11C9C;</span>U+11C9C MARCHEN SUBJOINED LETTER DA
+<br><span class=l><span class=e>a</span>&#x11C9D;</span>U+11C9D MARCHEN SUBJOINED LETTER NA
+<br><span class=l><span class=e>a</span>&#x11C9E;</span>U+11C9E MARCHEN SUBJOINED LETTER PA
+<br><span class=l><span class=e>a</span>&#x11C9F;</span>U+11C9F MARCHEN SUBJOINED LETTER PHA
+<br><span class=l><span class=e>a</span>&#x11CA0;</span>U+11CA0 MARCHEN SUBJOINED LETTER BA
+<br><span class=l><span class=e>a</span>&#x11CA1;</span>U+11CA1 MARCHEN SUBJOINED LETTER MA
+<br><span class=l><span class=e>a</span>&#x11CA2;</span>U+11CA2 MARCHEN SUBJOINED LETTER TSA
+<br><span class=l><span class=e>a</span>&#x11CA3;</span>U+11CA3 MARCHEN SUBJOINED LETTER TSHA
+<br><span class=l><span class=e>a</span>&#x11CA4;</span>U+11CA4 MARCHEN SUBJOINED LETTER DZA
+<br><span class=l><span class=e>a</span>&#x11CA5;</span>U+11CA5 MARCHEN SUBJOINED LETTER WA
+<br><span class=l><span class=e>a</span>&#x11CA6;</span>U+11CA6 MARCHEN SUBJOINED LETTER ZHA
+<br><span class=l><span class=e>a</span>&#x11CA7;</span>U+11CA7 MARCHEN SUBJOINED LETTER ZA
+<br><span class=l><span class=e>a</span>&#x11CAA;</span>U+11CAA MARCHEN SUBJOINED LETTER RA
+<br><span class=l><span class=e>a</span>&#x11CAB;</span>U+11CAB MARCHEN SUBJOINED LETTER LA
+<br><span class=l><span class=e>a</span>&#x11CAC;</span>U+11CAC MARCHEN SUBJOINED LETTER SHA
+<br><span class=l><span class=e>a</span>&#x11CAD;</span>U+11CAD MARCHEN SUBJOINED LETTER SA
+<br><span class=l><span class=e>a</span>&#x11CAE;</span>U+11CAE MARCHEN SUBJOINED LETTER HA
+<br><span class=l><span class=e>a</span>&#x11CAF;</span>U+11CAF MARCHEN SUBJOINED LETTER A
+<br><span class=l><span class=e>a</span>&#x11CB0;</span>U+11CB0 MARCHEN VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#x11CB2;</span>U+11CB2 MARCHEN VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11CB3;</span>U+11CB3 MARCHEN VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11CB5;</span>U+11CB5 MARCHEN SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11CB6;</span>U+11CB6 MARCHEN SIGN CANDRABINDU
+<br><span class=l><span class=e>a</span>&#x11D31;</span>U+11D31 MASARAM GONDI VOWEL SIGN AA
+<br><span class=l><span class=e>a</span>&#x11D32;</span>U+11D32 MASARAM GONDI VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x11D33;</span>U+11D33 MASARAM GONDI VOWEL SIGN II
+<br><span class=l><span class=e>a</span>&#x11D34;</span>U+11D34 MASARAM GONDI VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x11D35;</span>U+11D35 MASARAM GONDI VOWEL SIGN UU
+<br><span class=l><span class=e>a</span>&#x11D36;</span>U+11D36 MASARAM GONDI VOWEL SIGN VOCALIC R
+<br><span class=l><span class=e>a</span>&#x11D3A;</span>U+11D3A MASARAM GONDI VOWEL SIGN E
+<br><span class=l><span class=e>a</span>&#x11D3C;</span>U+11D3C MASARAM GONDI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11D3D;</span>U+11D3D MASARAM GONDI VOWEL SIGN O
+<br><span class=l><span class=e>a</span>&#x11D3F;</span>U+11D3F MASARAM GONDI VOWEL SIGN AU
+<br><span class=l><span class=e>a</span>&#x11D40;</span>U+11D40 MASARAM GONDI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11D41;</span>U+11D41 MASARAM GONDI SIGN VISARGA
+<br><span class=l><span class=e>a</span>&#x11D42;</span>U+11D42 MASARAM GONDI SIGN NUKTA
+<br><span class=l><span class=e>a</span>&#x11D43;</span>U+11D43 MASARAM GONDI SIGN CANDRA
+<br><span class=l><span class=e>a</span>&#x11D44;</span>U+11D44 MASARAM GONDI SIGN HALANTA
+<br><span class=l><span class=e>a</span>&#x11D45;</span>U+11D45 MASARAM GONDI VIRAMA
+<br><span class=l><span class=e>a</span>&#x11D47;</span>U+11D47 MASARAM GONDI RA-KARA
+<br><span class=l><span class=e>a</span>&#x11D90;</span>U+11D90 GUNJALA GONDI VOWEL SIGN EE
+<br><span class=l><span class=e>a</span>&#x11D91;</span>U+11D91 GUNJALA GONDI VOWEL SIGN AI
+<br><span class=l><span class=e>a</span>&#x11D95;</span>U+11D95 GUNJALA GONDI SIGN ANUSVARA
+<br><span class=l><span class=e>a</span>&#x11D97;</span>U+11D97 GUNJALA GONDI VIRAMA
+<br><span class=l><span class=e>a</span>&#x11EF3;</span>U+11EF3 MAKASAR VOWEL SIGN I
+<br><span class=l><span class=e>a</span>&#x11EF4;</span>U+11EF4 MAKASAR VOWEL SIGN U
+<br><span class=l><span class=e>a</span>&#x16AF0;</span>U+16AF0 BASSA VAH COMBINING HIGH TONE
+<br><span class=l><span class=e>a</span>&#x16AF1;</span>U+16AF1 BASSA VAH COMBINING LOW TONE
+<br><span class=l><span class=e>a</span>&#x16AF2;</span>U+16AF2 BASSA VAH COMBINING MID TONE
+<br><span class=l><span class=e>a</span>&#x16AF3;</span>U+16AF3 BASSA VAH COMBINING LOW-MID TONE
+<br><span class=l><span class=e>a</span>&#x16AF4;</span>U+16AF4 BASSA VAH COMBINING HIGH-LOW TONE
+<br><span class=l><span class=e>a</span>&#x16B30;</span>U+16B30 PAHAWH HMONG MARK CIM TUB
+<br><span class=l><span class=e>a</span>&#x16B31;</span>U+16B31 PAHAWH HMONG MARK CIM SO
+<br><span class=l><span class=e>a</span>&#x16B32;</span>U+16B32 PAHAWH HMONG MARK CIM KES
+<br><span class=l><span class=e>a</span>&#x16B33;</span>U+16B33 PAHAWH HMONG MARK CIM KHAV
+<br><span class=l><span class=e>a</span>&#x16B34;</span>U+16B34 PAHAWH HMONG MARK CIM SUAM
+<br><span class=l><span class=e>a</span>&#x16B35;</span>U+16B35 PAHAWH HMONG MARK CIM HOM
+<br><span class=l><span class=e>a</span>&#x16B36;</span>U+16B36 PAHAWH HMONG MARK CIM TAUM
+<br><span class=l><span class=e>a</span>&#x16F4F;</span>U+16F4F MIAO SIGN CONSONANT MODIFIER BAR
+<br><span class=l><span class=e>a</span>&#x16F8F;</span>U+16F8F MIAO TONE RIGHT
+<br><span class=l><span class=e>a</span>&#x16F90;</span>U+16F90 MIAO TONE TOP RIGHT
+<br><span class=l><span class=e>a</span>&#x16F91;</span>U+16F91 MIAO TONE ABOVE
+<br><span class=l><span class=e>a</span>&#x16F92;</span>U+16F92 MIAO TONE BELOW
+<br><span class=l><span class=e>a</span>&#x16FE4;</span>U+16FE4 KHITAN SMALL SCRIPT FILLER
+<br><span class=l><span class=e>a</span>&#x1BC9D;</span>U+1BC9D DUPLOYAN THICK LETTER SELECTOR
+<br><span class=l><span class=e>a</span>&#x1BC9E;</span>U+1BC9E DUPLOYAN DOUBLE MARK
+<br><span class=l><span class=e>a</span>&#x1D167;</span>U+1D167 MUSICAL SYMBOL COMBINING TREMOLO-1
+<br><span class=l><span class=e>a</span>&#x1D168;</span>U+1D168 MUSICAL SYMBOL COMBINING TREMOLO-2
+<br><span class=l><span class=e>a</span>&#x1D169;</span>U+1D169 MUSICAL SYMBOL COMBINING TREMOLO-3
+<br><span class=l><span class=e>a</span>&#x1D17B;</span>U+1D17B MUSICAL SYMBOL COMBINING ACCENT
+<br><span class=l><span class=e>a</span>&#x1D17C;</span>U+1D17C MUSICAL SYMBOL COMBINING STACCATO
+<br><span class=l><span class=e>a</span>&#x1D17D;</span>U+1D17D MUSICAL SYMBOL COMBINING TENUTO
+<br><span class=l><span class=e>a</span>&#x1D17E;</span>U+1D17E MUSICAL SYMBOL COMBINING STACCATISSIMO
+<br><span class=l><span class=e>a</span>&#x1D17F;</span>U+1D17F MUSICAL SYMBOL COMBINING MARCATO
+<br><span class=l><span class=e>a</span>&#x1D180;</span>U+1D180 MUSICAL SYMBOL COMBINING MARCATO-STACCATO
+<br><span class=l><span class=e>a</span>&#x1D181;</span>U+1D181 MUSICAL SYMBOL COMBINING ACCENT-STACCATO
+<br><span class=l><span class=e>a</span>&#x1D182;</span>U+1D182 MUSICAL SYMBOL COMBINING LOURE
+<br><span class=l><span class=e>a</span>&#x1D185;</span>U+1D185 MUSICAL SYMBOL COMBINING DOIT
+<br><span class=l><span class=e>a</span>&#x1D186;</span>U+1D186 MUSICAL SYMBOL COMBINING RIP
+<br><span class=l><span class=e>a</span>&#x1D187;</span>U+1D187 MUSICAL SYMBOL COMBINING FLIP
+<br><span class=l><span class=e>a</span>&#x1D188;</span>U+1D188 MUSICAL SYMBOL COMBINING SMEAR
+<br><span class=l><span class=e>a</span>&#x1D189;</span>U+1D189 MUSICAL SYMBOL COMBINING BEND
+<br><span class=l><span class=e>a</span>&#x1D18A;</span>U+1D18A MUSICAL SYMBOL COMBINING DOUBLE TONGUE
+<br><span class=l><span class=e>a</span>&#x1D18B;</span>U+1D18B MUSICAL SYMBOL COMBINING TRIPLE TONGUE
+<br><span class=l><span class=e>a</span>&#x1D1AA;</span>U+1D1AA MUSICAL SYMBOL COMBINING DOWN BOW
+<br><span class=l><span class=e>a</span>&#x1D1AB;</span>U+1D1AB MUSICAL SYMBOL COMBINING UP BOW
+<br><span class=l><span class=e>a</span>&#x1D1AC;</span>U+1D1AC MUSICAL SYMBOL COMBINING HARMONIC
+<br><span class=l><span class=e>a</span>&#x1D1AD;</span>U+1D1AD MUSICAL SYMBOL COMBINING SNAP PIZZICATO
+<br><span class=l><span class=e>a</span>&#x1D242;</span>U+1D242 COMBINING GREEK MUSICAL TRISEME
+<br><span class=l><span class=e>a</span>&#x1D243;</span>U+1D243 COMBINING GREEK MUSICAL TETRASEME
+<br><span class=l><span class=e>a</span>&#x1D244;</span>U+1D244 COMBINING GREEK MUSICAL PENTASEME
+<br><span class=l><span class=e>a</span>&#x1DA00;</span>U+1DA00 SIGNWRITING HEAD RIM
+<br><span class=l><span class=e>a</span>&#x1DA01;</span>U+1DA01 SIGNWRITING HEAD MOVEMENT-WALLPLANE STRAIGHT
+<br><span class=l><span class=e>a</span>&#x1DA02;</span>U+1DA02 SIGNWRITING HEAD MOVEMENT-WALLPLANE TILT
+<br><span class=l><span class=e>a</span>&#x1DA03;</span>U+1DA03 SIGNWRITING HEAD MOVEMENT-FLOORPLANE STRAIGHT
+<br><span class=l><span class=e>a</span>&#x1DA04;</span>U+1DA04 SIGNWRITING HEAD MOVEMENT-WALLPLANE CURVE
+<br><span class=l><span class=e>a</span>&#x1DA05;</span>U+1DA05 SIGNWRITING HEAD MOVEMENT-FLOORPLANE CURVE
+<br><span class=l><span class=e>a</span>&#x1DA06;</span>U+1DA06 SIGNWRITING HEAD MOVEMENT CIRCLE
+<br><span class=l><span class=e>a</span>&#x1DA07;</span>U+1DA07 SIGNWRITING FACE DIRECTION POSITION NOSE FORWARD TILTING
+<br><span class=l><span class=e>a</span>&#x1DA08;</span>U+1DA08 SIGNWRITING FACE DIRECTION POSITION NOSE UP OR DOWN
+<br><span class=l><span class=e>a</span>&#x1DA09;</span>U+1DA09 SIGNWRITING FACE DIRECTION POSITION NOSE UP OR DOWN TILTING
+<br><span class=l><span class=e>a</span>&#x1DA0A;</span>U+1DA0A SIGNWRITING EYEBROWS STRAIGHT UP
+<br><span class=l><span class=e>a</span>&#x1DA0B;</span>U+1DA0B SIGNWRITING EYEBROWS STRAIGHT NEUTRAL
+<br><span class=l><span class=e>a</span>&#x1DA0C;</span>U+1DA0C SIGNWRITING EYEBROWS STRAIGHT DOWN
+<br><span class=l><span class=e>a</span>&#x1DA0D;</span>U+1DA0D SIGNWRITING DREAMY EYEBROWS NEUTRAL DOWN
+<br><span class=l><span class=e>a</span>&#x1DA0E;</span>U+1DA0E SIGNWRITING DREAMY EYEBROWS DOWN NEUTRAL
+<br><span class=l><span class=e>a</span>&#x1DA0F;</span>U+1DA0F SIGNWRITING DREAMY EYEBROWS UP NEUTRAL
+<br><span class=l><span class=e>a</span>&#x1DA10;</span>U+1DA10 SIGNWRITING DREAMY EYEBROWS NEUTRAL UP
+<br><span class=l><span class=e>a</span>&#x1DA11;</span>U+1DA11 SIGNWRITING FOREHEAD NEUTRAL
+<br><span class=l><span class=e>a</span>&#x1DA12;</span>U+1DA12 SIGNWRITING FOREHEAD CONTACT
+<br><span class=l><span class=e>a</span>&#x1DA13;</span>U+1DA13 SIGNWRITING FOREHEAD WRINKLED
+<br><span class=l><span class=e>a</span>&#x1DA14;</span>U+1DA14 SIGNWRITING EYES OPEN
+<br><span class=l><span class=e>a</span>&#x1DA15;</span>U+1DA15 SIGNWRITING EYES SQUEEZED
+<br><span class=l><span class=e>a</span>&#x1DA16;</span>U+1DA16 SIGNWRITING EYES CLOSED
+<br><span class=l><span class=e>a</span>&#x1DA17;</span>U+1DA17 SIGNWRITING EYE BLINK SINGLE
+<br><span class=l><span class=e>a</span>&#x1DA18;</span>U+1DA18 SIGNWRITING EYE BLINK MULTIPLE
+<br><span class=l><span class=e>a</span>&#x1DA19;</span>U+1DA19 SIGNWRITING EYES HALF OPEN
+<br><span class=l><span class=e>a</span>&#x1DA1A;</span>U+1DA1A SIGNWRITING EYES WIDE OPEN
+<br><span class=l><span class=e>a</span>&#x1DA1B;</span>U+1DA1B SIGNWRITING EYES HALF CLOSED
+<br><span class=l><span class=e>a</span>&#x1DA1C;</span>U+1DA1C SIGNWRITING EYES WIDENING MOVEMENT
+<br><span class=l><span class=e>a</span>&#x1DA1D;</span>U+1DA1D SIGNWRITING EYE WINK
+<br><span class=l><span class=e>a</span>&#x1DA1E;</span>U+1DA1E SIGNWRITING EYELASHES UP
+<br><span class=l><span class=e>a</span>&#x1DA1F;</span>U+1DA1F SIGNWRITING EYELASHES DOWN
+<br><span class=l><span class=e>a</span>&#x1DA20;</span>U+1DA20 SIGNWRITING EYELASHES FLUTTERING
+<br><span class=l><span class=e>a</span>&#x1DA21;</span>U+1DA21 SIGNWRITING EYEGAZE-WALLPLANE STRAIGHT
+<br><span class=l><span class=e>a</span>&#x1DA22;</span>U+1DA22 SIGNWRITING EYEGAZE-WALLPLANE STRAIGHT DOUBLE
+<br><span class=l><span class=e>a</span>&#x1DA23;</span>U+1DA23 SIGNWRITING EYEGAZE-WALLPLANE STRAIGHT ALTERNATING
+<br><span class=l><span class=e>a</span>&#x1DA24;</span>U+1DA24 SIGNWRITING EYEGAZE-FLOORPLANE STRAIGHT
+<br><span class=l><span class=e>a</span>&#x1DA25;</span>U+1DA25 SIGNWRITING EYEGAZE-FLOORPLANE STRAIGHT DOUBLE
+<br><span class=l><span class=e>a</span>&#x1DA26;</span>U+1DA26 SIGNWRITING EYEGAZE-FLOORPLANE STRAIGHT ALTERNATING
+<br><span class=l><span class=e>a</span>&#x1DA27;</span>U+1DA27 SIGNWRITING EYEGAZE-WALLPLANE CURVED
+<br><span class=l><span class=e>a</span>&#x1DA28;</span>U+1DA28 SIGNWRITING EYEGAZE-FLOORPLANE CURVED
+<br><span class=l><span class=e>a</span>&#x1DA29;</span>U+1DA29 SIGNWRITING EYEGAZE-WALLPLANE CIRCLING
+<br><span class=l><span class=e>a</span>&#x1DA2A;</span>U+1DA2A SIGNWRITING CHEEKS PUFFED
+<br><span class=l><span class=e>a</span>&#x1DA2B;</span>U+1DA2B SIGNWRITING CHEEKS NEUTRAL
+<br><span class=l><span class=e>a</span>&#x1DA2C;</span>U+1DA2C SIGNWRITING CHEEKS SUCKED
+<br><span class=l><span class=e>a</span>&#x1DA2D;</span>U+1DA2D SIGNWRITING TENSE CHEEKS HIGH
+<br><span class=l><span class=e>a</span>&#x1DA2E;</span>U+1DA2E SIGNWRITING TENSE CHEEKS MIDDLE
+<br><span class=l><span class=e>a</span>&#x1DA2F;</span>U+1DA2F SIGNWRITING TENSE CHEEKS LOW
+<br><span class=l><span class=e>a</span>&#x1DA30;</span>U+1DA30 SIGNWRITING EARS
+<br><span class=l><span class=e>a</span>&#x1DA31;</span>U+1DA31 SIGNWRITING NOSE NEUTRAL
+<br><span class=l><span class=e>a</span>&#x1DA32;</span>U+1DA32 SIGNWRITING NOSE CONTACT
+<br><span class=l><span class=e>a</span>&#x1DA33;</span>U+1DA33 SIGNWRITING NOSE WRINKLES
+<br><span class=l><span class=e>a</span>&#x1DA34;</span>U+1DA34 SIGNWRITING NOSE WIGGLES
+<br><span class=l><span class=e>a</span>&#x1DA35;</span>U+1DA35 SIGNWRITING AIR BLOWING OUT
+<br><span class=l><span class=e>a</span>&#x1DA36;</span>U+1DA36 SIGNWRITING AIR SUCKING IN
+<br><span class=l><span class=e>a</span>&#x1DA3B;</span>U+1DA3B SIGNWRITING MOUTH CLOSED NEUTRAL
+<br><span class=l><span class=e>a</span>&#x1DA3C;</span>U+1DA3C SIGNWRITING MOUTH CLOSED FORWARD
+<br><span class=l><span class=e>a</span>&#x1DA3D;</span>U+1DA3D SIGNWRITING MOUTH CLOSED CONTACT
+<br><span class=l><span class=e>a</span>&#x1DA3E;</span>U+1DA3E SIGNWRITING MOUTH SMILE
+<br><span class=l><span class=e>a</span>&#x1DA3F;</span>U+1DA3F SIGNWRITING MOUTH SMILE WRINKLED
+<br><span class=l><span class=e>a</span>&#x1DA40;</span>U+1DA40 SIGNWRITING MOUTH SMILE OPEN
+<br><span class=l><span class=e>a</span>&#x1DA41;</span>U+1DA41 SIGNWRITING MOUTH FROWN
+<br><span class=l><span class=e>a</span>&#x1DA42;</span>U+1DA42 SIGNWRITING MOUTH FROWN WRINKLED
+<br><span class=l><span class=e>a</span>&#x1DA43;</span>U+1DA43 SIGNWRITING MOUTH FROWN OPEN
+<br><span class=l><span class=e>a</span>&#x1DA44;</span>U+1DA44 SIGNWRITING MOUTH OPEN CIRCLE
+<br><span class=l><span class=e>a</span>&#x1DA45;</span>U+1DA45 SIGNWRITING MOUTH OPEN FORWARD
+<br><span class=l><span class=e>a</span>&#x1DA46;</span>U+1DA46 SIGNWRITING MOUTH OPEN WRINKLED
+<br><span class=l><span class=e>a</span>&#x1DA47;</span>U+1DA47 SIGNWRITING MOUTH OPEN OVAL
+<br><span class=l><span class=e>a</span>&#x1DA48;</span>U+1DA48 SIGNWRITING MOUTH OPEN OVAL WRINKLED
+<br><span class=l><span class=e>a</span>&#x1DA49;</span>U+1DA49 SIGNWRITING MOUTH OPEN OVAL YAWN
+<br><span class=l><span class=e>a</span>&#x1DA4A;</span>U+1DA4A SIGNWRITING MOUTH OPEN RECTANGLE
+<br><span class=l><span class=e>a</span>&#x1DA4B;</span>U+1DA4B SIGNWRITING MOUTH OPEN RECTANGLE WRINKLED
+<br><span class=l><span class=e>a</span>&#x1DA4C;</span>U+1DA4C SIGNWRITING MOUTH OPEN RECTANGLE YAWN
+<br><span class=l><span class=e>a</span>&#x1DA4D;</span>U+1DA4D SIGNWRITING MOUTH KISS
+<br><span class=l><span class=e>a</span>&#x1DA4E;</span>U+1DA4E SIGNWRITING MOUTH KISS FORWARD
+<br><span class=l><span class=e>a</span>&#x1DA4F;</span>U+1DA4F SIGNWRITING MOUTH KISS WRINKLED
+<br><span class=l><span class=e>a</span>&#x1DA50;</span>U+1DA50 SIGNWRITING MOUTH TENSE
+<br><span class=l><span class=e>a</span>&#x1DA51;</span>U+1DA51 SIGNWRITING MOUTH TENSE FORWARD
+<br><span class=l><span class=e>a</span>&#x1DA52;</span>U+1DA52 SIGNWRITING MOUTH TENSE SUCKED
+<br><span class=l><span class=e>a</span>&#x1DA53;</span>U+1DA53 SIGNWRITING LIPS PRESSED TOGETHER
+<br><span class=l><span class=e>a</span>&#x1DA54;</span>U+1DA54 SIGNWRITING LIP LOWER OVER UPPER
+<br><span class=l><span class=e>a</span>&#x1DA55;</span>U+1DA55 SIGNWRITING LIP UPPER OVER LOWER
+<br><span class=l><span class=e>a</span>&#x1DA56;</span>U+1DA56 SIGNWRITING MOUTH CORNERS
+<br><span class=l><span class=e>a</span>&#x1DA57;</span>U+1DA57 SIGNWRITING MOUTH WRINKLES SINGLE
+<br><span class=l><span class=e>a</span>&#x1DA58;</span>U+1DA58 SIGNWRITING MOUTH WRINKLES DOUBLE
+<br><span class=l><span class=e>a</span>&#x1DA59;</span>U+1DA59 SIGNWRITING TONGUE STICKING OUT FAR
+<br><span class=l><span class=e>a</span>&#x1DA5A;</span>U+1DA5A SIGNWRITING TONGUE LICKING LIPS
+<br><span class=l><span class=e>a</span>&#x1DA5B;</span>U+1DA5B SIGNWRITING TONGUE TIP BETWEEN LIPS
+<br><span class=l><span class=e>a</span>&#x1DA5C;</span>U+1DA5C SIGNWRITING TONGUE TIP TOUCHING INSIDE MOUTH
+<br><span class=l><span class=e>a</span>&#x1DA5D;</span>U+1DA5D SIGNWRITING TONGUE INSIDE MOUTH RELAXED
+<br><span class=l><span class=e>a</span>&#x1DA5E;</span>U+1DA5E SIGNWRITING TONGUE MOVES AGAINST CHEEK
+<br><span class=l><span class=e>a</span>&#x1DA5F;</span>U+1DA5F SIGNWRITING TONGUE CENTRE STICKING OUT
+<br><span class=l><span class=e>a</span>&#x1DA60;</span>U+1DA60 SIGNWRITING TONGUE CENTRE INSIDE MOUTH
+<br><span class=l><span class=e>a</span>&#x1DA61;</span>U+1DA61 SIGNWRITING TEETH
+<br><span class=l><span class=e>a</span>&#x1DA62;</span>U+1DA62 SIGNWRITING TEETH MOVEMENT
+<br><span class=l><span class=e>a</span>&#x1DA63;</span>U+1DA63 SIGNWRITING TEETH ON TONGUE
+<br><span class=l><span class=e>a</span>&#x1DA64;</span>U+1DA64 SIGNWRITING TEETH ON TONGUE MOVEMENT
+<br><span class=l><span class=e>a</span>&#x1DA65;</span>U+1DA65 SIGNWRITING TEETH ON LIPS
+<br><span class=l><span class=e>a</span>&#x1DA66;</span>U+1DA66 SIGNWRITING TEETH ON LIPS MOVEMENT
+<br><span class=l><span class=e>a</span>&#x1DA67;</span>U+1DA67 SIGNWRITING TEETH BITE LIPS
+<br><span class=l><span class=e>a</span>&#x1DA68;</span>U+1DA68 SIGNWRITING MOVEMENT-WALLPLANE JAW
+<br><span class=l><span class=e>a</span>&#x1DA69;</span>U+1DA69 SIGNWRITING MOVEMENT-FLOORPLANE JAW
+<br><span class=l><span class=e>a</span>&#x1DA6A;</span>U+1DA6A SIGNWRITING NECK
+<br><span class=l><span class=e>a</span>&#x1DA6B;</span>U+1DA6B SIGNWRITING HAIR
+<br><span class=l><span class=e>a</span>&#x1DA6C;</span>U+1DA6C SIGNWRITING EXCITEMENT
+<br><span class=l><span class=e>a</span>&#x1DA75;</span>U+1DA75 SIGNWRITING UPPER BODY TILTING FROM HIP JOINTS
+<br><span class=l><span class=e>a</span>&#x1DA84;</span>U+1DA84 SIGNWRITING LOCATION HEAD NECK
+<br><span class=l><span class=e>a</span>&#x1DA9B;</span>U+1DA9B SIGNWRITING FILL MODIFIER-2
+<br><span class=l><span class=e>a</span>&#x1DA9C;</span>U+1DA9C SIGNWRITING FILL MODIFIER-3
+<br><span class=l><span class=e>a</span>&#x1DA9D;</span>U+1DA9D SIGNWRITING FILL MODIFIER-4
+<br><span class=l><span class=e>a</span>&#x1DA9E;</span>U+1DA9E SIGNWRITING FILL MODIFIER-5
+<br><span class=l><span class=e>a</span>&#x1DA9F;</span>U+1DA9F SIGNWRITING FILL MODIFIER-6
+<br><span class=l><span class=e>a</span>&#x1DAA1;</span>U+1DAA1 SIGNWRITING ROTATION MODIFIER-2
+<br><span class=l><span class=e>a</span>&#x1DAA2;</span>U+1DAA2 SIGNWRITING ROTATION MODIFIER-3
+<br><span class=l><span class=e>a</span>&#x1DAA3;</span>U+1DAA3 SIGNWRITING ROTATION MODIFIER-4
+<br><span class=l><span class=e>a</span>&#x1DAA4;</span>U+1DAA4 SIGNWRITING ROTATION MODIFIER-5
+<br><span class=l><span class=e>a</span>&#x1DAA5;</span>U+1DAA5 SIGNWRITING ROTATION MODIFIER-6
+<br><span class=l><span class=e>a</span>&#x1DAA6;</span>U+1DAA6 SIGNWRITING ROTATION MODIFIER-7
+<br><span class=l><span class=e>a</span>&#x1DAA7;</span>U+1DAA7 SIGNWRITING ROTATION MODIFIER-8
+<br><span class=l><span class=e>a</span>&#x1DAA8;</span>U+1DAA8 SIGNWRITING ROTATION MODIFIER-9
+<br><span class=l><span class=e>a</span>&#x1DAA9;</span>U+1DAA9 SIGNWRITING ROTATION MODIFIER-10
+<br><span class=l><span class=e>a</span>&#x1DAAA;</span>U+1DAAA SIGNWRITING ROTATION MODIFIER-11
+<br><span class=l><span class=e>a</span>&#x1DAAB;</span>U+1DAAB SIGNWRITING ROTATION MODIFIER-12
+<br><span class=l><span class=e>a</span>&#x1DAAC;</span>U+1DAAC SIGNWRITING ROTATION MODIFIER-13
+<br><span class=l><span class=e>a</span>&#x1DAAD;</span>U+1DAAD SIGNWRITING ROTATION MODIFIER-14
+<br><span class=l><span class=e>a</span>&#x1DAAE;</span>U+1DAAE SIGNWRITING ROTATION MODIFIER-15
+<br><span class=l><span class=e>a</span>&#x1DAAF;</span>U+1DAAF SIGNWRITING ROTATION MODIFIER-16
+<br><span class=l><span class=e>a</span>&#x1E000;</span>U+1E000 COMBINING GLAGOLITIC LETTER AZU
+<br><span class=l><span class=e>a</span>&#x1E001;</span>U+1E001 COMBINING GLAGOLITIC LETTER BUKY
+<br><span class=l><span class=e>a</span>&#x1E002;</span>U+1E002 COMBINING GLAGOLITIC LETTER VEDE
+<br><span class=l><span class=e>a</span>&#x1E003;</span>U+1E003 COMBINING GLAGOLITIC LETTER GLAGOLI
+<br><span class=l><span class=e>a</span>&#x1E004;</span>U+1E004 COMBINING GLAGOLITIC LETTER DOBRO
+<br><span class=l><span class=e>a</span>&#x1E005;</span>U+1E005 COMBINING GLAGOLITIC LETTER YESTU
+<br><span class=l><span class=e>a</span>&#x1E006;</span>U+1E006 COMBINING GLAGOLITIC LETTER ZHIVETE
+<br><span class=l><span class=e>a</span>&#x1E008;</span>U+1E008 COMBINING GLAGOLITIC LETTER ZEMLJA
+<br><span class=l><span class=e>a</span>&#x1E009;</span>U+1E009 COMBINING GLAGOLITIC LETTER IZHE
+<br><span class=l><span class=e>a</span>&#x1E00A;</span>U+1E00A COMBINING GLAGOLITIC LETTER INITIAL IZHE
+<br><span class=l><span class=e>a</span>&#x1E00B;</span>U+1E00B COMBINING GLAGOLITIC LETTER I
+<br><span class=l><span class=e>a</span>&#x1E00C;</span>U+1E00C COMBINING GLAGOLITIC LETTER DJERVI
+<br><span class=l><span class=e>a</span>&#x1E00D;</span>U+1E00D COMBINING GLAGOLITIC LETTER KAKO
+<br><span class=l><span class=e>a</span>&#x1E00E;</span>U+1E00E COMBINING GLAGOLITIC LETTER LJUDIJE
+<br><span class=l><span class=e>a</span>&#x1E00F;</span>U+1E00F COMBINING GLAGOLITIC LETTER MYSLITE
+<br><span class=l><span class=e>a</span>&#x1E010;</span>U+1E010 COMBINING GLAGOLITIC LETTER NASHI
+<br><span class=l><span class=e>a</span>&#x1E011;</span>U+1E011 COMBINING GLAGOLITIC LETTER ONU
+<br><span class=l><span class=e>a</span>&#x1E012;</span>U+1E012 COMBINING GLAGOLITIC LETTER POKOJI
+<br><span class=l><span class=e>a</span>&#x1E013;</span>U+1E013 COMBINING GLAGOLITIC LETTER RITSI
+<br><span class=l><span class=e>a</span>&#x1E014;</span>U+1E014 COMBINING GLAGOLITIC LETTER SLOVO
+<br><span class=l><span class=e>a</span>&#x1E015;</span>U+1E015 COMBINING GLAGOLITIC LETTER TVRIDO
+<br><span class=l><span class=e>a</span>&#x1E016;</span>U+1E016 COMBINING GLAGOLITIC LETTER UKU
+<br><span class=l><span class=e>a</span>&#x1E017;</span>U+1E017 COMBINING GLAGOLITIC LETTER FRITU
+<br><span class=l><span class=e>a</span>&#x1E018;</span>U+1E018 COMBINING GLAGOLITIC LETTER HERU
+<br><span class=l><span class=e>a</span>&#x1E01B;</span>U+1E01B COMBINING GLAGOLITIC LETTER SHTA
+<br><span class=l><span class=e>a</span>&#x1E01C;</span>U+1E01C COMBINING GLAGOLITIC LETTER TSI
+<br><span class=l><span class=e>a</span>&#x1E01D;</span>U+1E01D COMBINING GLAGOLITIC LETTER CHRIVI
+<br><span class=l><span class=e>a</span>&#x1E01E;</span>U+1E01E COMBINING GLAGOLITIC LETTER SHA
+<br><span class=l><span class=e>a</span>&#x1E01F;</span>U+1E01F COMBINING GLAGOLITIC LETTER YERU
+<br><span class=l><span class=e>a</span>&#x1E020;</span>U+1E020 COMBINING GLAGOLITIC LETTER YERI
+<br><span class=l><span class=e>a</span>&#x1E021;</span>U+1E021 COMBINING GLAGOLITIC LETTER YATI
+<br><span class=l><span class=e>a</span>&#x1E023;</span>U+1E023 COMBINING GLAGOLITIC LETTER YU
+<br><span class=l><span class=e>a</span>&#x1E024;</span>U+1E024 COMBINING GLAGOLITIC LETTER SMALL YUS
+<br><span class=l><span class=e>a</span>&#x1E026;</span>U+1E026 COMBINING GLAGOLITIC LETTER YO
+<br><span class=l><span class=e>a</span>&#x1E027;</span>U+1E027 COMBINING GLAGOLITIC LETTER IOTATED SMALL YUS
+<br><span class=l><span class=e>a</span>&#x1E028;</span>U+1E028 COMBINING GLAGOLITIC LETTER BIG YUS
+<br><span class=l><span class=e>a</span>&#x1E029;</span>U+1E029 COMBINING GLAGOLITIC LETTER IOTATED BIG YUS
+<br><span class=l><span class=e>a</span>&#x1E02A;</span>U+1E02A COMBINING GLAGOLITIC LETTER FITA
+<br><span class=l><span class=e>a</span>&#x1E130;</span>U+1E130 NYIAKENG PUACHUE HMONG TONE-B
+<br><span class=l><span class=e>a</span>&#x1E131;</span>U+1E131 NYIAKENG PUACHUE HMONG TONE-M
+<br><span class=l><span class=e>a</span>&#x1E132;</span>U+1E132 NYIAKENG PUACHUE HMONG TONE-J
+<br><span class=l><span class=e>a</span>&#x1E133;</span>U+1E133 NYIAKENG PUACHUE HMONG TONE-V
+<br><span class=l><span class=e>a</span>&#x1E134;</span>U+1E134 NYIAKENG PUACHUE HMONG TONE-S
+<br><span class=l><span class=e>a</span>&#x1E135;</span>U+1E135 NYIAKENG PUACHUE HMONG TONE-G
+<br><span class=l><span class=e>a</span>&#x1E136;</span>U+1E136 NYIAKENG PUACHUE HMONG TONE-D
+<br><span class=l><span class=e>a</span>&#x1E2EC;</span>U+1E2EC WANCHO TONE TUP
+<br><span class=l><span class=e>a</span>&#x1E2ED;</span>U+1E2ED WANCHO TONE TUPNI
+<br><span class=l><span class=e>a</span>&#x1E2EE;</span>U+1E2EE WANCHO TONE KOI
+<br><span class=l><span class=e>a</span>&#x1E2EF;</span>U+1E2EF WANCHO TONE KOINI
+<br><span class=l><span class=e>a</span>&#x1E8D0;</span>U+1E8D0 MENDE KIKAKUI COMBINING NUMBER TEENS
+<br><span class=l><span class=e>a</span>&#x1E8D1;</span>U+1E8D1 MENDE KIKAKUI COMBINING NUMBER TENS
+<br><span class=l><span class=e>a</span>&#x1E8D2;</span>U+1E8D2 MENDE KIKAKUI COMBINING NUMBER HUNDREDS
+<br><span class=l><span class=e>a</span>&#x1E8D3;</span>U+1E8D3 MENDE KIKAKUI COMBINING NUMBER THOUSANDS
+<br><span class=l><span class=e>a</span>&#x1E8D4;</span>U+1E8D4 MENDE KIKAKUI COMBINING NUMBER TEN THOUSANDS
+<br><span class=l><span class=e>a</span>&#x1E8D5;</span>U+1E8D5 MENDE KIKAKUI COMBINING NUMBER HUNDRED THOUSANDS
+<br><span class=l><span class=e>a</span>&#x1E8D6;</span>U+1E8D6 MENDE KIKAKUI COMBINING NUMBER MILLIONS
+<br><span class=l><span class=e>a</span>&#x1E944;</span>U+1E944 ADLAM ALIF LENGTHENER
+<br><span class=l><span class=e>a</span>&#x1E945;</span>U+1E945 ADLAM VOWEL LENGTHENER
+<br><span class=l><span class=e>a</span>&#x1E946;</span>U+1E946 ADLAM GEMINATION MARK
+<br><span class=l><span class=e>a</span>&#x1E947;</span>U+1E947 ADLAM HAMZA
+<br><span class=l><span class=e>a</span>&#x1E948;</span>U+1E948 ADLAM CONSONANT MODIFIER
+<br><span class=l><span class=e>a</span>&#x1E949;</span>U+1E949 ADLAM GEMINATE CONSONANT MODIFIER
+<br><span class=l><span class=e>a</span>&#x1E94A;</span>U+1E94A ADLAM NUKTA
+        </div>
+    </body>
+</html>
