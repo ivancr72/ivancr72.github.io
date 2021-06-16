@@ -71,7 +71,9 @@ ul.padded li {
 }
 
 
-input {
+input, button {
     font: inherit;
+}
+input.short {
     width: 4em;
 }
