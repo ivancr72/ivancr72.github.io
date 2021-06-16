@@ -8,11 +8,11 @@
         --table-header: #ccc;
         --link: #06f;
     }
-    :lang(qpj) {
-        --foreground: #000225;
+    [lang = qpj] {
+        --foreground: #E8E18D;
     }
-    :not(:lang(qpj)) {
-        --foreground: #000;
+    [lang = en] {
+        --foreground: #fff;
     }
 }
 
@@ -24,10 +24,10 @@
         --table-header: #333;
         --link: #09f;
     }
-    :lang(qpj) {
+    [lang = qpj] {
         --foreground: #E8E18D;
     }
-    :not(:lang(qpj)) {
+    [lang = en] {
         --foreground: #fff;
     }
 }
