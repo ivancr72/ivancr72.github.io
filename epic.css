@@ -8,6 +8,9 @@
         --table-header: #ccc;
         --link: #06f;
     }
+    :lang(qpj) {
+        --foreground: #000225;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +20,9 @@
         --table-border: #888;
         --table-header: #333;
         --link: #09f;
+    }
+    :lang(qpj) {
+        --foreground: #E8E18D;
     }
 }
 body {
