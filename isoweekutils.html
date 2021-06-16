@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="epic.css"/>
         <link rel="icon" type="image/png" href="/selaere.png">
         <!-- *sigh* i know... -->
         <script src="https://moment.github.io/luxon/global/luxon.js" ></script>
@@ -36,43 +37,20 @@
             }
         </script>
         <style>
-            body{
-                font-family: sans-serif;
-                padding: 10px 10px;
-            }
-            p, h2 {
-                text-align: center;
-            }
-            p {
-                margin: 10px 10px 10px 10px;
-                font-size: 16px;
-            }
             .big {
                 font-size: 36px;
-                margin: 10px 10px 20px 10px;
                 font-weight: bold;
-            }
-            input {
-                font: inherit;
-                width: 4em;
-            }
-            a {
-                color: #0080FF;
-                text-decoration: inherit;
-            }
-            a:hover {
-                text-decoration: underline;
             }
         </style>
     </head>
     <body onload="ready()">
         <h2> ISO 6801 week date </h2>
         <p><a href="https://en.wikipedia.org/wiki/ISO_week_date">more info</a></p>
-        <p>date and time in your local timezone:</p>
-        <p id=local class=big></p>
-        <p>date and time in UTC:</p>
-        <p id=utc class=big></p>
-        <p><button onclick="ready()">reload</button></p>
+        <div style="text-align: center">
+            <p>date and time in your local timezone:<br><span id=local class=big></span></p>
+            <p>date and time in UTC:<br><span id=utc class=big></span></p>
+            <p><button onclick="ready()">reload</button></p>
+        </div>
         <hr>
         <h2> conversion </h2>
         <p> gregorian (YYYY-MM-DD):

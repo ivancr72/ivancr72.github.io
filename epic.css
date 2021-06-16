@@ -69,3 +69,9 @@ th {
 ul.padded li {
     padding-bottom: 5px;
 }
+
+
+input {
+    font: inherit;
+    width: 4em;
+}
