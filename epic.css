@@ -9,10 +9,7 @@
         --link: #06f;
     }
     [lang = qpj] {
-        --foreground: #E8E18D;
-    }
-    [lang = en] {
-        --foreground: #fff;
+        --foreground: #6A2B47;
     }
 }
 
@@ -26,9 +23,6 @@
     }
     [lang = qpj] {
         --foreground: #E8E18D;
-    }
-    [lang = en] {
-        --foreground: #fff;
     }
 }
 body {
