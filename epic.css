@@ -71,8 +71,11 @@ ul.padded li {
 }
 
 
-input, button {
+input, button, textarea {
     font: inherit;
+    background-color: var(--background);
+    border: solid 1px var(--table-border);
+    color: var(--foreground);
 }
 input.short {
     width: 4em;
