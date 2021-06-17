@@ -7,9 +7,7 @@
         --table-border: #888;
         --table-header: #ccc;
         --link: #06f;
-    }
-    [lang = qpj] {
-        --foreground: #6A2B47;
+        --peejosa: #6A2B47;
     }
 }
 
@@ -20,9 +18,7 @@
         --table-border: #888;
         --table-header: #333;
         --link: #09f;
-    }
-    [lang = qpj] {
-        --foreground: #E8E18D;
+        --peejosa: #E8E18D;
     }
 }
 body {
@@ -33,6 +29,10 @@ body {
     padding: 20px;
     background-color: var(--background);
     color: var(--foreground)
+}
+
+[lang = qpj] {
+    color: var(--peejosa)
 }
 
 a {
