@@ -32,7 +32,8 @@ body {
 }
 
 [lang = qpj] {
-    color: var(--peejosa)
+    color: var(--peejosa);
+    --foreground: var(--peejosa)
 }
 
 a {
