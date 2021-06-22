@@ -7,6 +7,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <title>tuxsite</title>
+        <script>
+            onready = () => [...document.getElementsByClassName("close")].forEach(el => el.addEventListener("click", () => el.parentNode.style.display = "none", false))
+        </script>
         <style>
             body {
                 background-color: #dddde0;
@@ -22,6 +25,7 @@
                 border-color: rgba(0, 0, 0, 0.700);
                 border-style: solid;
                 max-width:600px;
+                width: 100%;
                 padding:20px 40px;
                 display:block;
                 background-color: white;
@@ -33,7 +37,7 @@
                 align-items: center;
                 justify-content: center;
             }
-            button {
+            /*.buttons */button {
                 border-width:0px;
                 background-color: white;
                 font-family: inherit;
@@ -50,10 +54,32 @@
                 cursor: pointer;
                 /* 82e9de 4db6ac 00867d*/
             }
+            header.bar {
+                position: fixed;
+                top: 0px; left: 0px;
+                width: 100%;
+                z-index: 100;
+                min-height: 20px;
+                background-color: white;
+                padding: 10px;
+                box-shadow: 0px 5px 5px grey;
+                display: flex;
+                align-items: center;
+            }
+            header.bar span {
+                width: 100%
+            }
+            header.bar button {
+                right: 10px
+            }
         </style>
         
     </head>
-    <body>
+    <body onload=onready()>
+        <header class=bar>
+            <span class=text>This website doesn't use cookies. You have to click this button anyways lmao</span>
+            <button class=close>close</button>
+        </header>
         <div class=block>
             <h2>Apioforms</h2>
             <p>bees. apioids, even.</p>
