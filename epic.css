@@ -23,13 +23,17 @@
 }
 body {
     margin: auto;
-    max-width: 800px;
     font-size: 18px;
     font-family: sans-serif;
     padding: 20px;
     background-color: var(--background);
     color: var(--foreground)
 }
+
+body.small {
+    max-width: 800px;
+}
+
 
 [lang = qpj] {
     color: var(--peejosa);
