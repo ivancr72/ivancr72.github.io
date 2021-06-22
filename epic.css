@@ -1,5 +1,4 @@
 /*epic css*/
-
 @media (prefers-color-scheme: light) {
     html {
         --background: #fff;
@@ -10,7 +9,6 @@
         --peejosa: #6A2B47;
     }
 }
-
 @media (prefers-color-scheme: dark) {
     html {
         --background: #111;
@@ -29,22 +27,18 @@ body {
     background-color: var(--background);
     color: var(--foreground)
 }
-
 body.small {
     max-width: 800px;
 }
-
 
 [lang = qpj] {
     color: var(--peejosa);
     --foreground: var(--peejosa)
 }
-
 a {
     color: var(--link);
     text-decoration: inherit;
 }
-
 a:hover {
     text-decoration: underline;
 }
@@ -58,29 +52,23 @@ table {
     -ms-overflow-style: none; 
     scrollbar-width: none;
 }
-
 .scrollable::-webkit-scrollbar {
     display: none;
 }
-
 td,
 th {
     border: 1px solid var(--table-border);
     padding: 0px 10px;
 }
-
 th {
     background-color: var(--table-header);
 }
-
 .noborder {
     border: 0px
 }
-
 ul.padded li {
     padding-bottom: 5px;
 }
-
 
 input, button, textarea {
     font: inherit;
