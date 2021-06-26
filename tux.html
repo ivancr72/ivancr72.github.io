@@ -62,7 +62,7 @@
                 min-height: 20px;
                 background-color: white;
                 padding: 10px;
-                box-shadow: 0px 5px 5px grey;
+                box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.300);
                 display: flex;
                 align-items: center;
             }
@@ -72,10 +72,18 @@
             header.bar button {
                 right: 10px
             }
+            div.black {
+                position: fixed;
+                top: 0px; left: 0px;
+                width: 100%; height: 100%;
+                background-color: rgba(0, 0, 0, 0.300);
+                z-index: 200;
+            }
         </style>
         
     </head>
     <body onload=onready()>
+        <div class=black></div>
         <header class=bar>
             <span class=text>This website doesn't use cookies. You have to click this button anyways lmao</span>
             <button class=close>close</button>
