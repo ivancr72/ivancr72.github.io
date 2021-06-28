@@ -23,10 +23,10 @@ rel="stylesheet"><title>
     div.black    { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.300); 
                    z-index: 200; display: flex; justify-content: center; align-items: center; }
 </style><script>
-    $=()=> 
+    $=a=> 
     Array.from(document.getElementsByClassName("close")).forEach(b=>
     b.addEventListener("click",c=>
-    document.getElementById(el.getAttribute("close")).style.display="none", false));
+    document.getElementById(b.getAttribute("close")).style.display="none", false));
 </script></head><body onload=$()><div class=black id=newspopup><div class="block popup"><header class=list><h1 class=wide>
     subscribe to our newsletter
 </h1><button class="close red" close=newspopup>
