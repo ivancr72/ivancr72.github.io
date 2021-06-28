@@ -7,9 +7,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <title>tuxsite</title>
-        <script>
-            onready = () => [...document.getElementsByClassName("close")].forEach(el => el.addEventListener("click", () => el.parentNode.style.display = "none", false))
-        </script>
         <style>
             body {
                 background-color: #dddde0;
@@ -32,27 +29,35 @@
                 border-radius: 10px;
                 box-shadow: 10px 5px 5px grey;
             }
+            div.block.popup {
+                max-width:500px;
+            }
             div.buttons {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
-            /*.buttons */button {
+            .teal {
+                --main: 77, 182, 172;
+            }
+            .red {
+                --main: 186, 0, 13;
+            }
+            button {
                 border-width:0px;
                 background-color: white;
                 font-family: inherit;
                 text-transform: uppercase;
-                color: #4db6ac;
+                color: rgb(var(--main));
                 font-weight: bold;
                 margin:10px 20px;
                 padding: 10px 20px;
                 border-radius: 5px;
             }
             button:hover {
-                background-color: #4db6ac10;
-                color: #4db6ac;
+                background-color: rgba(var(--main), 0.3);
+                color: rgb(var(--main));
                 cursor: pointer;
-                /* 82e9de 4db6ac 00867d*/
             }
             header.bar {
                 position: fixed;
@@ -63,14 +68,13 @@
                 background-color: white;
                 padding: 10px;
                 box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.300);
+            }
+            .list {
                 display: flex;
                 align-items: center;
             }
-            header.bar span {
+            .wide {
                 width: 100%
-            }
-            header.bar button {
-                right: 10px
             }
             div.black {
                 position: fixed;
@@ -78,21 +82,36 @@
                 width: 100%; height: 100%;
                 background-color: rgba(0, 0, 0, 0.300);
                 z-index: 200;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
+            
         </style>
-        
+        <script>
+            a = () => [...document.getElementsByClassName("close")].forEach(el => el.addEventListener("click", () => document.getElementById(el.getAttribute("close")).style.display="none", false))
+        </script>
     </head>
-    <body onload=onready()>
-        <div class=black></div>
-        <header class=bar>
-            <span class=text>This website doesn't use cookies. You have to click this button anyways lmao</span>
-            <button class=close>close</button>
+    <body onload=a()>
+        <div class=black id=newspopup>
+            <div class="block popup">
+                <header class=list>
+                    <h1 class=wide>subscribe to our newsletter</h1>
+                    <button class="close red" close=newspopup>X</button>
+                </header>
+                <p>please thank you</p>
+            </div>
+        </div>
+        <header class="bar list" id=cookery>
+            <span class=wide>This website doesn't use cookies. You have to click this button anyways lmao</span>
+            <button class="close red" close=cookery>close</button>
+        </div>
         </header>
         <div class=block>
             <h2>Apioforms</h2>
             <p>bees. apioids, even.</p>
             <p>flat design is good and without flaw.</p>
-            <div class=buttons>
+            <div class="buttons teal">
                 <button onclick="window.open('https://jsweisart.com/facebook-alegria')">I agree</button>
                 <button onclick="window.open('https://material.io/design')">I agree</button>
             </div>
