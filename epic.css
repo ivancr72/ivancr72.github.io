@@ -7,6 +7,7 @@ html {
     --link: #06f;
     --english: #000;
     --peejosa: #6A2B47;
+    --foreground: var(--english);
 }
 @media (prefers-color-scheme: dark) {
     html {
@@ -17,6 +18,7 @@ html {
         --link: #09f;
         --english: #fff;
         --peejosa: #E8E18D;
+        --foreground: var(--english);
     }
 }
 body {
