@@ -33,12 +33,8 @@ body.small {
     max-width: 800px;
 }
 
-[lang = qpj] {
-    --foreground: var(--peejosa)
-}
-[lang = en] {
-    --foreground: var(--english)
-}
+[lang = qpj] {--foreground: var(--peejosa); color: var(--foreground)}
+[lang = en]  {--foreground: var(--english); color: var(--foreground)}
 a {
     color: var(--link);
     text-decoration: inherit;
