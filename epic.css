@@ -1,13 +1,12 @@
 /*epic css*/
-@media (prefers-color-scheme: light) {
-    html {
-        --background: #fff;
-        --foreground: #000;
-        --table-border: #888;
-        --table-header: #ccc;
-        --link: #06f;
-        --peejosa: #6A2B47;
-    }
+html {
+    --background: #fff;
+    --foreground: #000;
+    --table-border: #888;
+    --table-header: #ccc;
+    --link: #06f;
+    --english: #000;
+    --peejosa: #6A2B47;
 }
 @media (prefers-color-scheme: dark) {
     html {
@@ -16,6 +15,7 @@
         --table-border: #888;
         --table-header: #333;
         --link: #09f;
+        --english: #fff;
         --peejosa: #E8E18D;
     }
 }
@@ -32,8 +32,10 @@ body.small {
 }
 
 [lang = qpj] {
-    color: var(--peejosa);
     --foreground: var(--peejosa)
+}
+[lang = en] {
+    --foreground: var(--english)
 }
 a {
     color: var(--link);
