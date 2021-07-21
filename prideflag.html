@@ -42,26 +42,6 @@
                     ctx.fillRect(0, Math.floor(canvas.height/stripes*i), canvas.width, Math.ceil(canvas.height/stripes))
                     
                 }
-
-                /*
-                let color = 0
-                let [lastx, lasty] = [null, null];
-                canvas.addEventListener('mousemove', function(e) {
-                    color++;
-                    ctx.fillStyle = `hsl(${color%360}deg, 100%, 50%)`;
-                    ctx.strokeStyle = `hsl(${color%360}deg, 100%, 50%)`;
-                    ctx.lineWidth = 5
-                    if (lastx !== null) {
-                        ctx.beginPath();
-                        ctx.moveTo(lastx, lasty)
-                        ctx.lineTo(e.offsetX, e.offsetY);
-                        ctx.stroke();
-                    }
-                    [lastx, lasty] = [e.offsetX, e.offsetY]
-                    ctx.beginPath();
-                    ctx.arc(e.offsetX, e.offsetY, 5, 0, 2 * Math.PI);
-                    ctx.fill();
-                }, false);*/
             }
         </script>
 
