@@ -22,7 +22,7 @@
                 canvas.height = document.body.clientHeight - 40;
                 const ctx = canvas.getContext('2d');
                 const reflected = rng(0, 1);
-                const stripes = rng(3, 7);
+                const stripes = !reflected ? rng(3, 5) : rng(5, 7) ;
                 let colors = [];
                 for (let i = 0; i < stripes; i++) {
                     const a = rng(1, 10)
@@ -31,7 +31,6 @@
                     } else if (a >= 2) {
                         ctx.fillStyle = `hsl(0deg, 0%, ${rng(0,4)*25}%)`;
                     }
-
                     if (reflected) {
                         if (i+0.5 > stripes/2) {
                             ctx.fillStyle = colors.pop()
@@ -40,7 +39,6 @@
                         }
                     }
                     ctx.fillRect(0, Math.floor(canvas.height/stripes*i), canvas.width, Math.ceil(canvas.height/stripes))
-                    
                 }
             }
         </script>
