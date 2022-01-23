@@ -139,7 +139,7 @@
 #kawar leer &00f704c+0077011
 #kawar levr &c4f0f4c+1170711
 #kawar limakö &b2a2a2b+6222226
-#kawar linja &5555555+5555555
+#kawar linja &4444444+1111111
 #kawar lorid &f17000c+5050111
 #kawar lort &f4f5f44+7175711
 #kawar lubhelu &c5c075d+1510747
@@ -206,7 +206,7 @@
 #kawar putain &12010f1+4204074
 #kawar putain' &120d444+4205111
 #kawar rajon &5088b9f+5000647
-#kawar räkke &f0f0f0f+7070707
+#kawar räkke &4040404+1010101
 #kawar regii &002504c+0025011
 #kawar regl &7555d57+7071511
 #kawar repet &f4c4c4f+5050505
