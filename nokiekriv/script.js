@@ -15,15 +15,15 @@ let postnkwer = new Map();
 let meiokiPostnkw = 0;
 
 function splitOnce(string, pattern) {
-    let idx = string.search(pattern);
-    return [string.substring(0, idx), string.substring(idx + 1)]
+    const idx = string.search(pattern);
+    return [string.substring(0, idx), string.substring(idx + 1)];
 }
 
 function explode(name) {
     return [
         name.replaceAll("ä", "a").replaceAll("ö", "o").replaceAll("ü", "u"),
         name.replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue")
-    ]
+    ];
 }
 
 function kawarVZiker(wort) {
@@ -38,11 +38,13 @@ function kawarVZiker(wort) {
 function kawarVMisper(wort) {
     return [...wort].map(
         (zik, misp) => {
-            let sus = misper.get(zik) ?? misper.get("#ander");
+            const sus = misper.get(zik) ?? misper.get("#ander");
             if (misp == wort.length - 1) {
-                return "+" + sus
+                return "+" + sus;
             } else {
-                return "&" + sus.substring(0, sus.length - 1) + (parseInt(sus.at(-1), 16) | 8).toString(16)
+                return "&" 
+                    + sus.substring(0, sus.length - 1)
+                    + (parseInt(sus.at(-1), 16) | 8).toString(16);
             }
         }
     ).join(" ");
@@ -60,26 +62,26 @@ function ozefPostnkw(name, value) {
 const toutfairechat = {
     "##": () => { },
     "#kawar": (name, value) => {
-        let parsed = ovsäMaghchat(value);
+        const parsed = ovsäMaghchat(value);
         if (parsed === null) { console.log(`netov maghchat v ${name}`); return; }
-        for (let n of explode(name)) { kawarchor.set(n, parsed); }
+        for (const n of explode(name)) { kawarchor.set(n, parsed); }
     },
     "#zik": (name, value) => ziker.set(name, value),
     "#misp": (name, value) => misper.set(name === "#efes" ? " " : name, value),
     "#prenkw": (name, value) => ozefPrenkw(name, ovsäMaghchat(value)),
     "#postnkw": (name, value) => ozefPostnkw(name, ovsäMaghchat(value)),
     "#kawarprenkw": (name, value) => {
-        let parsed = ovsäMaghchat(value);
+        const parsed = ovsäMaghchat(value);
         if (parsed === null) { console.log(`netov maghchat v ${name}`); return; }
-        for (let n of explode(name)) {
+        for (const n of explode(name)) {
             kawarchor.set(n, parsed);
             ozefPrenkw(n, parsed);
         }
     },
     "#kawarpostnkw": (name, value) => {
-        let parsed = ovsäMaghchat(value);
+        const parsed = ovsäMaghchat(value);
         if (parsed === null) { console.log(`netov maghchat v ${name}`); return; }
-        for (let n of explode(name)) {
+        for (const n of explode(name)) {
             kawarchor.set(n, parsed);
             ozefPostnkw(n, parsed);
         }
@@ -87,10 +89,10 @@ const toutfairechat = {
 }
 
 function faireFairechater(fairechater) {
-    for (let ziklinja of fairechater.split("\n")) {
+    for (const ziklinja of fairechater.split("\n")) {
         if (ziklinja[0] != "#") { continue; }
-        let [fairechatname, anderchoser] = splitOnce(ziklinja.trimStart(), " ");
-        let [ikijem, doujem] = splitOnce(anderchoser, " ");
+        const [fairechatname, anderchoser] = splitOnce(ziklinja.trimStart(), " ");
+        const [ikijem, doujem] = splitOnce(anderchoser, " ");
         (toutfairechat[fairechatname] ?? (
             () => { console.log(`inv fairechat ${fairechatname}`); }
         ))(ikijem, doujem.trimEnd());
@@ -102,7 +104,7 @@ function ovsäWort(wort) {
         return wort.toLowerCase() + "0".repeat(8 - wort.length);
 
     } else if (wort === "//" || wort === "\n") {
-        return "//"
+        return "//";
 
     } else if (wort === "  ") {
         return kawarchor.get("#efes");
@@ -112,9 +114,6 @@ function ovsäWort(wort) {
 
     } else if ("0123456789".includes(wort[0])) {
         return kawarVMisper(wort);
-
-    } else if (wort[0] === "$") {
-        return kawarVMisper(wort.substring(1, wort.length - 1))
 
     } else if (wort[0] === '"') {
         return wort.substring(1, wort.length - 1)
@@ -131,7 +130,6 @@ function ovsäWort(wort) {
 }
 
 function opadWort(wort) {
-    
     if (kawarchor.has(wort)) {
         return kawarchor.get(wort);
     } else {
@@ -165,11 +163,11 @@ function ovsäMaghchat(mogus) {
 function faireLinjar(ovsärt, lukbater) {
     const zakerVLinja = Math.floor(lukbater / 4);
     let linjar = [];
-    for (let linja of ovsärt.split("//")) {
-        linja = linja.trim();
+    for (const suslinja of ovsärt.split("//")) {
+        const linja = suslinja.trim();
 
-        if (linja) { linja = linja.split(" "); }
-        else { linjar.push([]); continue; }  // "".split(" ") is [""] (???)
+        if (linja) { linja = linja.split(" "); } else { linjar.push([]); continue; }
+        // "".split(" ") is [""] (???)
 
         let dji = 0;
         while (dji < linja.length) {
@@ -245,7 +243,7 @@ fetch("./fairechoser.txt")
         //console.debug(kawarchor, ziker, prenkwer, postnkwer);
         ctx = document.getElementById("oras").getContext('2d', {alpha: false});
         window.addEventListener("resize", faireOras);
-        document.getElementById("ekrivmist").addEventListener("input", faireOras)
-        document.getElementById("lukbattaej").addEventListener("input", faireOras)
+        document.getElementById("ekrivmist").addEventListener("input", faireOras);
+        document.getElementById("lukbattaej").addEventListener("input", faireOras);
         faireOras();
     });
