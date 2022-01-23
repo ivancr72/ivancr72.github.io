@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="UTF-8">
+    <title>nokiekriv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://selaere.github.io/epic.css"/>
+    <style>
+        canvas {
+            border: 1px solid black;
+            background-color: #fff;
+        }
+        textarea {
+            width: 100%;
+            font-size: large;
+            box-sizing: border-box;
+            resize: vertical;
+            font-family: monospace;
+        }
+        body {
+            max-width: 90%;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        code {
+            background-color: var(--table-header);
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>nokiekriv (&alpha;)</h1>
+    <p>
+        <b>nokiekriv</b> (name pöbukawarir) ist peejosa'n ekrivfason at komme d peeekriv.
+        de myfairir (bi ich) fore choser pöekrivir v ordinateurlukbater plyfasilmon.
+    </p>
+    <p>
+        jach dou zaktiper: agaizaker (3x7 lukbater) agus nagaizaker (7x7 lukbater). 
+        nokiworter agus amportanworter ist agaizaker, agus tout ander worter ist nagaizaker.
+        anpe zaker mykawarir fore de oogir plytovmon avec ander zaker. 
+    </p>
+    <p>
+        agaizaker v cum ist:
+        <ul>
+            <li>ich tu de vi kore sore wa</li>
+            <li>avec d v pro bi ndagus</li>
+            <li>oder agus</li>
+            <li>me at ku ef sa post pre mens ki</li>
+            <li>ander tej tout koren soren</li>
+            <li>häbbe ist jach</li>
+            <li>lid mist mumente</li>
+            <li>pö muss mile mega volo zuk</li>
+            <li>dji- zor- rev- ne- my- bu-</li>
+            <li>ver- anpe- ply- pe- mei- za-</li>
+            <li>-ti -cho -chat -mon -per -ir -re -jem -er -n</li>
+        </ul>
+    </p>
+    <p>
+        kore ist veratarashi, <b>bujach lorter!!</b> ku tu oog choser at oogir netov, at nevirk, 
+        at ist nasa, at tu tänk pöist plytov, at tu neved kiwa ich mykawar, ef revmagh der 
+        ichper!!!!!!!!!!!! oder tu 
+        pö<a href="https://github.com/selaere/selaere.github.io/issues">ütiliz github'n lortnetsid</a>
+        inv ich voloesowesir!! jach choser at oogir netovmon </p>
+    
+
+    <h2>nokiekrivlid</h2>
+    <p><textarea id=ekrivmist rows=5></textarea></p>
+    <p><canvas id=oras></canvas></p>
+
+    <p>
+        <label for=lukbattaej>lukbattäj:</label>
+        <input id=lukbattaej type=number min=1 value=8 size=10> px
+    </p>
+    <hr>
+    <p>
+        revekriv zaker chalakirt bi efes <code>&nbsp;</code> oder linjar <code>-</code>
+        (der virk tejmon).
+        <code>ä&nbsp;ë&nbsp;ö&nbsp;ü&nbsp;ŋ</code>
+        pökawarir v
+        <code>ae&nbsp;e&nbsp;oe&nbsp;ue&nbsp;ng</code>: <code>aemuezon</code>
+    </p>
+    <p>
+        anpemon tu pöozef <code>'</code> pro orasre ander zak: revzukekriv
+        <code>pre&nbsp;pre'</code>
+    </p>
+    <p>
+        v ver mumenter, kore buoog nokiworter v worter, me de pömussfä noki kawarchor
+        (<code>peoki</code>, nej <code>poki</code>;
+        <code>meneir</code>, nej <code>mener</code> oder <code>menir</code>)
+    </p>
+    <p>
+        revekriv v <code>"..."</code> pro nütiliz zaker me ütiliz ziker. tu pöekriv v okiziker
+        <code>"AEOUN"</code> agus
+        <code>äëöüŋ</code> buorasir.
+    </p>
+    <p>
+        neziker ist:
+        <code>.&nbsp;,&nbsp;:&nbsp;?&nbsp;!&nbsp;...&nbsp;(&nbsp;)</code>
+    </p>
+    <p>
+        linjar pöozefir bi ozef linja v ekrivmist oder <code>//</code>. tu pöozef dou efeser
+        <code>&nbsp;&nbsp;</code>
+        pro efes limakö dou zaker.
+    </p>
+    <p>
+        tu pöekriv misper: <code>0123456789</code>. ander mispmaghoraser nevirk v cum.
+    </p>
+    <p>
+        ku tu volo, ekriv <code>+</code> pre seit mispziker v 16jem-mispzikekrivfason (välj
+        <code>0123456789abcdef</code>) pro faire 4x7 oras.
+    </p>
+    <p>
+        pro faire nagaizak, revütiliz dou 4x7 oraser; revkawar <code>+</code> v <code>&</code> v
+        djit oras, sa linjafairelid nechalak tun zak.
+    </p>
+</body>
+
+</html>
