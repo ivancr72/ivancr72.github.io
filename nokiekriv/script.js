@@ -165,18 +165,17 @@ function faireLinjar(ovsärt, lukbater) {
     let linjar = [];
     for (const suslinja of ovsärt.split("//")) {
         const linja = suslinja.trim();
-
-        if (linja) { linja = linja.split(" "); } else { linjar.push([]); continue; }
-        // "".split(" ") is [""] (???)
+        if (!linja) { linjar.push([]); continue; }  // "".split(" ") is [""] (???)
+        const zaker = linja.split(" ");
 
         let dji = 0;
-        while (dji < linja.length) {
+        while (dji < zaker.length) {
             let zor = dji + zakerVLinja;
-            while ((linja[zor - 1] ?? "+")[0] == "&") {
+            while ((zaker[zor - 1] ?? "+")[0] == "&") {
                 zor--;
                 if (zor <= dji) { zor = dji + zakerVLinja; break; }  // ku zak ist plynagai linja
             }
-            linjar.push(linja.slice(dji, zor));
+            zaker.push(linja.slice(dji, zor));
             dji = zor;
         }
     }
