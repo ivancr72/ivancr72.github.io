@@ -123,7 +123,7 @@ function ovsäWort(wort) {
             .split(" ").map(kawarVZiker).join(" ");
 
     } else {
-        opadWort(wort.toLowerCase()
+        return opadWort(wort.toLowerCase()
             .replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue")
             .replaceAll("ë", "e").replaceAll("ŋ", "ng"));
     }
