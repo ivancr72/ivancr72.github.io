@@ -124,33 +124,33 @@ function ovsäWort(wort) {
             .split(" ").map(kawarVZiker).join(" ");
 
     } else {
-        wort = wort.toLowerCase()
+        opadWort(wort.toLowerCase()
             .replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue")
-            .replaceAll("ë", "e").replaceAll("ŋ", "ng");
-        if (kawarchor.has(wort)) {
-            return kawarchor.get(wort);
-        } else {
-            return opadNokiworter(wort)
-        }
+            .replaceAll("ë", "e").replaceAll("ŋ", "ng"));
     }
 }
 
-function opadNokiworter(wort) {
-    for (let i = 1; i <= Math.min(meiokiPrenkw, wort.length - 1); i++) {
-        const substr = wort.substring(0, i);
-        if (prenkwer.has(substr)) {
-            const rest = opadNokiworter(wort.substring(i));
-            if (rest) { return prenkwer.get(substr) + " " + rest; }
+function opadWort(wort) {
+    
+    if (kawarchor.has(wort)) {
+        return kawarchor.get(wort);
+    } else {
+        for (let i = 1; i <= Math.min(meiokiPrenkw, wort.length - 1); i++) {
+            const substr = wort.substring(0, i);
+            if (prenkwer.has(substr)) {
+                const rest = opadWort(wort.substring(i));
+                if (rest) { return prenkwer.get(substr) + " " + rest; }
+            }
         }
-    }
-    for (let i = 1; i <= Math.min(meiokiPrenkw, wort.length - 1); i++) {
-        const substr = wort.substring(wort.length - i);
-        if (postnkwer.has(substr)) {
-            const rest = opadNokiworter(wort.substring(0, wort.length - i));
-            if (rest) { return rest + " " + postnkwer.get(substr); }
+        for (let i = 1; i <= Math.min(meiokiPrenkw, wort.length - 1); i++) {
+            const substr = wort.substring(wort.length - i);
+            if (postnkwer.has(substr)) {
+                const rest = opadWort(wort.substring(0, wort.length - i));
+                if (rest) { return rest + " " + postnkwer.get(substr); }
+            }
         }
+        return null;
     }
-    return null
 }
 
 
