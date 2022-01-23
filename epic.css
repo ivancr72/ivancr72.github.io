@@ -5,9 +5,6 @@ html {
     --table-border: #888;
     --table-header: #ccc;
     --link: #06f;
-    --english: #000;
-    --peejosa: #6A2B47;
-    --foreground: var(--english);
 }
 @media (prefers-color-scheme: dark) {
     html {
@@ -16,9 +13,6 @@ html {
         --table-border: #888;
         --table-header: #333;
         --link: #09f;
-        --english: #fff;
-        --peejosa: #E8E18D;
-        --foreground: var(--english);
     }
 }
 body {
@@ -27,14 +21,11 @@ body {
     font-family: sans-serif;
     padding: 20px;
     background-color: var(--background);
-    color: var(--foreground)
+    color: var(--foreground);
 }
 body.small {
     max-width: 800px;
 }
-
-[lang = qpj] {--foreground: var(--peejosa); color: var(--foreground)}
-[lang = en]  {--foreground: var(--english); color: var(--foreground)}
 a {
     color: var(--link);
     text-decoration: inherit;
