@@ -297,6 +297,8 @@
 #kawar mens' &f0eae0f+7032307
 #kawar ki +0627260
 #kawar ki' &888f888+7000007
+#kawar fore +011511
+#kawar fore' &7555557+0005000
 
 #kawar kore +2222227
 #kawar koren +2227227
