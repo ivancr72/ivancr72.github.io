@@ -45,7 +45,6 @@
 #misp 9 7474743
 #misp 0 2222207
 #misp #efes 0000007
-#misp #ander 7777707
 
 #kawar ! +2075702
 #kawar #efes +0
