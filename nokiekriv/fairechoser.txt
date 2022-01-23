@@ -34,8 +34,6 @@
 #zik - 000700
 #zik #ander 077777
 
-
-
 #misp 1 0070007
 #misp 2 0707007
 #misp 3 7020707
@@ -120,7 +118,7 @@
 #kawar jaki &f5f5f5f+7575757
 #kawar jamin &f11111f+5151515
 #kawar jiri &715d517+7075707
-#kawar jö &74c4c47+7474747
+#kawar joe &74c4c47+7474747
 #kawar john &5470547+5470547
 #kawar jol &f440547+7110517
 #kawar kalama &80d1d08+7455547
@@ -284,9 +282,12 @@
 #kawar ndagus +7022205
 
 #kawar me +0157510
+#kawar me' &755f557+0117110
 #kawar at +0317130
 #kawar ku +0705070
+#kawar ku' &f0c5c0f+7015107
 #kawar ef +0550550
+#kawar ef' &d5d8d5d+5550555
 #kawar sa +0171710
 #kawar sa' &755f557+0007000
 #kawar post +0475740
@@ -294,7 +295,9 @@
 #kawar pre +0175710
 #kawar pre' &707d707+0075700
 #kawar mens +0757570
+#kawar mens' &f0eae0f+7032307
 #kawar ki +0627260
+#kawar ki' &888f888+7000007
 
 #kawar kore +2222227
 #kawar koren +2227227
@@ -327,20 +330,21 @@
 
 #kawarprenkw dji +7555111
 #kawarprenkw zor +4445557
-#kawarprenkw rev +7117555
+#kawarprenkw rev +7175555
 #kawarprenkw ne +2272722
 #kawarprenkw my +5555707
 #kawarprenkw bu +7075555
-#kawarprenkw za +7075555
+
 #kawarprenkw ver +7444444
 #kawarprenkw anpe +1111117
 #kawarprenkw ply +7474444
 #kawarprenkw pe +1111717
 #kawarprenkw mei +7574444
 #kawarprenkw za +1111757
+
 #kawarprenkw mega +7571517
-#kawarprenkw mile +7557115
-#kawarprenkw muss +7007115
+#kawarprenkw mile +7571115
+#kawarprenkw muss +7071115
 #kawarprenkw volo +7117117
 #kawarprenkw zuk +7545457
 #kawarprenkw pö +7115117
