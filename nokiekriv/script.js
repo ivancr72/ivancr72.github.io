@@ -175,7 +175,7 @@ function faireLinjar(ovsärt, lukbater) {
                 zor--;
                 if (zor <= dji) { zor = dji + zakerVLinja; break; }  // ku zak ist plynagai linja
             }
-            zaker.push(linja.slice(dji, zor));
+            linjar.push(zaker.slice(dji, zor));
             dji = zor;
         }
     }
