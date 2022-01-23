@@ -42,7 +42,7 @@ function kawarVMisper(wort) {
             if (misp == wort.length - 1) {
                 return "+" + sus;
             } else {
-                return "&" 
+                return "&"
                     + sus.substring(0, sus.length - 1)
                     + (parseInt(sus.at(-1), 16) | 8).toString(16);
             }
@@ -240,7 +240,7 @@ fetch("./fairechoser.txt")
     .then(txt => {
         faireFairechater(txt);
         //console.debug(kawarchor, ziker, prenkwer, postnkwer);
-        ctx = document.getElementById("oras").getContext('2d', {alpha: false});
+        ctx = document.getElementById("oras").getContext('2d', { alpha: false });
         window.addEventListener("resize", faireOras);
         document.getElementById("ekrivmist").addEventListener("input", faireOras);
         document.getElementById("lukbattaej").addEventListener("input", faireOras);
