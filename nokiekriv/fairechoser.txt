@@ -300,9 +300,6 @@
 #kawar fore +011511
 #kawar fore' &7555557+0005000
 
-#kawar kiwa ki wa
-#kawar biwa bi wa
-
 #kawar kore +2222227
 #kawar koren +2227227
 #kawar sore +6447446
@@ -311,9 +308,6 @@
 #kawar koren' &88c999f+0014447
 #kawar sore' &800f008+7447447
 #kawar soren' &804f408+7447447
-
-#kawar mumen mumente
-#kawar cum koren mumente
 
 #kawar efes &0008+0
 #kawar iki &000f+0007
@@ -388,3 +382,9 @@
 #kawar aac agus ander chose er
 #kawar inv ich ne ved
 #kawar mds mort d sjov
+#kawar ag agus
+#kawar ndag ndagus
+#kawar mumen mumente
+#kawar cum koren mumente
+#kawar kiwa ki wa
+#kawar biwa bi wa
