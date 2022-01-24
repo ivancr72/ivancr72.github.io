@@ -82,11 +82,13 @@
 #kawar chose &7570757+7570757
 #kawar cranj &0470e4f+0170317
 #kawar dag &1f10747+0700707
+#kawar däkor &1f10747+0700707
 #kawar denwa &f15151f+7171717
 #kawar deralk &7d72205+4140000
 #kawar derulk &31c4c13+6411146
 #kawar det &74f8c44+7550111
 #kawar deveni &74d0d47+7054507
+#kawar egzäminäsjon &f5d555f+7574147
 #kawar eider &f57075f+7554557
 #kawar ekol &74d470f+7474707
 #kawar ekriv &75d5507+4050404
@@ -99,7 +101,9 @@
 #kawar feri &22f2715+7474447
 #kawar feri' &2272715+7447447
 #kawar fet &7170717+7470747
+#kawar fiil &f1f8f05+7570705
 #kawar foütre &504475f+5011757
+#kawar frot &7011757+7044757
 #kawar fuku &7155544+7455511
 #kawar furui &7099f05+7044705
 #kawar gab &711f117+4545454
@@ -162,9 +166,9 @@
 #kawar mürdar &faafaaa+7227222
 #kawar musik &c444757+7444757
 #kawar mwa &c01d10c+5455545
+#kawar naenae &f1d5d1f+5050505
 #kawar nagai &f1f0f1f+7074707
 #kawar name &70f1d1f+7074547
-#kawar naenae &f1d5d1f+5050505
 #kawar nasa &f1d5d1f+7074547
 #kawar neja &000d444+0005111
 #kawar ngombe &7174d5d+0070715
@@ -274,11 +278,15 @@
 #kawar d +6223226
 #kawar v +3226223
 #kawar pro +5474745
+#kawar pro' &10d0d01+7454547
 #kawar bi +1117111
 
-#kawar oder +5574755
-#kawar agus +5557555
 #kawar ndagus +7022205
+#kawar ndagus' &7044407+7011105
+#kawar agus +5557555
+#kawar agus' &f57075f+5557555
+#kawar oder +5574755
+#kawar oder' &75f0f57+4474744
 
 #kawar me +0157510
 #kawar me' &755f557+0117110
@@ -371,11 +379,11 @@
 #kawarpostnkw lid +7550557
 #kawarpostnkw mist +7075557
 #kawarpostnkw mumente +2022227
+#kawarpostnkw r er
 
 #kawar mist' &f0f111f+7074447
 #kawar mumente' &808899f+0000447
 
-#postnkw r er
 #postnkw irt ir ti
 
 #kawar vkm v koren mumente
