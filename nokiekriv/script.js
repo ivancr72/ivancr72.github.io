@@ -1,8 +1,5 @@
 'use strict';
 
-const preParp = "#fff";
-const zikParp = "#000";
-
 let kawarchor = new Map();
 let ziker = new Map();
 let misper = new Map();
