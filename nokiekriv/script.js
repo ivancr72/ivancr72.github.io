@@ -228,7 +228,7 @@ function faireOras() {
         return;
     }
     const lukbaterVLinja = Math.floor(xTäj / lukbattäj - 2);
-    if (lukbaterVLinja < 8) { return; }
+    if (lukbaterVLinja < 4) { return; }
     const [linjar, meinagaiLinja] = faireLinjar(parsed, lukbaterVLinja);
 
     oras.width = document.getElementById("plynoki").checked 
