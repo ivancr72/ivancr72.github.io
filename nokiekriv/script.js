@@ -224,7 +224,12 @@ function faireOras() {
 
     const xTäj = ekrivmist.parentElement.offsetWidth;
 
-    if (parsed === "") { oras.height = 9 * lukbattäj; loridOras(ctx); return; }
+    if (!parsed) {
+        oras.width = document.getElementById("plynoki").checked ? lukbattäj : xTäj;
+        oras.height = 9 * lukbattäj; 
+        loridOras(ctx);
+        return;
+    }
     const lukbaterVLinja = Math.floor(xTäj / lukbattäj - 2);
     if (lukbaterVLinja < 8) { return; }
     const [linjar, meinagaiLinja] = faireLinjar(parsed, lukbaterVLinja);
