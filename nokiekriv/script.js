@@ -1,5 +1,4 @@
 'use strict';
-let ctx;
 
 const preParp = "#fff";
 const zikParp = "#000";
@@ -22,7 +21,7 @@ function splitOnce(string, pattern) {
 function explode(name) {
     return [
         name.replaceAll("ä", "a").replaceAll("ö", "o").replaceAll("ü", "u"),
-        name.replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue")
+        name.replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue"),
     ];
 }
 
@@ -163,6 +162,7 @@ function ovsäMaghchat(mogus) {
 function faireLinjar(ovsärt, lukbater) {
     const zakerVLinja = Math.floor(lukbater / 4);
     let linjar = [];
+    let meinagaiLinja = 0;
     for (const suslinja of ovsärt.split("//")) {
         const linja = suslinja.trim();
         if (!linja) { linjar.push([]); continue; }  // "".split(" ") is [""] (???)
@@ -175,11 +175,13 @@ function faireLinjar(ovsärt, lukbater) {
                 zor--;
                 if (zor <= dji) { zor = dji + zakerVLinja; break; }  // ku zak ist plynagai linja
             }
-            linjar.push(zaker.slice(dji, zor));
+            const slice = zaker.slice(dji, zor);
+            linjar.push(slice);
+            meinagaiLinja = Math.max(meinagaiLinja, slice.length);
             dji = zor;
         }
     }
-    return linjar;
+    return [linjar, meinagaiLinja];
 }
 
 function faireOrasSus(ctx, linjar, lukbattäj) {
@@ -206,27 +208,30 @@ function faireOrasSus(ctx, linjar, lukbattäj) {
 }
 
 function loridOras(ctx) {
-    ctx.fillStyle = preParp;
+    ctx.fillStyle = document.getElementById("preparp").value;
     ctx.fillRect(0, 0, oras.width, oras.height);
-    ctx.fillStyle = zikParp;
+    ctx.fillStyle = document.getElementById("zikparp").value;
 }
 
 function faireOras() {
-    const ekrivmist = document.getElementById("ekrivmist");
     const oras = document.getElementById("oras");
+    const ctx = oras.getContext('2d', { alpha: false });
+    const ekrivmist = document.getElementById("ekrivmist");
     const lukbattäj = parseInt(document.getElementById("lukbattaej").value, 10);
     if (!(lukbattäj >= 1)) { return; }
 
     const parsed = ovsäMaghchat(ekrivmist.value);
 
     const xTäj = ekrivmist.parentElement.offsetWidth;
-    oras.width = xTäj;
 
     if (parsed === "") { oras.height = 9 * lukbattäj; loridOras(ctx); return; }
     const lukbaterVLinja = Math.floor(xTäj / lukbattäj - 2);
     if (lukbaterVLinja < 8) { return; }
-    const linjar = faireLinjar(parsed, lukbaterVLinja);
+    const [linjar, meinagaiLinja] = faireLinjar(parsed, lukbaterVLinja);
 
+    oras.width = document.getElementById("plynoki").checked 
+        ? (meinagaiLinja * 4 + 1) * lukbattäj
+        : xTäj;
     oras.height = (linjar.length * 8 + 1) * lukbattäj;
 
     loridOras(ctx);
@@ -240,9 +245,9 @@ fetch("./fairechoser.txt")
     .then(txt => {
         faireFairechater(txt);
         //console.debug(kawarchor, ziker, prenkwer, postnkwer);
-        ctx = document.getElementById("oras").getContext('2d', { alpha: false });
         window.addEventListener("resize", faireOras);
-        document.getElementById("ekrivmist").addEventListener("input", faireOras);
-        document.getElementById("lukbattaej").addEventListener("input", faireOras);
+        for (const x of document.querySelectorAll("input, textarea")) {
+            x.addEventListener("input", faireOras);
+        }
         faireOras();
     });
