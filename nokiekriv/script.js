@@ -25,7 +25,7 @@ function explode(name) {
 function kawarVZiker(wort) {
     return [...wort].map(
         (zik, misp) => (
-            ((misp == wort.length - 1) ? "+7" : "&f")
+            ((misp === wort.length - 1) ? "+7" : "&f")
             + (ziker.get(zik.toLowerCase()) || ziker.get("#ander"))
         )
     ).join(" ");
@@ -35,7 +35,7 @@ function kawarVMisper(wort) {
     return [...wort].map(
         (zik, misp) => {
             const sus = misper.get(zik) ?? misper.get("#ander");
-            if (misp == wort.length - 1) {
+            if (misp === wort.length - 1) {
                 return "+" + sus;
             } else {
                 return "&"
@@ -86,7 +86,7 @@ const toutfairechat = {
 
 function faireFairechater(fairechater) {
     for (const ziklinja of fairechater.split("\n")) {
-        if (ziklinja[0] != "#") { continue; }
+        if (ziklinja[0] !== "#") { continue; }
         const [fairechatname, anderchoser] = splitOnce(ziklinja.trimStart(), " ");
         const [ikijem, doujem] = splitOnce(anderchoser, " ");
         (toutfairechat[fairechatname] ?? (
@@ -168,7 +168,7 @@ function faireLinjar(ovsärt, lukbater) {
         let dji = 0;
         while (dji < zaker.length) {
             let zor = dji + zakerVLinja;
-            while ((zaker[zor - 1] ?? "+")[0] == "&") {
+            while ((zaker[zor - 1] ?? "+")[0] === "&") {
                 zor--;
                 if (zor <= dji) { zor = dji + zakerVLinja; break; }  // ku zak ist plynagai linja
             }
