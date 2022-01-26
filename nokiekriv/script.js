@@ -136,7 +136,7 @@ function opadWort(wort) {
                 if (rest) { return prenkwer.get(substr) + " " + rest; }
             }
         }
-        for (let i = 1; i <= Math.min(meiokiPrenkw, wort.length - 1); i++) {
+        for (let i = 1; i <= Math.min(meiokiPostnkw, wort.length - 1); i++) {
             const substr = wort.substring(wort.length - i);
             if (postnkwer.has(substr)) {
                 const rest = opadWort(wort.substring(0, wort.length - i));
@@ -215,11 +215,11 @@ function faireOras() {
     const ctx = oras.getContext('2d', { alpha: false });
     const ekrivmist = document.getElementById("ekrivmist");
     const lukbattäj = parseInt(document.getElementById("lukbattaej").value, 10);
+    const xTäj = ekrivmist.parentElement.offsetWidth;
+    
     if (!(lukbattäj >= 1)) { return; }
 
     const parsed = ovsäMaghchat(ekrivmist.value);
-
-    const xTäj = ekrivmist.parentElement.offsetWidth;
 
     if (!parsed) {
         oras.width = document.getElementById("plynoki").checked ? lukbattäj : xTäj;
