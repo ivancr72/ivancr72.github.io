@@ -182,8 +182,8 @@ function faireLinjar(ovsärt, lukbater) {
 }
 
 function faireOrasSus(ctx, linjar, lukbattäj) {
-    for (const [yy, line] of linjar.entries()) {
-        for (const [xx, oras] of line.entries()) {
+    for (const [yy, linja] of linjar.entries()) {
+        for (const [xx, oras] of linja.entries()) {
             if ("+&".includes(oras[0])) {
                 for (let y = 0; y < 7; y++) {
                     const seläre = parseInt(oras[y + 1], 16);
