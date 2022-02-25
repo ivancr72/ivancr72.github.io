@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/epic.css"/>
+    <link rel="icon" type="image/png" href="/selaere.png">
+    <title>memoriser</title>
+    <style>
+        textarea {
+            width: 100%;
+            font-size: large;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        #question {
+            font-size: larger;
+            font-weight: bolder;
+        }
+        #prompt {
+            width: 100%;
+        }
+        #small {
+            font-size: medium;
+            opacity: 70%;
+        }
+        button {
+            padding: 2px 10px;
+            min-width: 5em;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+            margin: 18px 0px;
+        }
+        fieldset {
+            margin: 18px 0px;
+        }
+        code {
+            background-color: var(--table-header);
+        }
+    </style>
+</head>
+<body class=small>
+    <h1> memori<span id=s 
+        onmouseenter="elem('s').innerText=elem('s').innerText==='s'?'z':'s'">s</span>er </h1>
+    <p>wip</p>
+    <fieldset id=settings>
+        <legend>settings</legend>
+        <p>
+            <label>
+                <input type=checkbox id=animations checked> enable animations
+            </label>
+            <br>
+            <label>
+                repeat each question <input type=number id=repetitions value=3 size=2 min=1>
+                time<span id=gimmick>s</span>
+            </label>
+        </p>
+    </fieldset>
+    <fieldset id=databox>
+        <legend>questions</legend>
+            <p> 
+                every non-empty line is a question. 
+                use <code><i>question</i><b>:</b>&nbsp;<i>answer</i></code> for short questions, 
+                and <code><i>question</i><b>::</b>&nbsp;<i>answer</i></code> for long questions.
+                long questions are checked by the user, and don’t require any input.
+            </p>
+            <p>
+            <textarea id=data rows=5>
+bees invention date: 87mya
+when were apioforms first invented?:: never, as they transcend spacetime
+what colors do bees have?:: yellow and black
+name of protagonist in bee movie: Barry</textarea>
+            </p>
+        </div>
+    </fieldset>
+    <div class=buttons>
+        <button id=startbtn>start</button>
+    </div>
+    <fieldset hidden id=asker>
+        <legend>gaming</legend>
+        <p>
+            Question <span id=no>0</span>/<span id=max>1</span>.
+            <span id=mistakes>0</span> mistakes.
+        </p>
+        <p>
+            <span id=question></span> <span id=small></span>
+        </p>
+        <p>
+            <span id=answer></span>
+        </p>
+        <p>
+            <label for=prompt id=promptlabel>answer:</label> <input id=prompt type=text>
+        </p>
+        <div class=buttons>
+            <button id=checkbtn>ok <kbd>↵</kbd></button>
+            <button id=rightbtn hidden>right <kbd>↵</kbd></button>
+            <button id=wrongbtn hidden>wrong <kbd>⌫</kbd></button>
+            <button id=quitbtn>quit</button>
+        </div>
+    </fieldset>
+    <fieldset hidden id=mistakeset>
+        <legend>mistakes</legend>
+        <p id=mistakelist>
+
+        </p>
+    </fieldset>
+</body>
+<script>
+
+const SHORT = 0;
+const LONG = 1;
+let questions = [];
+let selected = 0;
+let isWaitingForConfirmation = false;
+let wrong = [];
+const elem = x => document.getElementById(x);
+function rng(num) {
+    return Math.floor(Math.random() * num);
+}
+function get_questions() {
+    questions = [];
+    wrong = [];
+    const data = elem("data").value.trim();
+    let repetitions = parseInt(elem("repetitions").value.trim());
+    if (Number.isNaN(repetitions) || repetitions < 1) repetitions = 1;
+    for (const string of data.split("\n")) {
+        const idx = string.search(":");
+        let mong = new Object();
+        mong.question = string.substring(0, idx).trim();
+        if (string[idx + 1] === ":") {
+            mong.answer = string.substring(idx + 2).trim();
+            mong.type = LONG;
+        } else {
+            mong.answer = string.substring(idx + 1).trim();
+            mong.type = SHORT;
+        }
+        for (let i = 0; i < repetitions; i++) {
+            questions.push(mong);
+        }
+    }
+    // shuffle
+    for (let i = questions.length-1; i > 0; i--) {
+        const r = rng(i);
+        [questions[i], questions[r]] = [questions[r], questions[i]];
+    }
+    elem("max").innerText = `${questions.length}`;
+
+}
+function start() {
+    get_questions();
+    elem("asker").hidden = false;
+    elem("startbtn").hidden = true;
+    elem("databox").hidden = true;
+    elem("settings").disabled = true;
+    elem("mistakes").innerText = "0";
+    elem("mistakeset").hidden = true;
+    selected = -1;
+    next();
+}
+function quit() {
+    elem("asker").hidden = true;
+    elem("startbtn").hidden = false;
+    elem("databox").hidden = false;
+    elem("settings").disabled = false;
+    elem("mistakelist").replaceChildren(); // empties mistakes
+    for (q of wrong) {
+        elem("mistakelist").append(new Text(`${q.question}: ${q.answer}`), document.createElement("br"));
+    }
+    elem("mistakeset").hidden = false;
+}
+function check() {
+    const quest = questions[selected];
+    const prompt = elem("prompt");
+    if (quest.type === SHORT) {
+        if (elem("prompt").value.trim().toLowerCase() !== quest.answer.toLowerCase()) {
+            alert(`no!!!! the answer was ${quest.answer}`);
+            do_mistake();
+        }
+        next();
+    } else { // === LONG
+        elem("answer").innerText = quest.answer;
+        elem("answer").hidden = false;
+        elem("rightbtn").hidden = false;
+        elem("wrongbtn").hidden = false;
+        elem("checkbtn").hidden = true;
+        elem("prompt").disabled = true;
+        elem("prompt").blur();
+        isWaitingForConfirmation = true;
+    }
+}
+function next() {
+    selected++;
+    if (selected >= questions.length) {
+        elem("question").innerText = "no more questions left.";
+        elem("small").innerText = "(sorry)";
+        return;
+    }
+    const quest = questions[selected];
+    elem("no").innerText = `${selected+1}`;
+    elem("question").innerText = quest.question;
+    elem("small").innerText = quest.type === SHORT ? "" : "(long)";
+    elem("prompt").value = "";
+}
+function gimmick() {
+    elem("gimmick").innerText = elem("repetitions").value.trim() === "1" ? "" : "s";
+}
+
+function do_mistake() {
+    wrong.push(questions[selected]);
+    elem("mistakes").innerText = `${wrong.length}`;
+    if (elem("animations").checked) {
+        elem("mistakes").animate([
+            {color: "firebrick"},
+            {color: "var(--foreground)"}
+        ], {duration:700})
+    }
+}
+
+function userconfirm(bool) {
+    if (!bool) {
+        do_mistake();
+    }
+    elem("answer").hidden = true;
+    elem("rightbtn").hidden = true;
+    elem("wrongbtn").hidden = true;
+    elem("checkbtn").hidden = false;
+    elem("prompt").disabled = false;
+    elem("prompt").focus();
+    elem("prompt").value = "";
+    isWaitingForConfirmation = false;
+    next();
+}
+
+//elem("prompt").addEventListener("keydown", function(event) {
+//});
+elem("startbtn").addEventListener("click", start);
+elem("quitbtn").addEventListener("click", quit);
+elem("rightbtn").addEventListener("click", ()=>userconfirm(true));
+elem("wrongbtn").addEventListener("click", ()=>userconfirm(false));
+elem("checkbtn").addEventListener("click", check);
+elem("repetitions").addEventListener("input", gimmick)
+window.addEventListener("keydown", function(event) {
+    if (isWaitingForConfirmation && (event.key === "Enter" || event.key === "Backspace")) {
+        event.preventDefault();
+        userconfirm(event.key==="Enter");
+    } else if (event.key === "Enter") {
+        event.preventDefault();
+        check();
+    }
+})
+gimmick();
+
+</script>
+</html>
