@@ -8,7 +8,6 @@
         <title>char</title>
         <script>
             /*
-            
             Copyright © 1991-2021 Unicode, Inc. All rights reserved.
             Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
             
@@ -40,8 +39,8 @@
             */
             const blocks = '0000..007F;0080..00FF;0100..017F;0180..024F;0250..02AF;02B0..02FF;0300..036F;0370..03FF;0400..04FF;0500..052F;0530..058F;0590..05FF;0600..06FF;0700..074F;0750..077F;0780..07BF;07C0..07FF;0800..083F;0900..097F;0980..09FF;0A00..0A7F;0A80..0AFF;0B00..0B7F;0B80..0BFF;0C00..0C7F;0C80..0CFF;0D00..0D7F;0D80..0DFF;0E00..0E7F;0E80..0EFF;0F00..0FFF;1000..109F;10A0..10FF;1100..11FF;1200..137F;1380..139F;13A0..13FF;1400..167F;1680..169F;16A0..16FF;1700..171F;1720..173F;1740..175F;1760..177F;1780..17FF;1800..18AF;18B0..18FF;1900..194F;1950..197F;1980..19DF;19E0..19FF;1A00..1A1F;1A20..1AAF;1B00..1B7F;1B80..1BBF;1C00..1C4F;1C50..1C7F;1CD0..1CFF;1D00..1D7F;1D80..1DBF;1DC0..1DFF;1E00..1EFF;1F00..1FFF;2000..206F;2070..209F;20A0..20CF;20D0..20FF;2100..214F;2150..218F;2190..21FF;2200..22FF;2300..23FF;2400..243F;2440..245F;2460..24FF;2500..257F;2580..259F;25A0..25FF;2600..26FF;2700..27BF;27C0..27EF;27F0..27FF;2800..28FF;2900..297F;2980..29FF;2A00..2AFF;2B00..2BFF;2C00..2C5F;2C60..2C7F;2C80..2CFF;2D00..2D2F;2D30..2D7F;2D80..2DDF;2DE0..2DFF;2E00..2E7F;2E80..2EFF;2F00..2FDF;2FF0..2FFF;3000..303F;3040..309F;30A0..30FF;3100..312F;3130..318F;3190..319F;31A0..31BF;31C0..31EF;31F0..31FF;3200..32FF;3300..33FF;3400..4DBF;4DC0..4DFF;4E00..9FFF;A000..A48F;A490..A4CF;A4D0..A4FF;A500..A63F;A640..A69F;A6A0..A6FF;A700..A71F;A720..A7FF;A800..A82F;A830..A83F;A840..A87F;A880..A8DF;A8E0..A8FF;A900..A92F;A930..A95F;A960..A97F;A980..A9DF;AA00..AA5F;AA60..AA7F;AA80..AADF;ABC0..ABFF;AC00..D7AF;D7B0..D7FF;D800..DB7F;DB80..DBFF;DC00..DFFF;E000..F8FF;F900..FAFF;FB00..FB4F;FB50..FDFF;FE00..FE0F;FE10..FE1F;FE20..FE2F;FE30..FE4F;FE50..FE6F;FE70..FEFF;FF00..FFEF;FFF0..FFFF;10000..1007F;10080..100FF;10100..1013F;10140..1018F;10190..101CF;101D0..101FF;10280..1029F;102A0..102DF;10300..1032F;10330..1034F;10380..1039F;103A0..103DF;10400..1044F;10450..1047F;10480..104AF;10800..1083F;10840..1085F;10900..1091F;10920..1093F;10A00..10A5F;10A60..10A7F;10B00..10B3F;10B40..10B5F;10B60..10B7F;10C00..10C4F;10E60..10E7F;11080..110CF;12000..123FF;12400..1247F;13000..1342F;1D000..1D0FF;1D100..1D1FF;1D200..1D24F;1D300..1D35F;1D360..1D37F;1D400..1D7FF;1F000..1F02F;1F030..1F09F;1F100..1F1FF;1F200..1F2FF;20000..2A6DF;2A700..2B73F;2F800..2FA1F;E0000..E007F;E0100..E01EF;F0000..FFFFF;100000..10FFFF'.split(";")
             function char() {
-                let [start, end] = blocks[Math.floor(Math.random() * blocks.length)].split("..").map(x => parseInt(x, 16))
-                let cp = Math.floor(Math.random() * (end - start + 1) + start)
+                const [start, end] = blocks[Math.floor(Math.random() * blocks.length)].split("..").map(x => parseInt(x, 16))
+                const cp = Math.floor(Math.random() * (end - start + 1) + start)
                 document.getElementById("output").innerText = String.fromCodePoint(cp) + " U+" + cp.toString(16).toUpperCase().padStart(4, '0')
                 console.log(String.fromCodePoint(cp), cp.toString(16))
             }
@@ -55,7 +54,7 @@
             }
         </style>
     </head>
-    <body onload="char()" onkeypress="char()" class=small>
+    <body onload="char()" onkeyup="char()" class=small>
         <h1>random* unicode character</h1>
         <p>*a randomly chosen character from a randomly chosen unicode block. it would always be cjk otherwise</p>
         <div style="text-align: center;">
