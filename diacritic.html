@@ -6,6 +6,14 @@
         <link rel="stylesheet" type="text/css" href="/epic.css"/>
         <link rel="icon" type="image/png" href="/selaere.png">
         <title>dia critic</title>
+        <script>
+            function change_letter() {
+                const letter = document.getElementById("input").value || "◌";
+                for (x of document.getElementsByClassName("e")) {
+                    x.innerText = letter;
+                }
+            }
+        </script>
         <style>
             .l {
                 font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
