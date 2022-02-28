@@ -6,20 +6,12 @@
         <link rel="stylesheet" type="text/css" href="/epic.css"/>
         <link rel="icon" type="image/png" href="/selaere.png">
         <title>dia critic</title>
-        <script>
-            function change_letter() {
-                letter = document.getElementById("input").value;
-                if (letter.length === 0) letter = "◌";
-                for (x of document.getElementsByClassName("e")) {
-                    x.innerText = letter;
-                }
-            }
-        </script>
         <style>
             .l {
                 font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
                 font-size: 36px;
                 margin: 0px 20px 0px 10px;
+                display:inline-block; /*this makes selection work better*/
             }
             .sussy {
                 font-size: 12px;
@@ -28,22 +20,21 @@
         </style>
     </head>
     <body class=small>
-        <h1> dia critic </h1>
-        <p> welcome to dia critic: the show that gets facts wrong about <strong>YOUR</strong> favorite dia.</p>
+        <h1>dia critic</h1>
+        <p>welcome to dia critic: the show that gets facts wrong about <strong>your</strong> favorite dia.</p>
 
         <p>(i recommend installing <a href="https://www.google.com/get/noto/">Noto Sans</a> to be able to see most of these)</p>
 
         <p><a href=diacritic-full>full version</a></p>
 
-        <p> letter: <input oninput="change_letter()" id=input type=text value=a maxlength=10 class=short> </p>
-       
+        <p>letter: <input oninput="change_letter()" id=input type=text value=a maxlength=10 class=short></p>
 
-        <!-- I know, vomit all you want... i was considering doing this client-side, but apparently javascript has no way
-             of getting unicode names automatically, so it'd have to parse a file more than a 100 times longer than this one.
-             (this is also the reason for the cryptic class names)
-             heck people add huge javascript libraries and they get away with it i think this is fine -->
+        <!-- i was considering doing this client-side, but apparently javascript has no good way of
+            getting unicode names, so it'd have to parse a file more than a 100 times longer than 
+            this one. (this is also the reason for the single letter class names)
+            heck people add huge javascript libraries and they get away with it i think this is fine -->
         <div class=sussy>
-<br><span class=l><span class=e>a</span>&#x300;</span>U+0300 COMBINING GRAVE ACCENT
+    <span class=l><span class=e>a</span>&#x300;</span>U+0300 COMBINING GRAVE ACCENT
 <br><span class=l><span class=e>a</span>&#x301;</span>U+0301 COMBINING ACUTE ACCENT
 <br><span class=l><span class=e>a</span>&#x302;</span>U+0302 COMBINING CIRCUMFLEX ACCENT
 <br><span class=l><span class=e>a</span>&#x303;</span>U+0303 COMBINING TILDE
