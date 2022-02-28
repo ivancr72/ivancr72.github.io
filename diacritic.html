@@ -9,9 +9,7 @@
         <script>
             function change_letter() {
                 const letter = document.getElementById("input").value || "◌";
-                for (x of document.getElementsByClassName("e")) {
-                    x.innerText = letter;
-                }
+                for (x of document.getElementsByClassName("e")) x.innerText = letter;
             }
         </script>
         <style>
@@ -19,7 +17,7 @@
                 font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
                 font-size: 36px;
                 margin: 0px 20px 0px 10px;
-                display:inline-block; /*this makes selection work better*/
+                display: inline-block; /*this makes selection work better*/
             }
             .sussy {
                 font-size: 12px;
@@ -35,7 +33,7 @@
 
         <p><a href=diacritic-full>full version</a></p>
 
-        <p>letter: <input oninput="change_letter()" id=input type=text value=a maxlength=10 class=short></p>
+        <p><label for=input>letter:</label> <input oninput="change_letter()" id=input type=text value=a maxlength=10 class=short></p>
 
         <!-- i was considering doing this client-side, but apparently javascript has no good way of
             getting unicode names, so it'd have to parse a file more than a 100 times longer than 
