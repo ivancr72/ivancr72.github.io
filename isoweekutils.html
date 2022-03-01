@@ -9,31 +9,31 @@
     <script src="https://moment.github.io/luxon/global/luxon.js" ></script>
     <title>ISO week utils</title>
     <script>
-        id = x => document.getElementById(x)
+        const elem = x => document.getElementById(x);
         function ready() {
-            now = luxon.DateTime.now()
-            id`local`.innerText = `${now.toISOWeekDate()} ${now.toISOTime()}`
-            utc = now.toUTC()
-            id`utc`.innerText = `${utc.toISOWeekDate()} ${utc.toISOTime()}`
+            const now = luxon.DateTime.now();
+            const utc = now.toUTC();
+            elem("local").innerText = `${now.toISOWeekDate()} ${now.toISOTime()}`;
+            elem("utc"  ).innerText = `${utc.toISOWeekDate()} ${utc.toISOTime()}`;
         }
         function update_greg() {
-            date = luxon.DateTime.utc(
-                +id`year` .value, 
-                +id`month`.value, 
-                +id`day`  .value,
+            const date = luxon.DateTime.utc(
+                +elem("year" ).value, 
+                +elem("month").value, 
+                +elem("day"  ).value,
             );
-            id`weekYear`.value = date.weekYear || 0
-            id`weekNumber`.value = date.weekNumber || 0
-            id`weekday`.value = date.weekday || 0
+            elem("weekYear"  ).value = date.weekYear   || 0;
+            elem("weekNumber").value = date.weekNumber || 0;
+            elem("weekday"   ).value = date.weekday    || 0;
         }
         function update_week() {
-            date = luxon.DateTime.fromObject({ 
-                weekYear:   +id`weekYear`.value, 
-                weekNumber: +id`weekNumber`.value, 
-                weekday:    +id`weekday` .value });
-            id`year`.value  = date.year || 0
-            id`month`.value = date.month || 0
-            id`day`.value   = date.day || 0
+            const date = luxon.DateTime.fromObject({ 
+                weekYear:   +elem("weekYear"  ).value, 
+                weekNumber: +elem("weekNumber").value, 
+                weekday:    +elem("weekday"   ).value, });
+            elem("year" ).value = date.year  || 0;
+            elem("month").value = date.month || 0;
+            elem("day"  ).value = date.day   || 0;
         }
     </script>
     <style>
