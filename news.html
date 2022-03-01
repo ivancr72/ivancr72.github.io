@@ -19,65 +19,55 @@
     </style>
     <script>
         
-        words = [
-            "the", "a", "this", "these", "that", "those", "each", "every", "any", "some", "each",
-            "every", "no", "none", "another", "all", "both", "very", "too", "so", "not", "he", "him",
-            "his", "she", "her", "it", "its", "they", "them", "their", "one", "what", "which", "who",
-            "whose", "be", "are", "is", "was", "were", "have", "has", "having", "had", "very",
-            "not", "of", "in", "on", "over", "under", "to", "from", "with", "through", "by", "for",
-            "and", "nor", "but", "or", "yet", "so", "as", "because", "even", "if", "than", "unless",
-            "while"];
+        const words = ("the a this these that those each every any some each every no none " +
+            "another all both very too so not he him his she her it its they them their one what " +
+            "which who whose be are is was were have has having had very not of in on over under " +
+            "to from with through by for and nor but or yet so as because even if than unless while"
+        ).split(' ');
         
-        punctuation = [", ", "—", ": ", "; "]
+        const punctuation = [", ", "—", ": ", "; "];
         
         const params = new URLSearchParams(window.location.search);
 
-        let seed = BigInt(params.get("articleno") || Math.random() * Math.pow(2, 64));
-        let random = new Math.seedrandom(seed); // from seedrandom
-        let rng = () => Math.abs(random.int32())
+        const seed = BigInt(params.get("articleno") || Math.random() * Math.pow(2, 64));
+        const random = new Math.seedrandom(seed); // from seedrandom
+        const rng = () => Math.abs(random.int32());
+
+        let last_word;
+        function generate_word() {
+            let word;
+            do {
+                word = words[rng() % words.length];
+            } while (word === last_word);
+            last_word = word;
+            return word;
+        }
 
         function generate_sentence(max_words = 50) {
-            // XXX: dont append to strings you idiot
-            sentence = ""
-            length = rng() % (max_words - 10) + 10
-
-            let last_word = ""
-            let word = ""
-
+            // XXX: dont append to strings
+            const length = rng() % (max_words - 10) + 10;
+            let sentence = "";
             for (let i = 0; i < length; i++) {
-                while (word === last_word) {
-                    word = words[rng() % words.length]
-                }
-                sentence += word
-                if (rng() % 10) {
-                    sentence += " "
-                } else {
-                    sentence += punctuation[rng() % punctuation.length]
-                }
-                last_word = word
+                sentence += generate_word();
+                sentence += rng() % 10 === 0 ?
+                    punctuation[rng() % punctuation.length] : " ";
             }
-            sentence += words[rng() % words.length] + "."
-
-            sentence = sentence[0].toUpperCase() + sentence.slice(1)
-            return sentence
+            return sentence[0].toUpperCase() + sentence.slice(1) + generate_word() + ".";
         }
         function ready() {
-            let body = document.getElementsByTagName("body")[0]
-            let header = document.createElement('h1')
-            header.innerText = generate_sentence(25).slice(0, -1)
-            document.title = header.innerText
-            body.appendChild(header)
+            const body = document.getElementsByTagName("body")[0];
+            let header = document.createElement('h1');
+            header.innerText = generate_sentence(25).slice(0, -1);
+            document.title = header.innerText;
+            body.appendChild(header);
             for (let i = 0; i < (rng() % 7 + 4); i++) {
-                let paragraph = document.createElement('p')
+                let paragraph = document.createElement('p');
                 for (let j = 0; j < (rng() % 3 + 2); j++) {
-                    paragraph.innerText += generate_sentence() + " "
+                    paragraph.innerText += generate_sentence() + " ";
                 }
-                body.appendChild(paragraph)   
-                
+                body.appendChild(paragraph);
             }
         }
-
-
     </script>
 </head>
 
