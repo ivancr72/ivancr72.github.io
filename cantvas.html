@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/selaere.png">
-        <link rel="stylesheet" type="text/css" href="/epic.css"/>
-        <title>cantvas</title>
-        <style>
-            html, body {
-                height: 100%;
-                box-sizing: border-box;
-            }
-        </style>
-        <script>
-            function commence() {
-                const canvas = document.getElementById('canvas');
-                canvas.width = document.body.clientWidth - 40;
-                canvas.height = document.body.clientHeight - 40;
-                const ctx = canvas.getContext('2d');
-                let color = 0
-                let [lastx, lasty] = [null, null];
-                canvas.addEventListener('mousemove', function(e) {
-                    color++;
-                    ctx.fillStyle = `hsl(${color%360}deg, 100%, 50%)`;
-                    ctx.strokeStyle = `hsl(${color%360}deg, 100%, 50%)`;
-                    ctx.lineWidth = 5
-                    if (lastx !== null) {
-                        ctx.beginPath();
-                        ctx.moveTo(lastx, lasty)
-                        ctx.lineTo(e.offsetX, e.offsetY);
-                        ctx.stroke();
-                    }
-                    [lastx, lasty] = [e.offsetX, e.offsetY]
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/selaere.png">
+    <link rel="stylesheet" type="text/css" href="/epic.css"/>
+    <title>cantvas</title>
+    <style>
+        html, body {
+            height: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function commence() {
+            const canvas = document.getElementById('canvas');
+            canvas.width = document.body.clientWidth - 40;
+            canvas.height = document.body.clientHeight - 40;
+            const ctx = canvas.getContext('2d');
+            let color = 0
+            let [lastx, lasty] = [null, null];
+            canvas.addEventListener('mousemove', function(e) {
+                color++;
+                ctx.fillStyle = `hsl(${color%360}deg, 100%, 50%)`;
+                ctx.strokeStyle = `hsl(${color%360}deg, 100%, 50%)`;
+                ctx.lineWidth = 5
+                if (lastx !== null) {
                     ctx.beginPath();
-                    ctx.arc(e.offsetX, e.offsetY, 5, 0, 2 * Math.PI);
-                    ctx.fill();
-                }, false);
-            }
-        </script>
+                    ctx.moveTo(lastx, lasty)
+                    ctx.lineTo(e.offsetX, e.offsetY);
+                    ctx.stroke();
+                }
+                [lastx, lasty] = [e.offsetX, e.offsetY]
+                ctx.beginPath();
+                ctx.arc(e.offsetX, e.offsetY, 5, 0, 2 * Math.PI);
+                ctx.fill();
+            }, false);
+        }
+    </script>
 
-    </head>
-    <body onload=commence()>
-        <canvas id=canvas></canvas>
-    </body>
+</head>
+<body onload=commence()>
+    <canvas id=canvas></canvas>
+</body>
 </html>

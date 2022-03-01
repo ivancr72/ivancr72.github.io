@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/selaere.png">
-        <link rel="stylesheet" type="text/css" href="epic.css"/>
-        <title>dia critic</title>
-        <script>
-            function change_letter() {
-                const letter = document.getElementById("input").value || "◌";
-                for (x of document.getElementsByClassName("e")) x.innerText = letter;
-            }
-        </script>
-        <style>
-            .l {
-                font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
-                font-size: 36px;
-                margin: 0px 20px 0px 10px;
-                display: inline-block; /*this makes selection work better*/
-            }
-            .sussy {
-                font-size: 12px;
-                line-height: 1.5;
-            }
-        </style>
-    </head>
-    <body class=small>
-        <h1>dia critic 2</h1>
-        <p>welcome to dia critic: the show that gets facts wrong about <strong>your</strong> favorite dia.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/selaere.png">
+    <link rel="stylesheet" type="text/css" href="epic.css"/>
+    <title>dia critic</title>
+    <script>
+        function change_letter() {
+            const letter = document.getElementById("input").value || "◌";
+            for (x of document.getElementsByClassName("e")) x.innerText = letter;
+        }
+    </script>
+    <style>
+        .l {
+            font-family: "Noto Sans", "Noto Sans Symbols", "Noto Sans Symbols2", sans-serif;
+            font-size: 36px;
+            margin: 0px 20px 0px 10px;
+            display: inline-block; /*this makes selection work better*/
+        }
+        .sussy {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class=small>
+    <h1>dia critic 2</h1>
+    <p>welcome to dia critic: the show that gets facts wrong about <strong>your</strong> favorite dia.</p>
 
-        <p>(i recommend installing <a href="https://www.google.com/get/noto/">Noto Sans</a> to be able to see most of these)</p>
+    <p>(i recommend installing <a href="https://www.google.com/get/noto/">Noto Sans</a> to be able to see most of these)</p>
 
-        <p><a href=diacritic>limited version</a></p>
+    <p><a href=diacritic>limited version</a></p>
 
-        <p><label for=input>letter:</label> <input oninput="change_letter()" id=input type=text value=a maxlength=10 class=short></p>
+    <p><label for=input>letter:</label> <input oninput="change_letter()" id=input type=text value=a maxlength=10 class=short></p>
 
-        <!-- i was considering doing this client-side, but apparently javascript has no good way of
-            getting unicode names, so it'd have to parse a file more than a 100 times longer than 
-            this one. (this is also the reason for the single letter class names)
-            heck people add huge javascript libraries and they get away with it i think this is fine
-            generated with the following script: 
-            ```py
-            import unicodedata as u; open("output.html",'w').write('\n'.join(f"<br><span class=l><span class=e>a</span>&#x{cp:X};</span>U+{cp:04X} {u.name(chr(cp))}" for cp in range(0x1FFFF) if u.category(chr(cp)) == "Mn"))
-            ```
-        -->
-        <div class=sussy>
+    <!-- i was considering doing this client-side, but apparently javascript has no good way of
+        getting unicode names, so it'd have to parse a file more than a 100 times longer than 
+        this one. (this is also the reason for the single letter class names)
+        heck people add huge javascript libraries and they get away with it i think this is fine
+        generated with the following script: 
+        ```py
+        import unicodedata as u; open("output.html",'w').write('\n'.join(f"<br><span class=l><span class=e>a</span>&#x{cp:X};</span>U+{cp:04X} {u.name(chr(cp))}" for cp in range(0x1FFFF) if u.category(chr(cp)) == "Mn"))
+        ```
+    -->
+    <div class=sussy>
     <span class=l><span class=e>a</span>&#x300;</span>U+0300 COMBINING GRAVE ACCENT
 <br><span class=l><span class=e>a</span>&#x301;</span>U+0301 COMBINING ACUTE ACCENT
 <br><span class=l><span class=e>a</span>&#x302;</span>U+0302 COMBINING CIRCUMFLEX ACCENT

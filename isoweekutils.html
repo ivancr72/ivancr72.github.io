@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/epic.css"/>
-        <link rel="icon" type="image/png" href="/selaere.png">
-        <!-- *sigh* i know... -->
-        <script src="https://moment.github.io/luxon/global/luxon.js" ></script>
-        <title>ISO week utils</title>
-        <script>
-            id = x => document.getElementById(x)
-            function ready() {
-                now = luxon.DateTime.now()
-                id`local`.innerText = `${now.toISOWeekDate()} ${now.toISOTime()}`
-                utc = now.toUTC()
-                id`utc`.innerText = `${utc.toISOWeekDate()} ${utc.toISOTime()}`
-            }
-            function update_greg() {
-                date = luxon.DateTime.utc(
-                    +id`year` .value, 
-                    +id`month`.value, 
-                    +id`day`  .value,
-                );
-                id`weekYear`.value = date.weekYear || 0
-                id`weekNumber`.value = date.weekNumber || 0
-                id`weekday`.value = date.weekday || 0
-            }
-            function update_week() {
-                date = luxon.DateTime.fromObject({ 
-                    weekYear:   +id`weekYear`.value, 
-                    weekNumber: +id`weekNumber`.value, 
-                    weekday:    +id`weekday` .value });
-                id`year`.value  = date.year || 0
-                id`month`.value = date.month || 0
-                id`day`.value   = date.day || 0
-            }
-        </script>
-        <style>
-            .big {
-                font-size: 36px;
-                font-weight: bold;
-            }
-        </style>
-    </head>
-    <body onload="ready()" class=small>
-        <h2> ISO 6801 week date </h2>
-        <p><a href="https://en.wikipedia.org/wiki/ISO_week_date">more info</a></p>
-        <div style="text-align: center">
-            <p>date and time in your local timezone:<br><span id=local class=big></span></p>
-            <p>date and time in UTC:<br><span id=utc class=big></span></p>
-            <p><button onclick="ready()">reload</button></p>
-        </div>
-        <hr>
-        <h2> conversion </h2>
-        <p> gregorian (YYYY-MM-DD):
-            <input class=short type=number min=1 max=9999 value=2020 id=year oninput=update_greg()><!--
-            -->-<input class=short type=number min=1 max=12 value=12 id=month oninput=update_greg()><!--
-            -->-<input class=short type=number min=1 max=31 value=31 id=day oninput=update_greg()>
-        </p>
-        <p> ISO week:
-               <input class=short type=number min=1 max=9999 value=2019 id=weekYear oninput=update_week()><!--
-            -->-W<input class=short type=number min=1 max=54 value=54 id=weekNumber oninput=update_week()><!--
-            -->-<input class=short type=number min=1 max=7 value=4 id=weekday oninput=update_week()>
-        </p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/epic.css"/>
+    <link rel="icon" type="image/png" href="/selaere.png">
+    <!-- *sigh* i know... -->
+    <script src="https://moment.github.io/luxon/global/luxon.js" ></script>
+    <title>ISO week utils</title>
+    <script>
+        id = x => document.getElementById(x)
+        function ready() {
+            now = luxon.DateTime.now()
+            id`local`.innerText = `${now.toISOWeekDate()} ${now.toISOTime()}`
+            utc = now.toUTC()
+            id`utc`.innerText = `${utc.toISOWeekDate()} ${utc.toISOTime()}`
+        }
+        function update_greg() {
+            date = luxon.DateTime.utc(
+                +id`year` .value, 
+                +id`month`.value, 
+                +id`day`  .value,
+            );
+            id`weekYear`.value = date.weekYear || 0
+            id`weekNumber`.value = date.weekNumber || 0
+            id`weekday`.value = date.weekday || 0
+        }
+        function update_week() {
+            date = luxon.DateTime.fromObject({ 
+                weekYear:   +id`weekYear`.value, 
+                weekNumber: +id`weekNumber`.value, 
+                weekday:    +id`weekday` .value });
+            id`year`.value  = date.year || 0
+            id`month`.value = date.month || 0
+            id`day`.value   = date.day || 0
+        }
+    </script>
+    <style>
+        .big {
+            font-size: 36px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="ready()" class=small>
+    <h2> ISO 6801 week date </h2>
+    <p><a href="https://en.wikipedia.org/wiki/ISO_week_date">more info</a></p>
+    <div style="text-align: center">
+        <p>date and time in your local timezone:<br><span id=local class=big></span></p>
+        <p>date and time in UTC:<br><span id=utc class=big></span></p>
+        <p><button onclick="ready()">reload</button></p>
+    </div>
+    <hr>
+    <h2> conversion </h2>
+    <p> gregorian (YYYY-MM-DD):
+        <input class=short type=number min=1 max=9999 value=2020 id=year oninput=update_greg()><!--
+        -->-<input class=short type=number min=1 max=12 value=12 id=month oninput=update_greg()><!--
+        -->-<input class=short type=number min=1 max=31 value=31 id=day oninput=update_greg()>
+    </p>
+    <p> ISO week:
+            <input class=short type=number min=1 max=9999 value=2019 id=weekYear oninput=update_week()><!--
+        -->-W<input class=short type=number min=1 max=54 value=54 id=weekNumber oninput=update_week()><!--
+        -->-<input class=short type=number min=1 max=7 value=4 id=weekday oninput=update_week()>
+    </p>
+</body>
 </html>

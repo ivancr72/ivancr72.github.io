@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/selaere.png">
-        <link rel="stylesheet" type="text/css" href="/epic.css"/>
-        <title>pride flag generator</title>
-        <style>
-            html, body {
-                height: 100%;
-                box-sizing: border-box;
-            }
-        </style>
-        <script>
-            function rng(start, stop) {
-                return Math.floor(Math.random() * (stop+1-start)) + start;
-            }
-            function commence() {
-                const canvas = document.getElementById('canvas');
-                canvas.width = document.body.clientWidth - 40;
-                canvas.height = document.body.clientHeight - 40;
-                const ctx = canvas.getContext('2d');
-                const reflected = rng(0, 1);
-                const stripes = !reflected ? rng(3, 5) : rng(5, 7);
-                const stripeHeight = canvas.height / stripes;
-                let colors = [];
-                for (let i = 0; i < stripes; i++) {
-                    const a = rng(1, 10);
-                    if (a >= 4) {
-                        ctx.fillStyle = `hsl(${rng(0, 17)*20}deg, 100%, ${rng(0,1)*25+50}%)`;
-                    } else if (a >= 2) {
-                        ctx.fillStyle = `hsl(0deg, 0%, ${rng(0,4)*25}%)`;
-                    }
-                    if (reflected) {
-                        if (2*i+1 > stripes) {
-                            ctx.fillStyle = colors.pop();
-                        } else if (2*i+1 < stripes) {
-                            colors.push(ctx.fillStyle);
-                        }
-                    }
-                    ctx.fillRect(
-                        0, Math.floor(stripeHeight*i),
-                        canvas.width, Math.ceil(stripeHeight)
-                    );
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/selaere.png">
+    <link rel="stylesheet" type="text/css" href="/epic.css"/>
+    <title>pride flag generator</title>
+    <style>
+        html, body {
+            height: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function rng(start, stop) {
+            return Math.floor(Math.random() * (stop+1-start)) + start;
+        }
+        function commence() {
+            const canvas = document.getElementById('canvas');
+            canvas.width = document.body.clientWidth - 40;
+            canvas.height = document.body.clientHeight - 40;
+            const ctx = canvas.getContext('2d');
+            const reflected = rng(0, 1);
+            const stripes = !reflected ? rng(3, 5) : rng(5, 7);
+            const stripeHeight = canvas.height / stripes;
+            let colors = [];
+            for (let i = 0; i < stripes; i++) {
+                const a = rng(1, 10);
+                if (a >= 4) {
+                    ctx.fillStyle = `hsl(${rng(0, 17)*20}deg, 100%, ${rng(0,1)*25+50}%)`;
+                } else if (a >= 2) {
+                    ctx.fillStyle = `hsl(0deg, 0%, ${rng(0,4)*25}%)`;
                 }
+                if (reflected) {
+                    if (2*i+1 > stripes) {
+                        ctx.fillStyle = colors.pop();
+                    } else if (2*i+1 < stripes) {
+                        colors.push(ctx.fillStyle);
+                    }
+                }
+                ctx.fillRect(
+                    0, Math.floor(stripeHeight*i),
+                    canvas.width, Math.ceil(stripeHeight)
+                );
             }
-        </script>
-
-    </head>
-    <body onload=commence()>
-        <canvas id=canvas onclick=commence()></canvas>
-    </body>
+        }
+    </script>
+</head>
+<body onload=commence()>
+    <canvas id=canvas onclick=commence()></canvas>
+</body>
 </html>
