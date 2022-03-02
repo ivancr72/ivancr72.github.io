@@ -158,6 +158,7 @@ function start() {
     elem("settings").disabled = true;
     elem("mistakes").innerText = "0";
     elem("mistakeset").hidden = true;
+    isWaitingForConfirmation = false;
     selected = -1;
     next();
 }
@@ -171,6 +172,7 @@ function quit() {
         elem("mistakelist").append(new Text(`${q.question}: ${q.answer}`), document.createElement("br"));
     }
     elem("mistakeset").hidden = false;
+    isWaitingForConfirmation = false;
 }
 function check() {
     const quest = questions[selected];
@@ -216,7 +218,7 @@ function do_mistake() {
         elem("mistakes").animate([
             {color: "firebrick"},
             {color: "var(--foreground)"}
-        ], {duration:700})
+        ], {duration:700});
     }
 }
 
@@ -240,12 +242,12 @@ elem("quitbtn").addEventListener("click", quit);
 elem("rightbtn").addEventListener("click", ()=>userconfirm(true));
 elem("wrongbtn").addEventListener("click", ()=>userconfirm(false));
 elem("checkbtn").addEventListener("click", check);
-elem("repetitions").addEventListener("input", gimmick)
+elem("repetitions").addEventListener("input", gimmick);
 window.addEventListener("keydown", function(event) {
     if (isWaitingForConfirmation && (event.key === "Enter" || event.key === "Backspace")) {
         event.preventDefault();
         userconfirm(event.key==="Enter");
-    } else if (event.key === "Enter") {
+    } else if (event.key === "Enter" && elem("checkbtn").visible) {
         event.preventDefault();
         check();
     }
