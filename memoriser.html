@@ -247,7 +247,7 @@ window.addEventListener("keydown", function(event) {
     if (isWaitingForConfirmation && (event.key === "Enter" || event.key === "Backspace")) {
         event.preventDefault();
         userconfirm(event.key==="Enter");
-    } else if (event.key === "Enter" && elem("checkbtn").visible) {
+    } else if (event.key === "Enter" && elem("checkbtn").hidden) {
         event.preventDefault();
         check();
     }
