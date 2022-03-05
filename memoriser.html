@@ -243,10 +243,10 @@ elem("rightbtn").addEventListener("click", ()=>userconfirm(true));
 elem("wrongbtn").addEventListener("click", ()=>userconfirm(false));
 elem("checkbtn").addEventListener("click", check);
 elem("repetitions").addEventListener("input", gimmick);
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", event => {
     if (isWaitingForConfirmation && (event.key === "Enter" || event.key === "Backspace")) {
         event.preventDefault();
-        userconfirm(event.key==="Enter");
+        userconfirm(event.key === "Enter");
     } else if (event.key === "Enter" && !elem("checkbtn").hidden) {
         event.preventDefault();
         check();
