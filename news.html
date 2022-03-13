@@ -19,13 +19,15 @@
     </style>
     <script>
         
-        const words = ("the a this these that those each every any some each every no none " +
+        const words = ("the a this these that those each every any some each every no none other " +
             "another all both very too so not he him his she her it its they them their one what " +
             "which who whose be are is was were have has having had very not of in on over under " +
-            "to from with through by for and nor but or yet so as because even if than unless while"
+            "to from with through by for and nor but or yet so as because even if than unless " + 
+            "while then else there at thus anyways always never now also either neither too again" +
+            " through about into enough"
         ).split(' ');
         
-        const punctuation = [", ", "—", ": ", "; "];
+        const punctuation = [", ", ", ", "—", ": ", ": ", "; "];
         
         const params = new URLSearchParams(window.location.search);
 
@@ -43,16 +45,17 @@
             return word;
         }
 
-        function generate_sentence(max_words = 50) {
+        function generate_sentence(max_words = 30) {
             // XXX: dont append to strings
             const length = rng() % (max_words - 10) + 10;
             let sentence = "";
             for (let i = 0; i < length; i++) {
                 sentence += generate_word();
-                sentence += rng() % 10 === 0 ?
+                sentence += rng() % 8 === 0 ?
                     punctuation[rng() % punctuation.length] : " ";
             }
-            return sentence[0].toUpperCase() + sentence.slice(1) + generate_word() + ".";
+            return (sentence[0].toUpperCase() + sentence.slice(1) + generate_word() + ".")
+                .replace(/\ba(?= [aeiou])/, "an");
         }
         function ready() {
             const body = document.getElementsByTagName("body")[0];
@@ -62,7 +65,7 @@
             body.appendChild(header);
             for (let i = 0; i < (rng() % 7 + 4); i++) {
                 let paragraph = document.createElement('p');
-                for (let j = 0; j < (rng() % 3 + 2); j++) {
+                for (let j = 0; j < (rng() % 5 + 5); j++) {
                     paragraph.innerText += generate_sentence() + " ";
                 }
                 body.appendChild(paragraph);
