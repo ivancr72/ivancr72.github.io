@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/epic.css" />
     <link rel="icon" type="image/png" href="/selaere.png">
-    <!-- i spent wayyy too long trying to implement an algorithm myself and it wasnt even working as intended so -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+    <!-- i spent wayyy too long trying to implement a prng myself and it wasnt even working so -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/lib/alea.min.js">
     </script>
     <style>
         p {
@@ -18,7 +18,6 @@
         }
     </style>
     <script>
-        
         const words = ("the a this these that those each every any some each every no none other " +
             "another all both very too so not he him his she her it its they them their one what " +
             "which who whose be are is was were have has having had very not of in on over under " +
@@ -32,7 +31,7 @@
         const params = new URLSearchParams(window.location.search);
 
         const seed = BigInt(params.get("articleno") || Math.random() * Math.pow(2, 64));
-        const random = new Math.seedrandom(seed); // from seedrandom
+        const random = new alea(seed);
         const rng = () => Math.abs(random.int32());
 
         let last_word;
@@ -51,8 +50,7 @@
             let sentence = "";
             for (let i = 0; i < length; i++) {
                 sentence += generate_word();
-                sentence += rng() % 8 === 0 ?
-                    punctuation[rng() % punctuation.length] : " ";
+                sentence += rng() % 8 === 0 ? punctuation[rng() % punctuation.length] : " ";
             }
             return (sentence[0].toUpperCase() + sentence.slice(1) + generate_word() + ".")
                 .replace(/\ba(?= [aeiou])/, "an");
