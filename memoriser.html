@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/epic.css"/>
+    <link rel="stylesheet" type="text/css" href="./epic.css"/>
     <link rel="icon" type="image/png" href="/selaere.png">
     <title>memoriser</title>
     <style>
@@ -54,8 +54,12 @@
             </label>
             <br>
             <label>
-                repeat each question <input type=number id=repetitions value=3 size=2 min=1>
-                time<span id=gimmick>s</span>
+                <input type=checkbox id=flipped> flip order
+            </label>
+            <br>
+            <label>
+                repeat each question <input type=number id=repetitions value=1 size=2 min=1>
+                time<span id=gimmick></span>
             </label>
         </p>
     </fieldset>
@@ -137,6 +141,9 @@ function get_questions() {
         } else {
             mong.answer = string.substring(idx + 1).trim();
             mong.type = SHORT;
+        }
+        if (elem('flipped').checked) {
+            [mong.question, mong.answer] = [mong.answer, mong.question];
         }
         for (let i = 0; i < repetitions; i++) {
             questions.push(mong);
@@ -244,6 +251,7 @@ elem("wrongbtn").addEventListener("click", ()=>userconfirm(false));
 elem("checkbtn").addEventListener("click", check);
 elem("repetitions").addEventListener("input", gimmick);
 window.addEventListener("keydown", event => {
+    if (!elem("databox").hidden) return;
     if (isWaitingForConfirmation && (event.key === "Enter" || event.key === "Backspace")) {
         event.preventDefault();
         userconfirm(event.key === "Enter");

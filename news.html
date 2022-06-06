@@ -29,7 +29,6 @@
         const punctuation = [", ", ", ", "—", ": ", ": ", "; "];
         
         const params = new URLSearchParams(window.location.search);
-
         const seed = BigInt(params.get("articleno") || Math.random() * Math.pow(2, 64));
         const random = new alea(seed);
         const rng = () => Math.abs(random.int32());
