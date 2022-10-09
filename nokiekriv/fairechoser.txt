@@ -216,6 +216,8 @@
 #kawar repet &f4c4c4f+5050505
 #kawar reson &c44f44c+1041401
 #kawar revolv &f0f4c+7474547
+#kawar rot &547075d+5170747
+#kawar salatov &72a072a+7220722
 #kawar salut &555075d+5555507
 #kawar sapmo &745c547+7445447
 #kawar schaiss &00c4d1f+1110747
