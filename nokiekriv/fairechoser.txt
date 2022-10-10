@@ -63,6 +63,8 @@
 #kawar amportan &f0f050f+5050107
 #kawar ämüzon &c88071f+1000747
 #kawar änimo &71f0555+0011705
+#kawar annus &04d7d40+015751
+#kawar anräb &f1d5d17+7455557
 #kawar anüjö &f8f1717+7054555
 #kawar arsch &744444f+0070747
 #kawar ass &f1d5d1f+1054501
@@ -72,6 +74,7 @@
 #kawar bar &f11711f+7445447
 #kawar bar' &d0d8d8d+7074547
 #kawar beelie &c444447+7444444
+#kawar bery &7150f5f+7470545
 #kawar bje &555550f+5550755
 #kawar blanco &f05075d+5470747
 #kawar borgar &f1d0d1f+7450547
@@ -106,8 +109,10 @@
 #kawar frot &7011757+7044757
 #kawar fuku &7155544+7455511
 #kawar furui &7099f05+7044705
+#kawar fusselap &0070f4f+5555147
 #kawar gab &711f117+4545454
 #kawar gän &f11711f+7450547
+#kawar gbepsi &c011f0c+1155501
 #kawar gej &7170545+7470515
 #kawar glad &44c071f+1010747
 #kawar gug &007158c+0074501
@@ -124,6 +129,8 @@
 #kawar joe &74c4c47+7474747
 #kawar john &5470547+5470547
 #kawar jol &f440547+7110517
+#kawar josa &1111d55+4444555
+#kawar jundong &44c0c47+1010747
 #kawar kalama &80d1d08+7455547
 #kawar kami &55f1117+5574447
 #kawar kauf &7151717+7474547
@@ -170,6 +177,7 @@
 #kawar nagai &f1f0f1f+7074707
 #kawar name &70f1d1f+7074547
 #kawar nasa &f1d5d1f+7074547
+#kawar natur &722220f+7222207
 #kawar neja &000d444+0005111
 #kawar ngombe &7174d5d+0070715
 #kawar ngong &7175d05+0070715
@@ -228,11 +236,13 @@
 #kawar sista &75d8755+7550755
 #kawar sjov &250f11e+2507443
 #kawar sjrek &72f151f+7274547
+#kawar smorete &f1f0f17+7470747
 #kawar söl &75f4f57+1171711
 #kawar sowwi &001c111+0041444
 #kawar stoff &7d55557+7150547
 #kawar stronk &c075d0f+7555547
 #kawar stühl &00f0f15+4454745
+#kawar sulan &f0f1555+7074555
 #kawar sürpri &74c071f+7110747
 #kawar sus &c79f2ae+3644463
 #kawar tachat &f111f05+7444705
@@ -243,18 +253,23 @@
 #kawar tip &d550117+5070447
 #kawar torte &f455f44+7155711
 #kawar tos &e22702e+3207223
+#kawar totovv &faf0f5f+7270545
 #kawar tov &7551d1f+0070515
 #kawar trigj &7174717+7471747
 #kawar trist &c44071f+1010747
 #kawar us &c0d5d0c+1055501
 #kawar ütiliz &7c44447+5572205
+#kawar uwuigi &c8f555f+1075557
+#kawar vagintarin &d1f1711+7111701
 #kawar ved &f11911f+7440447
 #kawar virk &7555d57+5170700
 #kawar voos &7c0509f+0715047
 #kawar vosava &f1ddd17+7455547
+#kawar wario &111999f+4444447
 #kawar wart &c0d110c+1055501
 #kawar wort &755d557+7071707
 #kawar zak &755d557+7555507
+#kawar zem &c0d550c+1054501
 #kawar zet &f88075d+7000747
 #kawar zhö &7c727d5+4140517
 #kawar zik &f4d5d4f+7455547
@@ -277,6 +292,7 @@
 #kawar tout' &f1d5d1f+7455547
 
 #kawar avec +7470747
+#kawar avec' &0074447+744447
 #kawar d +6223226
 #kawar v +3226223
 #kawar pro +5474745
