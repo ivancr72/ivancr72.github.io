@@ -162,7 +162,7 @@ function faireLinjar(ovsärt, lukbater) {
     let meinagaiLinja = 0;
     for (const suslinja of ovsärt.split("//")) {
         const linja = suslinja.trim();
-        if (!linja) { linjar.push([]); continue; }  // "".split(" ") is [""] (???)
+        if (!linja) { linjar.push([]); continue; }
         const zaker = linja.split(" ");
 
         let dji = 0;
