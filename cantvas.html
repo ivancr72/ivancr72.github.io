@@ -22,7 +22,7 @@
             let [lastx, lasty] = [null, null];
             canvas.addEventListener('mousemove', function(e) {
                 color++;
-                ctx.fillStyle = `hsl(${color%360}deg, 100%, 50%)`;
+                ctx.fillStyle   = `hsl(${color%360}deg, 100%, 50%)`;
                 ctx.strokeStyle = `hsl(${color%360}deg, 100%, 50%)`;
                 ctx.lineWidth = 5
                 if (lastx !== null) {
