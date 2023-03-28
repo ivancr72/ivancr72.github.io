@@ -9,38 +9,35 @@
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.1/build/global/luxon.min.js" ></script>
     <title>ISO week utils</title>
     <script>
-        const elem = x => document.getElementById(x);
-        function ready() {
-            const now = luxon.DateTime.now();
-            const utc = now.toUTC();
-            elem("local").innerText = `${now.toISOWeekDate()} ${now.toISOTime()}`;
-            elem("utc"  ).innerText = `${utc.toISOWeekDate()} ${utc.toISOTime()}`;
-        }
-        function update_greg() {
-            const date = luxon.DateTime.utc(
-                +elem("year" ).value, 
-                +elem("month").value, 
-                +elem("day"  ).value,
-            );
-            elem("weekYear"  ).value = date.weekYear   || 0;
-            elem("weekNumber").value = date.weekNumber || 0;
-            elem("weekday"   ).value = date.weekday    || 0;
-        }
-        function update_week() {
-            const date = luxon.DateTime.fromObject({ 
-                weekYear:   +elem("weekYear"  ).value, 
-                weekNumber: +elem("weekNumber").value, 
-                weekday:    +elem("weekday"   ).value, });
-            elem("year" ).value = date.year  || 0;
-            elem("month").value = date.month || 0;
-            elem("day"  ).value = date.day   || 0;
-        }
+const id = x => document.getElementById(x);
+function ready() {
+    const now = luxon.DateTime.now();
+    const utc = now.toUTC();
+    id("local").innerText = `${now.toISOWeekDate()} ${now.toISOTime()}`;
+    id("utc"  ).innerText = `${utc.toISOWeekDate()} ${utc.toISOTime()}`;
+}
+function update_greg() {
+    const date = luxon.DateTime.utc(
+        +id("year" ).value, 
+        +id("month").value, 
+        +id("day"  ).value,
+    );
+    id("weekYear"  ).value = date.weekYear   || 0;
+    id("weekNumber").value = date.weekNumber || 0;
+    id("weekday"   ).value = date.weekday    || 0;
+}
+function update_week() {
+    const date = luxon.DateTime.fromObject({ 
+        weekYear:   +id("weekYear"  ).value, 
+        weekNumber: +id("weekNumber").value, 
+        weekday:    +id("weekday"   ).value, });
+    id("year" ).value = date.year  || 0;
+    id("month").value = date.month || 0;
+    id("day"  ).value = date.day   || 0;
+}
     </script>
     <style>
-        .big {
-            font-size: 36px;
-            font-weight: bold;
-        }
+.big { font-size: 36px; font-weight: bold; }
     </style>
 </head>
 <body onload="ready()" class=small>
