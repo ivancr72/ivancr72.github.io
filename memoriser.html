@@ -121,15 +121,15 @@ let questions = [];
 let selected = 0;
 let isWaitingForConfirmation = false;
 let wrong = [];
-const elem = x => document.getElementById(x);
+const id = x => document.getElementById(x);
 function rng(num) {
     return Math.floor(Math.random() * num);
 }
 function get_questions() {
     questions = [];
     wrong = [];
-    const data = elem("data").value.trim();
-    let repetitions = parseInt(elem("repetitions").value.trim());
+    const data = id("data").value.trim();
+    let repetitions = parseInt(id("repetitions").value.trim());
     if (Number.isNaN(repetitions) || repetitions < 1) repetitions = 1;
     for (const string of data.split("\n")) {
         const idx = string.search(":");
@@ -142,7 +142,7 @@ function get_questions() {
             mong.answer = string.substring(idx + 1).trim();
             mong.type = SHORT;
         }
-        if (elem('flipped').checked) {
+        if (id('flipped').checked) {
             [mong.question, mong.answer] = [mong.answer, mong.question];
         }
         for (let i = 0; i < repetitions; i++) {
@@ -154,75 +154,75 @@ function get_questions() {
         const r = rng(i);
         [questions[i], questions[r]] = [questions[r], questions[i]];
     }
-    elem("max").innerText = `${questions.length}`;
+    id("max").innerText = `${questions.length}`;
 
 }
 function start() {
     get_questions();
-    elem("asker").hidden = false;
-    elem("startbtn").hidden = true;
-    elem("databox").hidden = true;
-    elem("settings").disabled = true;
-    elem("mistakes").innerText = "0";
-    elem("mistakeset").hidden = true;
+    id("asker").hidden = false;
+    id("startbtn").hidden = true;
+    id("databox").hidden = true;
+    id("settings").disabled = true;
+    id("mistakes").innerText = "0";
+    id("mistakeset").hidden = true;
     isWaitingForConfirmation = false;
     selected = -1;
     next();
 }
 function quit() {
-    elem("asker").hidden = true;
-    elem("startbtn").hidden = false;
-    elem("databox").hidden = false;
-    elem("settings").disabled = false;
-    elem("mistakelist").replaceChildren(); // empties mistakes
+    id("asker").hidden = true;
+    id("startbtn").hidden = false;
+    id("databox").hidden = false;
+    id("settings").disabled = false;
+    id("mistakelist").replaceChildren(); // empties mistakes
     for (q of wrong) {
-        elem("mistakelist").append(new Text(`${q.question}: ${q.answer}`), document.createElement("br"));
+        id("mistakelist").append(new Text(`${q.question}: ${q.answer}`), document.createElement("br"));
     }
-    elem("mistakeset").hidden = false;
+    id("mistakeset").hidden = false;
     isWaitingForConfirmation = false;
 }
 function check() {
     const quest = questions[selected];
-    const prompt = elem("prompt");
+    const prompt = id("prompt");
     if (quest.type === SHORT) {
-        if (elem("prompt").value.trim().toLowerCase() !== quest.answer.toLowerCase()) {
+        if (id("prompt").value.trim().toLowerCase() !== quest.answer.toLowerCase()) {
             alert(`no!!!! the answer was ${quest.answer}`);
             do_mistake();
         }
         next();
     } else { // === LONG
-        elem("answer").innerText = quest.answer;
-        elem("answer").hidden = false;
-        elem("rightbtn").hidden = false;
-        elem("wrongbtn").hidden = false;
-        elem("checkbtn").hidden = true;
-        elem("prompt").disabled = true;
-        elem("prompt").blur();
+        id("answer").innerText = quest.answer;
+        id("answer").hidden = false;
+        id("rightbtn").hidden = false;
+        id("wrongbtn").hidden = false;
+        id("checkbtn").hidden = true;
+        id("prompt").disabled = true;
+        id("prompt").blur();
         isWaitingForConfirmation = true;
     }
 }
 function next() {
     selected++;
     if (selected >= questions.length) {
-        elem("question").innerText = "no more questions left.";
-        elem("small").innerText = "(sorry)";
+        id("question").innerText = "no more questions left.";
+        id("small").innerText = "(sorry)";
         return;
     }
     const quest = questions[selected];
-    elem("no").innerText = `${selected+1}`;
-    elem("question").innerText = quest.question;
-    elem("small").innerText = quest.type === SHORT ? "" : "(long)";
-    elem("prompt").value = "";
+    id("no").innerText = `${selected+1}`;
+    id("question").innerText = quest.question;
+    id("small").innerText = quest.type === SHORT ? "" : "(long)";
+    id("prompt").value = "";
 }
 function gimmick() {
-    elem("gimmick").innerText = elem("repetitions").value.trim() === "1" ? "" : "s";
+    id("gimmick").innerText = id("repetitions").value.trim() === "1" ? "" : "s";
 }
 
 function do_mistake() {
     wrong.push(questions[selected]);
-    elem("mistakes").innerText = `${wrong.length}`;
-    if (elem("animations").checked) {
-        elem("mistakes").animate([
+    id("mistakes").innerText = `${wrong.length}`;
+    if (id("animations").checked) {
+        id("mistakes").animate([
             {color: "firebrick"},
             {color: "var(--foreground)"}
         ], {duration:700});
@@ -233,23 +233,23 @@ function userconfirm(bool) {
     if (!bool) {
         do_mistake();
     }
-    elem("answer").hidden = true;
-    elem("rightbtn").hidden = true;
-    elem("wrongbtn").hidden = true;
-    elem("checkbtn").hidden = false;
-    elem("prompt").disabled = false;
-    elem("prompt").focus();
-    elem("prompt").value = "";
+    id("answer").hidden = true;
+    id("rightbtn").hidden = true;
+    id("wrongbtn").hidden = true;
+    id("checkbtn").hidden = false;
+    id("prompt").disabled = false;
+    id("prompt").focus();
+    id("prompt").value = "";
     isWaitingForConfirmation = false;
     next();
 }
 
-elem("startbtn").addEventListener("click", start);
-elem("quitbtn").addEventListener("click", quit);
-elem("rightbtn").addEventListener("click", ()=>userconfirm(true));
-elem("wrongbtn").addEventListener("click", ()=>userconfirm(false));
-elem("checkbtn").addEventListener("click", check);
-elem("repetitions").addEventListener("input", gimmick);
+id("startbtn").addEventListener("click", start);
+id("quitbtn").addEventListener("click", quit);
+id("rightbtn").addEventListener("click", ()=>userconfirm(true));
+id("wrongbtn").addEventListener("click", ()=>userconfirm(false));
+id("checkbtn").addEventListener("click", check);
+id("repetitions").addEventListener("input", gimmick);
 window.addEventListener("keydown", event => {
     if (!elem("databox").hidden) return;
     if (isWaitingForConfirmation && (event.key === "Enter" || event.key === "Backspace")) {
