@@ -44,7 +44,7 @@
 </head>
 <body class=small>
     <h1> memori<span id=s 
-        onmouseenter="id('s').innerText=id('s').innerText==='s'?'z':'s'">s</span>er </h1>
+        onmouseenter="event.target.innerText=event.target.innerText==='s'?'z':'s'">s</span>er </h1>
     <p>wip</p>
     <fieldset id=settings>
         <legend>settings</legend>
@@ -251,11 +251,11 @@ id("wrongbtn").addEventListener("click", ()=>userconfirm(false));
 id("checkbtn").addEventListener("click", check);
 id("repetitions").addEventListener("input", gimmick);
 window.addEventListener("keydown", event => {
-    if (!elem("databox").hidden) return;
+    if (!id("databox").hidden) return;
     if (isWaitingForConfirmation && (event.key === "Enter" || event.key === "Backspace")) {
         event.preventDefault();
         userconfirm(event.key === "Enter");
-    } else if (event.key === "Enter" && !elem("checkbtn").hidden) {
+    } else if (event.key === "Enter" && !id("checkbtn").hidden) {
         event.preventDefault();
         check();
     }
